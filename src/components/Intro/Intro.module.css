@@ -34,18 +34,18 @@
 }
 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .container {
         max-width: 32rem;
     }
-}
+} */
 
 @media (max-width: 425px) {
-    .container {
+    /* .container {
         max-width: 24rem;
-    }
+    } */
 
-    .container img {
+    .headshot {
         height: 80px;
         width: 80px;
         border: 2px solid #333;
@@ -61,7 +61,7 @@
     
 }
 
-@media (max-width: 375px) {
+/* @media (max-width: 375px) {
     .container {
         max-width: 19rem;
     }
@@ -71,4 +71,4 @@
     .container {
         max-width: 17rem;
     }
-}
+} */

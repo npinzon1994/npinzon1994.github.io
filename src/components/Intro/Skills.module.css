@@ -6,14 +6,24 @@
 .skills-list {
     list-style-type: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding-left: 0;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .skill {
     /* width: 100%; */
     width: 60px;
+    min-width: 22px;
     margin: 0 10px;
     /* display: flex;
     align-items: center; */
+}
+
+@media (max-width: 425px){
+    .skills-list {
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
 }
