@@ -1,0 +1,19 @@
+.container {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.sending {
+  font-size: larger;
+  margin-right: 10px;
+}
+
+.loading-spinner {
+  height: 28px;
+  width: 28px;
+}
+
+.loading-spinner-hidden {
+  display: none;
+}
