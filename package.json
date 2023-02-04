@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://npinzon1994.github.io/",
+  "homepage": "https://github.com/npinzon1994/npinzon1994.github.io",
   "private": false,
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
