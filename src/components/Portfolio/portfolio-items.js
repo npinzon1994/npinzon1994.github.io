@@ -29,7 +29,7 @@ const portfolioItems = [
     title: "Budget Breakdown",
     description: "Money management tool to help keep track of your expenses.",
     languages: budgetBreakdown,
-    link: "#",
+    link: "https://nikkipinzon.com/budget-breakdown/",
     target: "_blank",
   },
   {
@@ -45,16 +45,16 @@ const portfolioItems = [
     link: "#",
     target: "",
   },
-  {
-    id: "P3",
-    img: { src: bbScreenshot, alt: "Screenshot of Social Media App" },
-    title: "Social Media App",
-    description:
-      "Will be a simple social media app that allows users to follow, post, like, comment, and direct message.",
-    languages: socialMediaApp,
-    link: "#",
-    target: "_blank",
-  },
+  // {
+  //   id: "P3",
+  //   img: { src: bbScreenshot, alt: "Screenshot of Social Media App" },
+  //   title: "Social Media App",
+  //   description:
+  //     "Will be a simple social media app that allows users to follow, post, like, comment, and direct message.",
+  //   languages: socialMediaApp,
+  //   link: "#",
+  //   target: "_blank",
+  // },
   {
     id: "P4",
     img: { src: crScreenshot, alt: "Screenshot of Canaan Recycling Website" },
