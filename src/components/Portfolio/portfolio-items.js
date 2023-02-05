@@ -1,5 +1,5 @@
 import bbScreenshot from "../../assets/screenshots/bb-screenshot.PNG";
-import portfolioScreenshot from "../../assets/screenshots/github-screenshot.png";
+import portfolioScreenshot from "../../assets/screenshots/portfolio-screenshot.png";
 import cxScreenshot from "../../assets/screenshots/cx-screenshot.png";
 import crScreenshot from "../../assets/screenshots/cr-screenshot.png";
 import mfScreenshot from "../../assets/screenshots/mf-screenshot.png";
