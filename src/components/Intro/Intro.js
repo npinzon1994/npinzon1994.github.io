@@ -8,7 +8,7 @@ const Intro = () => {
     <div className={classes.container}>
       <img src={pfp} alt="Nikki Pinzon headshot" className={classes.headshot} />
       <h1>Nikki</h1>
-      <h3>Front-End Web Developer</h3>
+      <h3>Junior Software Engineer</h3>
       <Skills />
       <p>
         I'm an independent Front-End Web Developer looking to ease the lives of

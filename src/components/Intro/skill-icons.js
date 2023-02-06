@@ -7,11 +7,11 @@ import restApiIcon from '../../assets/skills-icons/rest-api-icon.svg';
 import reduxIcon from "../../assets/skills-icons/redux-icon.svg";
 
 export const skills = [
-  {id: 'S1', img: jsIcon, alt: 'JavaScript icon'},
-  {id: 'S2', img: reactIcon, alt: 'React.js icon'},
-  {id: 'S3', img: htmlIcon, alt: 'HTML5 icon'},
-  {id: 'S4', img: cssIcon, alt: 'CSS3 icon'},
-  {id: 'S5', img: gitIcon, alt: 'Git icon'},
-  {id: 'S6', img: restApiIcon, alt: 'REST API icon'},
-  {id: 'S7', img: reduxIcon, alt: 'Redux icon'},
+  {id: 'S1', img: reactIcon, alt: 'React.js icon'},
+  {id: 'S2', img: jsIcon, alt: 'JavaScript icon'},
+  {id: 'S3', img: reduxIcon, alt: 'Redux icon'},
+  {id: 'S4', img: htmlIcon, alt: 'HTML5 icon'},
+  {id: 'S5', img: cssIcon, alt: 'CSS3 icon'},
+  {id: 'S6', img: gitIcon, alt: 'Git icon'},
+  {id: 'S7', img: restApiIcon, alt: 'REST API icon'},
 ];
