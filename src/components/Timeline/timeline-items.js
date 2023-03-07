@@ -21,7 +21,7 @@ const timelineItems = [
     title: "Bachelor's Degree in Computer Science",
     duration: "4 years",
     description:
-      "Throughout these four years, I had gained quite a wealth of knowledge ranging from core design principles to data structures to computer architecture. College is also where I got my introduction to HTML, CSS and JavaScript.",
+      "Throughout these four years, I had gained quite a wealth of knowledge ranging from core design principles to data structures to computer architecture. College is where I was introduced to HTML, CSS, and JavaScript.",
   },
   {
     id: 'T4',

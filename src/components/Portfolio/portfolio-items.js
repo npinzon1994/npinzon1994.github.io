@@ -5,12 +5,12 @@ import crScreenshot from "../../assets/screenshots/cr-screenshot.png";
 import mfScreenshot from "../../assets/screenshots/mf-screenshot.png";
 
 const languages = {
-  budgetBreakdown: ["React", "Javascript", "CSS"],
-  developerPortfolio: ["React", "Javascript", "CSS"],
-  socialMediaApp: ["React", "Javascript", "CSS"],
-  cxSite: ["HTML", "CSS", "JavaScript", "PHP"],
-  crSite: ["HTML", "CSS", "JavaScript", "PHP"],
-  mfSite: ["HTML", "CSS", "JavaScript", "PHP"],
+  budgetBreakdown: ["React", "JavaScript", "CSS"],
+  developerPortfolio: ["React", "JavaScript", "CSS"],
+  socialMediaApp: ["React", "JavaScript", "CSS"],
+  cxSite: ["HTML", "CSS", "JavaScript"],
+  crSite: ["HTML", "CSS", "JavaScript"],
+  mfSite: ["HTML", "CSS", "JavaScript"],
 };
 
 const {
