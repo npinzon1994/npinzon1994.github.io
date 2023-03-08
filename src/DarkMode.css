@@ -41,3 +41,10 @@
   right: 8%;
   z-index: 99;
 }
+
+.fallback {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-30%, -50%);
+}

@@ -1,11 +1,14 @@
-import React, { useContext, useEffect } from "react";
-import Intro from "./components/Intro/Intro";
-import Portfolio from "./components/Portfolio/Portfolio";
-import Timeline from "./components/Timeline/Timeline";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer";
+import React, { useContext, useEffect, lazy, Suspense } from "react";
 import "./DarkMode.css";
 import ThemeContext from "./store/theme-context";
+import loadingSpinner from "./assets/loading-spinner.gif";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
+const Intro = lazy(() => import("./components/Intro/Intro"));
+const Portfolio = lazy(() => import("./components/Portfolio/Portfolio"));
+const Timeline = lazy(() => import("./components/Timeline/Timeline"));
+const Contact = lazy(() => import("./components/Contact/Contact"));
+const Footer = lazy(() => import("./components/Footer"));
 
 const App = () => {
   const themeContext = useContext(ThemeContext);
@@ -18,12 +21,33 @@ const App = () => {
 
   return (
     <div className={`App ${theme}`}>
-      <button className={`${theme === 'light' ? 'theme-toggle' : 'dark-theme-toggle'}`} onClick={toggleTheme} type="button" />
-      <Intro />
-      <Portfolio />
-      <Timeline />
-      <Contact />
-      <Footer />
+      <button
+        className={`${
+          theme === "light" ? "theme-toggle" : "dark-theme-toggle"
+        }`}
+        onClick={toggleTheme}
+        type="button"
+      />
+      <Suspense
+        fallback={
+          <div className="fallback">
+            <p>
+              <LazyLoadImage
+                src={loadingSpinner}
+                width={50}
+                height={50}
+                alt="loading spinner"
+              />
+            </p>
+          </div>
+        }
+      >
+        <Intro />
+        <Portfolio />
+        <Timeline />
+        <Contact />
+        <Footer />
+      </Suspense>
     </div>
   );
 };
