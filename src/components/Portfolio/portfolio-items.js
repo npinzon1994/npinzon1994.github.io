@@ -5,9 +5,9 @@ import crScreenshot from "../../assets/screenshots/cr-screenshot.png";
 import mfScreenshot from "../../assets/screenshots/mf-screenshot.png";
 
 const languages = {
-  budgetBreakdown: ["React", "JavaScript", "CSS"],
+  budgetBreakdown: ["React", "Redux", "CSS"],
   developerPortfolio: ["React", "JavaScript", "CSS"],
-  socialMediaApp: ["React", "JavaScript", "CSS"],
+  socialMediaApp: ["React", "Redux", "CSS"],
   cxSite: ["HTML", "CSS", "JavaScript"],
   crSite: ["HTML", "CSS", "JavaScript"],
   mfSite: ["HTML", "CSS", "JavaScript"],
