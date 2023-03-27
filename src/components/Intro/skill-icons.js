@@ -16,6 +16,5 @@ export const skills = [
   {id: 'S5', img: gitIcon, alt: 'Git icon'},
   {id: 'S6', img: reduxIcon, alt: 'Redux icon'},
   {id: 'S7', img: tsIcon, alt: 'TypeScript Icon'},
-  {id: 'S8', img: javaIcon, alt: 'Java Icon'},
-  {id: 'S9', img: firebaseIcon, alt: 'Firebase Icon'},
+  {id: 'S8', img: firebaseIcon, alt: 'Firebase Icon'},
 ];
