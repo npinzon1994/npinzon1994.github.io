@@ -1,0 +1,25 @@
+.wrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+  background: #eee4ff;
+  padding-block: 2rem;;
+}
+
+.inner-container {
+  width: 100%;
+  max-width: 66rem;
+  margin: 0 auto;
+  display: flex;
+    justify-content: space-between;
+  
+}
+
+.info-container {
+    flex-basis: 50%;
+}
+
+.headshot {
+  flex-basis: 50%;
+  text-align: center;
+}

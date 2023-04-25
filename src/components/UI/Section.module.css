@@ -1,0 +1,11 @@
+.wrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.inner-container {
+  width: 100%;
+  max-width: 66rem;
+  margin: 0 auto;
+}

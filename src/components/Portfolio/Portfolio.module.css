@@ -1,31 +1,19 @@
-.container {
+.wrapper {
   width: 100%;
-  max-width: 76rem;
-  margin: 6px auto;
-  display: flex;
-  justify-content: center;
+  position: relative;
 }
 
-.portfolio {
-  display: inline-flex;
-  justify-content: center;
+.inner-container {
+  width: 100%;
+  max-width: 66rem;
+  margin: 0 auto;
+}
+
+.portfolio-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+
   padding-left: 0;
-  flex-wrap: wrap;
   margin: auto;
-  visibility: hidden;
-  animation: slideUp 1s ease-out forwards;
-}
-
-@keyframes slideUp {
-  0% {
-    opacity: 0;
-    filter: blur(10px);
-    transform: translateY(15%);
-  }
-  100% {
-      opacity: 1;
-      filter: blur(0);
-      transform: translateY(0);
-      visibility: visible;
-  }
 }

@@ -3,12 +3,15 @@ import "./DarkMode.css";
 import ThemeContext from "./store/theme-context";
 import loadingSpinner from "./assets/loading-spinner.gif";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import Navigation from "./components/Layout/Navigation";
 
 const Intro = lazy(() => import("./components/Intro/Intro"));
 const Portfolio = lazy(() => import("./components/Portfolio/Portfolio"));
 const Timeline = lazy(() => import("./components/Timeline/Timeline"));
 const Contact = lazy(() => import("./components/Contact/Contact"));
-const Footer = lazy(() => import("./components/Footer"));
+const Footer = lazy(() => import("./components/Layout/Footer"));
+const About = lazy(() => import('./components/About/About'));
+const Tools = lazy(() => import('./components/Tools/Tools'));
 
 const App = () => {
   const themeContext = useContext(ThemeContext);
@@ -21,13 +24,13 @@ const App = () => {
 
   return (
     <div className={`App ${theme}`}>
-      <button
+      {/* <button
         className={`${
           theme === "light" ? "theme-toggle" : "dark-theme-toggle"
         }`}
         onClick={toggleTheme}
         type="button"
-      />
+      /> */}
       <Suspense
         fallback={
           <div className="fallback">
@@ -42,9 +45,11 @@ const App = () => {
           </div>
         }
       >
+        <Navigation />
         <Intro />
         <Portfolio />
-        <Timeline />
+        <About />
+        <Tools />
         <Contact />
         <Footer />
       </Suspense>

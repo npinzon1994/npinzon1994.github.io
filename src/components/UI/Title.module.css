@@ -1,6 +1,20 @@
-.title {
-    text-decoration: underline;
-    text-underline-offset: 6px;
+ .title {
     text-decoration-thickness: 3px;
-    margin-bottom: 24px;
+    margin: 0;
+    padding-bottom: 2rem;
+    color: #6F2DBD;
+    font-family: 'Alegreya', serif;
+    font-size: 2rem;
+    position: relative;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  left: 5%;
+  bottom: 2rem;
+  width: 10%;
+  height: 14px;
+  transform: skew(-12deg) translateX(-50%);
+  background: rgba(185,250,248,0.5);
 }

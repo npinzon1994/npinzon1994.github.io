@@ -1,0 +1,13 @@
+.container {
+  /* width: 100%;
+  max-width: 42rem; */
+}
+
+.tools-list {
+  list-style-type: none;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(5, 1fr);
+  padding-left: 0;
+  margin-block: 0;
+}

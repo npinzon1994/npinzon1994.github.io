@@ -6,8 +6,8 @@ import mfScreenshot from "../../assets/screenshots/mf-screenshot.png";
 
 const languages = {
   budgetBreakdown: ["React", "Redux", "CSS", "Firebase"],
-  developerPortfolio: ["React", "JavaScript", "CSS"],
-  socialMediaApp: ["React", "Redux", "CSS"],
+  bucketlist: ["React", "JavaScript", "CSS"],
+  socialMediaApp: ["React", "Redux", "Firebase"],
   cxSite: ["HTML", "CSS", "JavaScript"],
   crSite: ["HTML", "CSS", "JavaScript"],
   mfSite: ["HTML", "CSS", "JavaScript"],
@@ -15,7 +15,7 @@ const languages = {
 
 const {
   budgetBreakdown,
-  developerPortfolio,
+  bucketlist,
   socialMediaApp,
   crSite,
   cxSite,
@@ -36,27 +36,17 @@ const portfolioItems = [
     id: "P2",
     img: {
       src: portfolioScreenshot,
-      alt: "Screenshot of Developer Portfolio App",
+      alt: "Screenshot of Bucketlist App",
     },
-    title: "Developer Portfolio",
+    title: "Bucketlist",
     description:
-      "Professional developer portfolio that showcases my projects as well as a glimpse into my coding journey.",
-    languages: developerPortfolio,
+      "List of goals you want to achieve within your lifetime.",
+    languages: bucketlist,
     link: "#",
     target: "",
   },
-  // {
-  //   id: "P3",
-  //   img: { src: bbScreenshot, alt: "Screenshot of Social Media App" },
-  //   title: "Social Media App",
-  //   description:
-  //     "Will be a simple social media app that allows users to follow, post, like, comment, and direct message.",
-  //   languages: socialMediaApp,
-  //   link: "#",
-  //   target: "_blank",
-  // },
   {
-    id: "P4",
+    id: "P3",
     img: { src: crScreenshot, alt: "Screenshot of Canaan Recycling Website" },
     title: "Canaan Recycling Website",
     description:
@@ -66,25 +56,35 @@ const portfolioItems = [
     target: "_blank",
   },
   {
-    id: "P5",
-    img: { src: mfScreenshot, alt: "Screenshot of Millennium Fibers Website" },
-    title: "Millennium Fibers Website",
+    id: "P4",
+    img: { src: bbScreenshot, alt: "Screenshot of Social Media App" },
+    title: "Twitter Clone",
     description:
-      "Company website for Canaan Recycling, a fully diversified, international recycling firm.",
-    languages: mfSite,
-    link: "https://millenniumfibers.com/",
+      "Will be a simple social media app that allows users to follow, post, like, comment, and direct message.",
+    languages: socialMediaApp,
+    link: "#",
     target: "_blank",
   },
-  {
-    id: "P6",
-    img: { src: cxScreenshot, alt: "Screenshot of Canaan Xpress Website" },
-    title: "Canaan Xpress Website",
-    description:
-      "Company website for Canaan Xpress, a transportation business whose fleet of tractor trailers covers the continental United States.",
-    languages: cxSite,
-    link: "https://www.canaanxpress.com/index.html",
-    target: "_blank",
-  },
+  // {
+  //   id: "P5",
+  //   img: { src: mfScreenshot, alt: "Screenshot of Millennium Fibers Website" },
+  //   title: "Millennium Fibers Website",
+  //   description:
+  //     "Company website for Canaan Recycling, a fully diversified, international recycling firm.",
+  //   languages: mfSite,
+  //   link: "https://millenniumfibers.com/",
+  //   target: "_blank",
+  // },
+  // {
+  //   id: "P6",
+  //   img: { src: cxScreenshot, alt: "Screenshot of Canaan Xpress Website" },
+  //   title: "Canaan Xpress Website",
+  //   description:
+  //     "Company website for Canaan Xpress, a transportation business whose fleet of tractor trailers covers the continental United States.",
+  //   languages: cxSite,
+  //   link: "https://www.canaanxpress.com/index.html",
+  //   target: "_blank",
+  // },
 ];
 
 export default portfolioItems;

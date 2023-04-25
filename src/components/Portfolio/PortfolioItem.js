@@ -19,7 +19,7 @@ const PortfolioItem = (props) => {
   ));
 
   return (
-    <li className={`${classes.container} ${theme === 'dark' ? classes['dark-container'] : ''}`}>
+    <li className={`${classes['container-grid']} ${theme === 'dark' ? classes['dark-container'] : ''}`}>
       <img src={props.img.src} alt={props.img.alt} className={classes.image} />
       <Description description={props.description} link={props.link} target={props.target}/>
       <div className={classes["info-container"]}>

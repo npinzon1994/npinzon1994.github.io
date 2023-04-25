@@ -1,0 +1,35 @@
+.nav-wrapper {
+  position: fixed;
+  width: 100%;
+  background: linear-gradient(0.25turn, #6f2dbd, #b298dc);
+  z-index: 100;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-block: 10px;
+}
+
+.title {
+  color: #b9faf8;
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+}
+
+.links {
+  list-style-type: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.links li {
+  color: #fff;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.3rem;
+}

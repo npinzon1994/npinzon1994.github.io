@@ -1,75 +1,87 @@
-.container {
-    border: 3px solid #383838;
-    margin: 10px;
-    border-radius: 6px;
-    list-style-type: none;
-    position: relative;
+.container-grid {
+  outline: 2px solid #EEE4FF;
+  /* margin: 10px; */
+  border-radius: 0.4rem;
+  list-style-type: none;
+  position: relative;
+  background-color: #EEE4FF;
 }
 
-.container:hover .overlay {
-    opacity: 95%;
+/*setting sizes of first and last items*/
+/* .container-grid:first-of-type {
+    grid-column: span 2;
+}
+
+.container-grid:last-of-type {
+    grid-column: span 2;
+} */
+
+.container-grid:hover .overlay {
+  opacity: 95%;
 }
 
 .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: 0.5s ease;
-    background-color: rgb(34, 34, 34);
-  }
-  
-  .description {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0.4rem;
+}
+
+.description {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 
 .dark-container {
-    border: 3px solid #fff;
+  border: 3px solid #fff;
 }
 
 .image {
-    width: 100%;
-    height: fit-content;
-    max-width: 22rem;
-    max-height: 16rem;
+  width: 100%;
+  height: fit-content;
+  /* max-width: 22rem; */
+  max-height: 16rem;
+  border-radius: 0.4rem 0.4rem 0 0;
 }
 
 .info-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  color: #6f2dbd;
 }
 
 .title {
-    font-size: large;
-    font-weight: 500;
-    margin: 5px 18px;
+  font-size: large;
+  font-weight: 500;
+  margin: 5px 18px;
 }
 
 .language-container {
-    display: flex;
-    margin-left: 10px;
+  display: flex;
+  margin-left: 10px;
 }
 
 .language {
-    border: 3px solid #383838;
-    border-radius: 7px;
-    padding: 5px 7px 7px 7px;
-    margin: 8px 0 18px 8px;
-    font-weight: 500;
+  border: 3px solid #6f2dbd;
+  border-radius: 7px;
+  padding: 5px 7px 7px 7px;
+  margin: 8px 0 18px 8px;
+  font-weight: 500;
 }
 
 .dark-language {
-    border: 3px solid #fff;
+  border: 3px solid #fff;
 }
-

@@ -2,6 +2,7 @@ import React from "react";
 import classes from "../Portfolio/Portfolio.module.css";
 import PortfolioItem from "../Portfolio/PortfolioItem";
 import portfolioItems from "./portfolio-items";
+import Section from "../UI/Section";
 
 const items = portfolioItems.map((item) => (
   <PortfolioItem
@@ -17,9 +18,9 @@ const items = portfolioItems.map((item) => (
 
 const Portfolio = () => {
   return (
-    <div className={classes.container}>
-      <ul className={classes.portfolio}>{items}</ul>
-    </div>
+    <Section title="My Projects">
+      <ul className={classes["portfolio-grid"]}>{items}</ul>
+    </Section>
   );
 };
 

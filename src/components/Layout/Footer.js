@@ -1,10 +1,10 @@
 import React from "react";
-import classes from "./Footer.module.css";
+import classes from "../Layout/Footer.module.css";
 
 const Footer = (props) => {
   return (
-    <div className={classes.footer}>
-      <div className={classes["social-links"]}>
+    <footer className={classes.footer}>
+      {/* <div className={classes["social-links"]}>
         <a href="https://github.com/npinzon1994" target="_blank" rel="noreferrer">
           <img
             src="https://svgshare.com/i/W_.svg"
@@ -21,9 +21,9 @@ const Footer = (props) => {
             className={classes.linkedin}
           />
         </a>
-      </div>
+      </div> */}
       <div className={classes.copyright}>&#169; 2023 Nikki Pinzon</div>
-    </div>
+    </footer>
   );
 };
 

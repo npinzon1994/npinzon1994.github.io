@@ -1,28 +1,29 @@
 import React from "react";
 import classes from "./Intro.module.css";
-import pfp from "../../assets/professional-headshot.jpg";
-import Skills from "./Skills";
+import {ReactComponent as ArrowIcon} from '../../assets/triangle.svg';
+import Headshot from "../UI/Headshot";
 
 const Intro = () => {
   return (
-    <div className={classes.container}>
-      <div className={classes['slide-down']}>
-        <img
-          src={pfp}
-          alt="Nikki Pinzon headshot"
-          className={classes.headshot}
-        />
-        <h1>Nikki</h1>
-        <h3>Junior Software Engineer</h3>
+    <section className={classes.wrapper}>
+      <div className={classes.container}>
+        <div className={classes.content}>
+          <h1>
+            Hi, I'm <span>Nikki!</span>
+          </h1>
+          <p>
+            I'm a <span>Junior Software Engineer</span> looking to ease the
+            lives of everyone around me through code.
+          </p>
+          <div className={classes['button-container']}>
+            <a href="#">Contact</a>
+            <a href="https://firebasestorage.googleapis.com/v0/b/portfolio-cd2d0.appspot.com/o/Nikki%20Pinzon%20Resume.pdf?alt=media&token=344ad158-9eff-4f2c-b479-01000982c9c8" target="_blank" rel="noreferrer">Resume</a>
+          </div>
+        </div>
+        <Headshot className={classes['headshot-container']}/>
       </div>
-      <Skills />
-      <p className={classes['slide-up']}>
-        I'm an independent Front-End Web Developer looking to ease the lives of
-        everyone around me through code. My passion for clean, component-driven
-        design and problem solving is what drives me to create the best products
-        possible.
-      </p>
-    </div>
+      <ArrowIcon className={classes.arrow}/>
+    </section>
   );
 };
 

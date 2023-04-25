@@ -1,0 +1,14 @@
+.tool {
+    list-style-type: none;
+    width: 6.5rem;
+    min-width: 22px;
+    background: #b298dc;
+    text-align: center;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+  }
+
+  .tool span {
+    color: white;
+    font-weight: 500;
+  }
