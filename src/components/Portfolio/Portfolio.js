@@ -7,7 +7,10 @@ import Section from "../UI/Section";
 const items = portfolioItems.map((item) => (
   <PortfolioItem
     key={item.id}
-    img={item.img}
+    video={{
+      src: item.video.src,
+      type: item.video.type
+    }}
     title={item.title}
     description={item.description}
     languages={item.languages}
