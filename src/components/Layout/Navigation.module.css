@@ -20,6 +20,7 @@
   font-weight: 700;
   font-size: 1.3rem;
   line-height: 1.4rem;
+  text-decoration: none;
 }
 
 .links {
@@ -28,8 +29,9 @@
   gap: 3rem;
 }
 
-.links li {
+.links li a {
   color: #fff;
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 1.3rem;
+  text-decoration: none;
 }

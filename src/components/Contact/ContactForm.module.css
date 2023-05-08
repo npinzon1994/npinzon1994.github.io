@@ -69,16 +69,16 @@
 
 .success {
   font-size: larger;
-  color: rgb(77, 131, 77);
-}
-
-.dark-success {
   color: rgb(136, 212, 136);
 }
 
+/* .dark-success {
+  color: rgb(136, 212, 136);
+} */
+
 .error {
   font-size: larger;
-  color: rgb(170, 41, 41);
+  color: rgb(221, 91, 91);
 }
 
 .dark-error {

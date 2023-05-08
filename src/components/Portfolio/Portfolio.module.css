@@ -1,6 +1,8 @@
 .wrapper {
   width: 100%;
   position: relative;
+  margin-bottom: 4rem;
+  scroll-margin-top: 6rem;
 }
 
 .inner-container {
@@ -13,7 +15,33 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
-
   padding-left: 0;
   margin: auto;
+}
+
+.title {
+  text-decoration-thickness: 3px;
+  margin: 0;
+  padding-bottom: 2rem;
+  color: #6F2DBD;
+  font-family: 'Alegreya', serif;
+  font-size: 2rem;
+  position: relative;
+}
+
+.title::before {
+content: "";
+position: absolute;
+left: 5%;
+bottom: 2rem;
+width: 10%;
+height: 14px;
+transform: skew(-12deg) translateX(-50%);
+background: rgba(185,250,248,0.5);
+}
+
+.title span {
+  font-size: 1rem;
+  margin-left: 1.5rem;
+  color: gray;
 }

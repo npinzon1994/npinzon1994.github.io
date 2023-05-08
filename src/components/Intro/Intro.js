@@ -3,9 +3,9 @@ import classes from "./Intro.module.css";
 import {ReactComponent as ArrowIcon} from '../../assets/triangle.svg';
 import Headshot from "../UI/Headshot";
 
-const Intro = () => {
+const Intro = (props) => {
   return (
-    <section className={classes.wrapper}>
+    <section className={classes.wrapper} id={props.id}>
       <div className={classes.container}>
         <div className={classes.content}>
           <h1>
@@ -16,7 +16,7 @@ const Intro = () => {
             lives of everyone around me through code.
           </p>
           <div className={classes['button-container']}>
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
             <a href="https://firebasestorage.googleapis.com/v0/b/portfolio-cd2d0.appspot.com/o/Nikki%20Pinzon%20Resume.pdf?alt=media&token=344ad158-9eff-4f2c-b479-01000982c9c8" target="_blank" rel="noreferrer">Resume</a>
           </div>
         </div>

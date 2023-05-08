@@ -176,9 +176,7 @@ const ContactForm = (props) => {
           name="email"
           onChange={emailChangeHandler}
           onBlur={validateEmailOnBlur}
-          className={`${classes.input} ${
-            isDarkTheme ? classes["dark-input"] : ""
-          }`}
+          className={classes.input}
           ref={emailInputRef}
           value={email}
         />

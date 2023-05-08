@@ -6,7 +6,7 @@ import Title from "../UI/Title";
 
 const About = (props) => {
   return (
-      <section className={`${classes.wrapper} ${props.className}`}>
+      <section className={`${classes.wrapper} ${props.className}`} id={props.id}>
         <div className={classes["inner-container"]}>
             <div className={classes["info-container"]}>
               <Title title="About Me" style={{paddingBottom: 0}}/>

@@ -5,14 +5,14 @@ const Navigation = (props) => {
   return (
     <header className={classes["nav-wrapper"]}>
       <nav className={classes.navigation}>
-        <span className={classes.title}>
-          Nikki <br />
-          Pinzon
+        <span>
+          <a href="#home" className={classes.title}>Nikki <br />
+          Pinzon</a>
         </span>
         <ul className={classes.links}>
-          <li>Projects</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>

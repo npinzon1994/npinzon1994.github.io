@@ -5,9 +5,9 @@ import Title from "../UI/Title";
 import { ReactComponent as GithubIcon } from "../../assets/github-mark.svg";
 import { ReactComponent as LinkedinIcon } from "../../assets/linkedin-icon.svg";
 
-const Contact = () => {
+const Contact = (props) => {
   return (
-    <div className={classes.wrapper}>
+    <section className={classes.wrapper} id={props.id}>
       <div className={classes["inner-container"]}>
         <div className={classes["info-container"]}>
           <Title title="Let's Chat!" style={{ padding: 0, color: "#b9faf8" }} />
@@ -38,7 +38,7 @@ const Contact = () => {
         </div>
         <ContactForm />
       </div>
-    </div>
+    </section>
   );
 };
 

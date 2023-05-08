@@ -6,15 +6,21 @@ const Description = (props) => {
     <span className={classes.language}>{language}</span>
   ));
   return (
-    <a href={props.link} target={props.target}>
-      <div className={classes.overlay}>
-        <div className={classes["info-container"]}>
-          <span className={classes.title}>{props.title}</span>
-          <div className={classes["language-container"]}>{languages}</div>
+    <div className={classes.overlay}>
+      <div className={classes["info-container"]}>
+        <span className={classes.title}>{props.title}</span>
+        <div className={classes["language-container"]}>{languages}</div>
+        <span className={classes.description}>{props.description}</span>
+        <div className={classes["button-container"]}>
+          <a href={props.liveLink} target="_blank" rel="noreferrer">
+            Live Site
+          </a>
+          <a href={props.codeLink} target="_blank" rel="noreferrer">
+            View Code
+          </a>
         </div>
-        <p className={classes.description}>{props.description}</p>
       </div>
-    </a>
+    </div>
   );
 };
 
@@ -32,6 +38,8 @@ const PortfolioItem = (props) => {
         target={props.target}
         languages={props.languages}
         title={props.title}
+        liveLink={props.liveLink}
+        codeLink={props.codeLink}
       />
     </li>
   );

@@ -3,7 +3,7 @@ const crDemo = "https://firebasestorage.googleapis.com/v0/b/portfolio-cd2d0.apps
 
 const languages = {
   budgetBreakdown: ["React", "Redux", "CSS", "Firebase"],
-  bucketlist: ["React", "JavaScript", "CSS"],
+  bucketlist: ["React", "Typescript", "CSS"],
   socialMediaApp: ["React", "Redux", "Firebase"],
   crSite: ["HTML", "CSS", "JavaScript"],
 };
@@ -17,8 +17,8 @@ const portfolioItems = [
     title: "Budget Breakdown",
     description: "Money management tool to help keep track of your expenses.",
     languages: budgetBreakdown,
-    link: "https://nikkipinzon.com/budget-breakdown/",
-    target: "_blank",
+    liveLink: "https://nikkipinzon.com/budget-breakdown/",
+    codeLink: "https://github.com/npinzon1994/budget-breakdown"
   },
   {
     id: "P2",
@@ -26,8 +26,8 @@ const portfolioItems = [
     title: "Bucketlist",
     description: "List of goals you want to achieve within your lifetime.",
     languages: bucketlist,
-    link: "#",
-    target: "",
+    liveLink: "#",
+    codeLink: "https://github.com/npinzon1994/bucketlist"
   },
   {
     id: "P3",
@@ -36,8 +36,8 @@ const portfolioItems = [
     description:
       "Company website for Canaan Recycling, a fully diversified, domestic recycling firm.",
     languages: crSite,
-    link: "https://canaanrecycling.com/",
-    target: "_blank",
+    liveLink: "https://canaanrecycling.com/",
+    codeLink: "https://github.com/npinzon1994/Canaan-Recycling-Site"
   },
   {
     id: "P4",
@@ -46,8 +46,8 @@ const portfolioItems = [
     description:
       "Will be a simple social media app that allows users to follow, post, like, comment, and direct message.",
     languages: socialMediaApp,
-    link: "#",
-    target: "_blank",
+    liveLink: "#",
+    codeLink: "https://github.com/npinzon1994/social-media-site"
   },
 ];
 

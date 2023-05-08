@@ -46,11 +46,11 @@ const App = () => {
         }
       >
         <Navigation />
-        <Intro />
-        <Portfolio />
-        <About />
+        <Intro id="home"/>
+        <Portfolio id="projects"/>
+        <About id="about"/>
         <Tools />
-        <Contact />
+        <Contact id="contact"/>
         <Footer />
       </Suspense>
     </div>

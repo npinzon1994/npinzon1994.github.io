@@ -2,28 +2,32 @@ import React from "react";
 import classes from "../Portfolio/Portfolio.module.css";
 import PortfolioItem from "../Portfolio/PortfolioItem";
 import portfolioItems from "./portfolio-items";
-import Section from "../UI/Section";
 
 const items = portfolioItems.map((item) => (
   <PortfolioItem
     key={item.id}
     video={{
       src: item.video.src,
-      type: item.video.type
+      type: item.video.type,
     }}
     title={item.title}
     description={item.description}
     languages={item.languages}
-    link={item.link}
-    target={item.target}
+    liveLink={item.liveLink}
+    codeLink={item.codeLink}
   />
 ));
 
-const Portfolio = () => {
+const Portfolio = (props) => {
   return (
-    <Section title="My Projects">
-      <ul className={classes["portfolio-grid"]}>{items}</ul>
-    </Section>
+    <div className={`${classes.wrapper} ${props.className}`} id={props.id}>
+      <div className={classes["inner-container"]}>
+        <h2 className={classes.title}>
+          My Projects <span>(hover over each to learn more!)</span>
+        </h2>
+        <ul className={classes["portfolio-grid"]}>{items}</ul>
+      </div>
+    </div>
   );
 };
 

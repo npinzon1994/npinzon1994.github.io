@@ -36,13 +36,9 @@
 
 .description {
   color: white;
-  font-size: 20px;
-  /* position: absolute;
-  top: 40%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); */
+  font-size: 1.2rem;
+  text-align: justify;
+  font-family: 'Alegreya Sans', sans-serif;
 }
 
 .dark-container {
@@ -58,28 +54,50 @@
 }
 
 .info-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
+  gap: 1.5rem;
   flex-direction: column;
   color: #fff;
 }
 
 .title {
-  font-size: large;
-  font-weight: 500;
-  margin: 5px 18px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: 'Alegreya', serif;
+  text-align: center;
 }
 
 .language-container {
   display: flex;
-  margin-left: 10px;
+  gap: 8px;
+  justify-content: center;
 }
 
 .language {
-  background: #6f2dbd;
+  background: #B298DC;
   border-radius: 7px;
-  padding: 5px 7px 7px 7px;
-  margin: 8px 0 18px 8px;
+  padding: 7px;
+  font-family: 'Alegreya Sans', sans-serif;
   font-weight: 500;
+}
+
+.button-container {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.button-container a {
+  background: #b9faf8;
+  border-radius: 7px;
+  padding: 0.7em 2em;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .dark-language {
