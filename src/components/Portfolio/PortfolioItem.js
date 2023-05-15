@@ -28,7 +28,7 @@ const PortfolioItem = (props) => {
   return (
     <li className={classes["container-grid"]}>
       {/* <img src={props.img.src} alt={props.img.alt} className={classes.image} /> */}
-      <video width="100%" autoPlay playsInline muted loop>
+      <video width="100%" height="100%" autoPlay playsInline muted loop>
         <source src={props.video.src} type={props.video.type} />
         Sorry, your browser does not support videos.
       </video>

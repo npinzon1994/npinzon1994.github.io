@@ -12,12 +12,13 @@ const Contact = (props) => {
         <div className={classes["info-container"]}>
           <Title title="Let's Chat!" style={{ padding: 0, color: "#b9faf8" }} />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Whether you have a question, an opportunity, or just want to say
+            hello, shoot me a message! I'm always open to new ideas and
+            eager to contribute my skills as a junior developer 👩‍💻
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Let's collaborate and create something amazing together! Feel free
+            to reach out and let's embark on this coding journey side by side 😊
           </p>
           <div className={classes["social-links"]}>
             <a
@@ -25,14 +26,14 @@ const Contact = (props) => {
               target="_blank"
               rel="noreferrer"
             >
-              <GithubIcon className={classes.github} />
+              <GithubIcon className={classes.icon} />
             </a>
             <a
               href="https://www.linkedin.com/in/nikkipinzon/"
               target="_blank"
               rel="noreferrer"
             >
-              <LinkedinIcon className={classes.linkedin} />
+              <LinkedinIcon className={classes.icon} />
             </a>
           </div>
         </div>

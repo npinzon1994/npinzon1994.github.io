@@ -4,7 +4,25 @@
   border-radius: 0.4rem;
   list-style-type: none;
   position: relative;
-  background-color: #EEE4FF;
+  animation: slideInLeft 700ms ease forwards;
+  opacity: 0;
+}
+
+/* Add a delay to each div */
+.container-grid:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.container-grid:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.container-grid:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.container-grid:nth-child(4) {
+  animation-delay: 0.8s;
 }
 
 /*setting sizes of first and last items*/
@@ -45,12 +63,9 @@
   border: 3px solid #fff;
 }
 
-.image {
-  width: 100%;
-  height: fit-content;
-  /* max-width: 22rem; */
-  max-height: 16rem;
-  border-radius: 0.4rem 0.4rem 0 0;
+video {
+  border-radius: 0.4rem;
+  object-fit: fill;
 }
 
 .info-container {
@@ -102,4 +117,15 @@
 
 .dark-language {
   border: 3px solid #fff;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

@@ -11,7 +11,8 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding-block: 10px;
+  padding-block: 2px;
+  animation: navbar-slide 700ms ease-in-out forwards;
 }
 
 .title {
@@ -26,7 +27,7 @@
 .links {
   list-style-type: none;
   display: flex;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 .links li a {
@@ -34,4 +35,27 @@
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 1.3rem;
   text-decoration: none;
+  padding: 0.65rem 1rem;
+  border-radius: 24px;
+}
+
+.links li a:hover {
+  background: #b298dc;
+  transition: 200ms;
+}
+
+.links li a:active {
+  background: #c5a9f3;
+  transition: 200ms;
+}
+
+@keyframes navbar-slide {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

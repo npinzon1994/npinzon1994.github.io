@@ -2,6 +2,7 @@
   width: 100%;
   max-width: 42rem;
   margin: 0 auto 20px auto;
+  flex: 1.5;
 }
 
 .form {
@@ -78,11 +79,11 @@
 
 .error {
   font-size: larger;
-  color: rgb(221, 91, 91);
+  color: rgb(233, 110, 110);
 }
 
 .dark-error {
-  color: rgb(221, 91, 91);
+  color: rgb(233, 110, 110);
 }
 
 .form-button {
@@ -97,6 +98,16 @@
   color: #6f2dbd;
   cursor: pointer;
   margin-top: 12px;
+  transition: 200ms;
+}
+
+.form-button:hover {
+  background: #a6e0de;
+}
+
+.form-button:active {
+  background: #ccfffd;
+  transition: none;
 }
 
 /*OLD FORM BUTTON*/
