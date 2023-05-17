@@ -50,17 +50,15 @@
   transition: 0.5s ease;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
 }
 
 .description {
   color: white;
-  font-size: 1.2rem;
   text-align: justify;
   font-family: "Alegreya Sans", sans-serif;
-}
-
-.dark-container {
-  border: 3px solid #fff;
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
 }
 
 video {
@@ -69,12 +67,10 @@ video {
 }
 
 .info-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  max-width: 65%;
+  margin: 0 auto;
   display: flex;
-  gap: 1.5rem;
+  gap: clamp(0.7rem, 2vw, 1.5rem);
   flex-direction: column;
   color: #fff;
 }
@@ -88,7 +84,7 @@ video {
 
 .coming-soon {
   text-align: center;
-  margin-top: -26px;
+  margin-top: -20px;
   margin-bottom: -0.5rem;
   font-style: italic;
   font-family: "Alegreya Sans", sans-serif;
@@ -107,15 +103,17 @@ video {
 .language {
   background: #b298dc;
   border-radius: 7px;
-  padding: 7px;
+  padding: 0.5em;
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 500;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
 }
 
 .button-container {
   display: flex;
   gap: 8px;
   justify-content: center;
+  white-space: nowrap;
 }
 
 .button-container a {
@@ -127,6 +125,32 @@ video {
   text-decoration: none;
 }
 
-.dark-language {
-  border: 3px solid #fff;
+@media screen and (max-width: 768px) {
+  .description {
+    font-size: clamp(0.9rem, 3vw, 1.6rem);
+  }
+
+  .title {
+    font-size: clamp(1rem, 3vw, 2rem);
+  }
+
+  .language {
+    font-size: clamp(0.7rem, 2vw, 1.5rem);
+  }
+
+  .button-container a {
+    font-size: clamp(0.6rem, 3vw, 1rem);
+  }
+
+  .coming-soon {
+    font-size: clamp(0.7rem, 2vw, 1.1rem);
+    margin-bottom: 2px;
+    margin-top: -14px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container-grid:nth-of-type(4) .overlay .info-container {
+    gap: 0.6rem;
+  }
 }

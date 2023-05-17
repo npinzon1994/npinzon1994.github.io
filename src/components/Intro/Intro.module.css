@@ -20,7 +20,7 @@
 }
 
 .content {
-  flex-basis: 50%;
+  flex: 1 1 50%; /* Let content take up 50% of the container's width */
 }
 
 .content h1 {
@@ -51,6 +51,7 @@
   display: flex;
   gap: 1.4rem;
   margin-top: 2.4rem;
+  width: 300px; /* Adjust this width as needed */
 }
 
 .button-container a {
@@ -139,7 +140,7 @@
   }
 
   .button-container {
-    gap: 0.7rem;
+    /* gap: 0.7rem; */
   }
 
   .button-container a {

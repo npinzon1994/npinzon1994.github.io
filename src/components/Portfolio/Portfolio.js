@@ -3,15 +3,15 @@ import classes from "../Portfolio/Portfolio.module.css";
 import PortfolioItem from "../Portfolio/PortfolioItem";
 import portfolioItems from "./portfolio-items";
 
-
-
 const Portfolio = (props) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
     const scrollTop = window.pageYOffset;
     const windowHeight = window.innerHeight;
-    const boxElements = document.querySelectorAll(`.${classes['container-grid']}`);
+    const boxElements = document.querySelectorAll(
+      `.${classes["container-grid"]}`
+    );
 
     boxElements.forEach((box) => {
       const boxTop = box.offsetTop;
@@ -49,12 +49,11 @@ const Portfolio = (props) => {
   return (
     <div className={`${classes.wrapper} ${props.className}`} id={props.id}>
       <div className={classes["inner-container"]}>
-        <h2 className={classes.title}>
-          My Projects <span>(hover over each to learn more!)</span>
-        </h2>
-        <ul className={classes["portfolio-grid"]}>
-          {items}
-        </ul>
+        <div className={classes["title-container"]}>
+          <h2 className={classes.title}>My Projects</h2>
+          <span>(hover over a project to learn more!)</span>
+        </div>
+        <ul className={classes["portfolio-grid"]}>{items}</ul>
       </div>
     </div>
   );

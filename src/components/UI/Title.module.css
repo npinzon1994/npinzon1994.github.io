@@ -8,7 +8,7 @@
     position: relative;
 }
 
-.title::before {
+/* .title::before {
   content: "";
   position: absolute;
   left: 5%;
@@ -17,4 +17,4 @@
   height: 14px;
   transform: skew(-12deg) translateX(-50%);
   background: rgba(185,250,248,0.5);
-}
+} */

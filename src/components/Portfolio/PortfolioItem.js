@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import classes from "../Portfolio/PortfolioItem.module.css";
 
 const Description = (props) => {
   const languages = props.languages.map((language) => (
     <span className={classes.language}>{language}</span>
   ));
+
   return (
     <div className={classes.overlay}>
       <div className={classes["info-container"]}>
@@ -30,9 +31,24 @@ const Description = (props) => {
 };
 
 const PortfolioItem = (props) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // Update window width when the window is resized
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  
   return (
     <li className={`${classes['container-grid']} ${props.isVisible ? classes.visible : ''}`}>
-      {/* <img src={props.img.src} alt={props.img.alt} className={classes.image} /> */}
       <video width="100%" height="100%" autoPlay playsInline muted loop>
         <source src={props.video.src} type={props.video.type} />
         Sorry, your browser does not support videos.
