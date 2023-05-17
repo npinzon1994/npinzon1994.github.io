@@ -53,7 +53,7 @@ const Navigation = (props) => {
 
       <nav className={classes.navbar}>
         <span>
-          <a href="#home" onClick={toggleMenu} className={classes.title}>
+          <a href="#home" onClick={isOpen && toggleMenu} className={classes.title}>
             Nikki <br />
             Pinzon
           </a>
