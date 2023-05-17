@@ -25,14 +25,6 @@ const Navigation = (props) => {
     setIsOpen(!isOpen);
   };
 
-  // useEffect(() => {
-  //   if (isOpen) {
-  //     document.documentElement.style.overflow = "hidden"; // Disable scrolling
-  //   } else {
-  //     document.documentElement.style.overflow = ""; // Enable scrolling
-  //   }
-  // }, [isOpen]);
-
   return (
     <header className={classes["nav-wrapper"]}>
       <div
@@ -40,20 +32,30 @@ const Navigation = (props) => {
       >
         <ul className={classes.links}>
           <li>
-            <a href="#projects" onClick={toggleMenu}>Projects</a>
+            <a href="#projects" onClick={toggleMenu}>
+              Projects
+            </a>
           </li>
           <li>
-            <a href="#about" onClick={toggleMenu}>About</a>
+            <a href="#about" onClick={toggleMenu}>
+              About
+            </a>
           </li>
           <li>
-            <a href="#contact" onClick={toggleMenu}>Contact</a>
+            <a href="#contact" onClick={toggleMenu}>
+              Contact
+            </a>
           </li>
         </ul>
       </div>
 
       <nav className={classes.navbar}>
         <span>
-          <a href="#home" onClick={isOpen && toggleMenu} className={classes.title}>
+          <a
+            href="#home"
+            onClick={isOpen && toggleMenu}
+            className={classes.title}
+          >
             Nikki <br />
             Pinzon
           </a>
