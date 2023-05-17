@@ -16,6 +16,16 @@
   font-family: "Alegreya Sans", sans-serif;
   font-size: 1.25rem;
   line-height: 1.7rem;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: opacity 800ms, transform 800ms;
+  filter: blur(100%);
+}
+
+.inner-container.visible {
+  opacity: 1;
+  transform: translateX(0%);
+  filter: blur(0%);
 }
 
 .info-container {

@@ -1,38 +1,38 @@
 .container-grid {
-  outline: 2px solid #EEE4FF;
+  outline: 2px solid #eee4ff;
   /* margin: 10px; */
   border-radius: 0.4rem;
   list-style-type: none;
   position: relative;
-  animation: slideInLeft 700ms ease forwards;
+  /* animation: slideInLeft 700ms ease forwards; */
   opacity: 0;
+  transform: translateX(-50%);
+  transition: opacity 1.4s ease, transform 0.5s ease;
+  filter: blur(1);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
 }
 
 /* Add a delay to each div */
 .container-grid:nth-child(1) {
-  animation-delay: 0.2s;
+  transition-delay: 0s;
 }
 
 .container-grid:nth-child(2) {
-  animation-delay: 0.4s;
+  transition-delay: 0.3s;
 }
 
 .container-grid:nth-child(3) {
-  animation-delay: 0.6s;
+  transition-delay: 0.6s;
 }
 
 .container-grid:nth-child(4) {
-  animation-delay: 0.8s;
+  transition-delay: 0.9s;
 }
-
-/*setting sizes of first and last items*/
-/* .container-grid:first-of-type {
-    grid-column: span 2;
-}
-
-.container-grid:last-of-type {
-    grid-column: span 2;
-} */
 
 .container-grid:hover .overlay {
   opacity: 95%;
@@ -56,7 +56,7 @@
   color: white;
   font-size: 1.2rem;
   text-align: justify;
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: "Alegreya Sans", sans-serif;
 }
 
 .dark-container {
@@ -80,10 +80,22 @@ video {
 }
 
 .title {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  font-family: 'Alegreya', serif;
+  font-family: "Alegreya", serif;
   text-align: center;
+}
+
+.coming-soon {
+  text-align: center;
+  margin-top: -26px;
+  margin-bottom: -0.5rem;
+  font-style: italic;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.1rem;
+  color: rgb(255, 95, 95);
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .language-container {
@@ -93,10 +105,10 @@ video {
 }
 
 .language {
-  background: #B298DC;
+  background: #b298dc;
   border-radius: 7px;
   padding: 7px;
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: "Alegreya Sans", sans-serif;
   font-weight: 500;
 }
 
@@ -110,22 +122,11 @@ video {
   background: #b9faf8;
   border-radius: 7px;
   padding: 0.7em 2em;
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: "Alegreya Sans", sans-serif;
   font-weight: 500;
   text-decoration: none;
 }
 
 .dark-language {
   border: 3px solid #fff;
-}
-
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
 }

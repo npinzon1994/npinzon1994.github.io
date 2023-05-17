@@ -1,13 +1,41 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import classes from "./About.module.css";
 import Headshot from "../UI/Headshot";
 import Title from "../UI/Title";
 import pfp from "../../assets/professional-headshot.jpg";
 
 const About = (props) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const divRef = useRef(null);
+
+  
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const element = divRef.current;
+      const elementPosition = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+  
+      if (elementPosition < windowHeight) {
+        setIsVisible(true);
+        window.removeEventListener('scroll', handleScroll);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <section className={`${classes.wrapper} ${props.className}`} id={props.id}>
-      <div className={classes["inner-container"]}>
+      <div
+        className={`${classes["inner-container"]} ${
+          isVisible ? classes.visible : ""
+        }`}
+        ref={divRef}
+      >
         <div className={classes["info-container"]}>
           <Title title="About Me" style={{ paddingBottom: 0 }} />
           <p>
@@ -17,7 +45,11 @@ const About = (props) => {
             graduated from St. Joseph's University with a Bachelor's degree in
             Computer Science & Mathematics 👩‍🎓.
           </p>
-          <p>When I'm not coding, I'm either sprawled out on the couch watching Netflix 📺 or catching Pokemon. Feel free to ask for my Switch Online if you ever want to have a Pokemon battle! 🎮</p>
+          <p>
+            When I'm not coding, I'm either sprawled out on the couch watching
+            Netflix 📺 or catching Pokemon. Feel free to ask for my Switch
+            Online if you ever want to have a Pokemon battle! 🎮
+          </p>
         </div>
         <Headshot
           className={classes.headshot}

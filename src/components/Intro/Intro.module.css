@@ -16,6 +16,7 @@
   max-width: 66rem;
   margin: 0 auto 8rem auto;
   animation: slide-down 700ms ease-in-out forwards;
+  padding-inline: 2rem;
 }
 
 .content {
@@ -104,7 +105,7 @@
 @keyframes slide-down {
   0% {
     opacity: 0;
-    transform: translateY(-50%);
+    transform: translateY(-25%);
   }
   100% {
     opacity: 1;

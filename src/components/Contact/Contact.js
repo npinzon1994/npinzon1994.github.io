@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import classes from "./Contact.module.css";
 import ContactForm from "./ContactForm";
 import Title from "../UI/Title";
@@ -6,15 +6,41 @@ import { ReactComponent as GithubIcon } from "../../assets/github-mark.svg";
 import { ReactComponent as LinkedinIcon } from "../../assets/linkedin-icon.svg";
 
 const Contact = (props) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const divRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const element = divRef.current;
+      const elementPosition = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (elementPosition < windowHeight) {
+        setIsVisible(true);
+        window.removeEventListener("scroll", handleScroll);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <section className={classes.wrapper} id={props.id}>
-      <div className={classes["inner-container"]}>
+      <div
+        className={`${classes["inner-container"]} ${
+          isVisible ? classes.visible : ""
+        }`}
+        ref={divRef}
+      >
         <div className={classes["info-container"]}>
           <Title title="Let's Chat!" style={{ padding: 0, color: "#b9faf8" }} />
           <p>
             Whether you have a question, an opportunity, or just want to say
-            hello, shoot me a message! I'm always open to new ideas and
-            eager to contribute my skills as a junior developer 👩‍💻
+            hello, shoot me a message! I'm always open to new ideas and eager to
+            contribute my skills as a junior developer 👩‍💻
           </p>
           <p>
             Let's collaborate and create something amazing together! Feel free

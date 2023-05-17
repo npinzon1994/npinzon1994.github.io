@@ -4,6 +4,7 @@ import ThemeContext from "./store/theme-context";
 import loadingSpinner from "./assets/loading-spinner.gif";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Navigation from "./components/Layout/Navigation";
+import Navbar from "./components/Layout/Navbar";
 
 const Intro = lazy(() => import("./components/Intro/Intro"));
 const Portfolio = lazy(() => import("./components/Portfolio/Portfolio"));
@@ -45,7 +46,7 @@ const App = () => {
           </div>
         }
       >
-        <Navigation />
+        <Navigation/>
         <Intro id="home"/>
         <Portfolio id="projects"/>
         <About id="about"/>

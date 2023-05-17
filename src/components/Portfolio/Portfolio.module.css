@@ -6,6 +6,7 @@
 }
 
 .inner-container {
+  height: max-content;
   width: 100%;
   max-width: 66rem;
   margin: 0 auto;

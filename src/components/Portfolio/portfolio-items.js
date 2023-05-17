@@ -10,7 +10,6 @@ const bucketlistDemo =
 const twitterCloneDemo =
   "https://firebasestorage.googleapis.com/v0/b/portfolio-cd2d0.appspot.com/o/twitter-clone-demo.mp4?alt=media&token=a2c9eae8-2215-4d72-a541-67c2bd17c14e";
 
-
 const languages = {
   budgetBreakdown: ["React", "Redux", "CSS", "Firebase"],
   bucketlist: ["React", "Typescript", "CSS"],
@@ -29,6 +28,7 @@ const portfolioItems = [
     languages: budgetBreakdown,
     liveLink: "https://nikkipinzon.com/budget-breakdown/",
     codeLink: "https://github.com/npinzon1994/budget-breakdown",
+    completed: true,
   },
   {
     id: "P2",
@@ -38,6 +38,7 @@ const portfolioItems = [
     languages: bucketlist,
     liveLink: "https://nikkipinzon.com/bucketlist/",
     codeLink: "https://github.com/npinzon1994/bucketlist",
+    completed: true,
   },
   {
     id: "P3",
@@ -48,6 +49,7 @@ const portfolioItems = [
     languages: crSite,
     liveLink: "https://canaanrecycling.com/",
     codeLink: "https://github.com/npinzon1994/Canaan-Recycling-Site",
+    completed: true,
   },
   {
     id: "P4",
@@ -58,6 +60,7 @@ const portfolioItems = [
     languages: socialMediaApp,
     liveLink: "#",
     codeLink: "https://github.com/npinzon1994/social-media-site",
+    completed: false,
   },
 ];
 
