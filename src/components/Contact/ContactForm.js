@@ -2,15 +2,12 @@ import React, {
   useRef,
   useState,
   useReducer,
-  useContext,
   useEffect,
 } from "react";
 import classes from "../Contact/ContactForm.module.css";
 import emailClasses from "../Contact/EmailStatus.module.css";
 import emailjs from "@emailjs/browser";
-import Title from "../UI/Title";
 import useInput from "../../hooks/use-input";
-import ThemeContext from "../../store/theme-context";
 import EmailStatus from "./EmailStatus";
 import loadingSpinner from "../../assets/loading-spinner.gif";
 import ErrorMessage from "./ErrorMessage";
@@ -26,10 +23,6 @@ const ContactForm = (props) => {
   const [sendingState, dispatchSending] = useReducer(reducer, defaultState);
   const [statusMsgVisible, setStatusMsgVisible] = useState(false);
   const [error, setError] = useState();
-
-  const themeContext = useContext(ThemeContext);
-  const { theme } = themeContext;
-  const isDarkTheme = theme === "dark";
 
   //useInput(s)
   const {
@@ -115,10 +108,8 @@ const ContactForm = (props) => {
     setStatusMsgVisible(true);
   }, []);
 
-  const { isSending, sendSuccessful } = sendingState;
-  const nameClasses = `${classes.input} ${classes.name} ${
-    isDarkTheme ? classes["dark-input"] : ""
-  }`;
+  const { isSending } = sendingState;
+  const nameClasses = `${classes.input} ${classes.name}`;
 
   //determining which status message should be shown
   let emailStatus;
@@ -138,9 +129,7 @@ const ContactForm = (props) => {
     emailStatus = (
       <EmailStatus
         status="Email sent successfully!"
-        className={`${classes.success} ${
-          isDarkTheme ? classes["dark-success"] : ""
-        }`}
+        className={classes.success}
         img={{ className: emailClasses["loading-spinner-hidden"] }}
       />
     );
@@ -148,9 +137,7 @@ const ContactForm = (props) => {
     emailStatus = (
       <EmailStatus
         status={error}
-        className={`${classes.error} ${
-          isDarkTheme ? classes["dark-error"] : ""
-        }`}
+        className={classes.error}
         img={{ className: emailClasses["loading-spinner-hidden"] }}
       />
     );
@@ -187,9 +174,7 @@ const ContactForm = (props) => {
           rows="10"
           onChange={messageChangeHandler}
           onBlur={validateMessageOnBlur}
-          className={`${classes["text-area"]} ${
-            isDarkTheme ? classes["dark-text-area"] : ""
-          }`}
+          className={classes["text-area"]}
           ref={messageInputRef}
           value={message}
         />
@@ -197,9 +182,7 @@ const ContactForm = (props) => {
         {emailStatus}
         <button
           type="submit"
-          className={`${classes["form-button"]} ${
-            isDarkTheme ? classes["dark-form-button"] : ""
-          }`}
+          className={classes["form-button"]}
         >
           Send Message
         </button>

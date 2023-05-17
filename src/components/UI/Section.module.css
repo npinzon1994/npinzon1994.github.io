@@ -3,6 +3,7 @@
   position: relative;
   margin-bottom: 4rem;
   scroll-margin-top: 6rem;
+  padding-inline: 2rem;
 }
 
 .inner-container {

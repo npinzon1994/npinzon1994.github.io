@@ -2,32 +2,32 @@
   display: flex;
   align-items: center;
   width: 100%;
-  background: linear-gradient(0.25turn, #6f2dbd, #B298DC);
+  background: linear-gradient(0.25turn, #6f2dbd, #b298dc);
   height: 100vh;
   position: relative;
   margin-bottom: 2rem;
+  padding-inline: 2rem;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
-  gap: 10rem;
+  gap: 3rem;
   align-items: center;
   max-width: 66rem;
-  margin: 0 auto 8rem auto;
+  margin: 0 auto;
   animation: slide-down 700ms ease-in-out forwards;
-  padding-inline: 2rem;
 }
 
 .content {
-  flex-basis: 75%;
+  flex-basis: 50%;
 }
 
 .content h1 {
   color: #eee4ff;
-  font-size: 4rem;
+  font-size: 3.6rem;
   margin: 0;
-  font-family: 'Alegreya', serif;
+  font-family: "Alegreya", serif;
   font-weight: 600;
 }
 
@@ -38,18 +38,13 @@
 .content p {
   color: white;
   font-size: 1.6rem;
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: "Alegreya Sans", sans-serif;
   font-weight: 300;
 }
 
 .content p span {
   color: #b9faf8;
   font-weight: 500;
-}
-
-.headshot-container {
-  flex-basis: 25%;
-  text-align: center;
 }
 
 .button-container {
@@ -62,10 +57,10 @@
   text-decoration: none;
   background: #b9faf8;
   color: #6f2dbd;
-  padding: 0.8em 2.5em;
+  padding: 0.7em 2.3em;
   font-size: 1.4rem;
   border-radius: 0.4rem;
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: "Alegreya Sans", sans-serif;
   font-weight: 700;
   transition: 200ms;
 }
@@ -84,12 +79,6 @@
   animation: floating 1.5s ease-in-out infinite;
 }
 
-.headshot-container {
-  background: #eee4ff;
-  padding: 2rem;
-  border-radius: 50%;
-}
-
 @keyframes floating {
   0% {
     transform: translateY(0);
@@ -105,10 +94,57 @@
 @keyframes slide-down {
   0% {
     opacity: 0;
-    transform: translateY(-25%);
+    transform: translateY(-30%);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0%);
   }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  
+  .content {
+    flex-basis: 100%;
+  }
+
+  .content h1 {
+    font-size: 3.2rem;
+  }
+
+  .content p {
+    font-size: 1.5rem;
+  }
+
+  .button-container a {
+    padding: 0.5em 2.1em;
+  font-size: 1.3rem;
+  }
+
+}
+
+@media screen and (max-width: 389px) {
+  
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .content p {
+    font-size: 1.2rem;
+  }
+
+  .button-container {
+    gap: 0.7rem;
+  }
+
+  .button-container a {
+    padding: 0.5em 2.1em;
+  font-size: 1.3rem;
+  }
+
 }

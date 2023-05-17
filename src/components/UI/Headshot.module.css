@@ -3,5 +3,20 @@
   width: 18rem;
   border-radius: 50%;
   margin-inline: auto;
-  /* border: 2px solid rgb(34, 34, 34); */
+  background: #EEE4FF;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .headshot {
+    height: 14rem;
+    width: 14rem;
+  }
+}
+
+@media screen and (max-width: 389px) {
+  .headshot {
+    height: 11rem;
+    width: 11rem;
+  }
 }

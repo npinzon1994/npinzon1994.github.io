@@ -5,7 +5,6 @@ import cssIcon from "../../assets/tools-icons/css3-plain.svg";
 import gitIcon from "../../assets/tools-icons/git-icon.svg";
 import reduxIcon from "../../assets/tools-icons/redux-icon.svg";
 import tsIcon from '../../assets/tools-icons/typescript-icon.svg';
-import javaIcon from '../../assets/tools-icons/java-icon.svg';
 import firebaseIcon from '../../assets/tools-icons/firebase-icon.svg';
 import vsCodeIcon from '../../assets/tools-icons/vscode-plain.svg';
 

@@ -8,6 +8,7 @@ const Intro = (props) => {
   return (
     <section className={classes.wrapper} id={props.id}>
       <div className={classes.container}>
+
         <div className={classes.content}>
           <h1>
             Hi, I'm <span>Nikki!</span>
@@ -28,11 +29,11 @@ const Intro = (props) => {
           </div>
         </div>
         <Headshot
-          className={classes["headshot-container"]}
           src={vectorArt}
           alt="vector drawing of me"
         />
       </div>
+      
       <ArrowIcon className={classes.arrow} />
     </section>
   );

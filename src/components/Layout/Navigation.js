@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import classes from "./Navigation.module.css";
-import HamburgerButton from "../UI/HamburgerButton";
 import HamburgerCollapse from "hamburger-react";
 
 const Navigation = (props) => {
@@ -60,7 +59,7 @@ const Navigation = (props) => {
             Pinzon
           </a>
         </span>
-        {windowWidth >= 768 && !isOpen ? (
+        {windowWidth > 768 && !isOpen ? (
           <ul className={classes.links}>
             <li>
               <a href="#projects">Projects</a>

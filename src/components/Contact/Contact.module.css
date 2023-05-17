@@ -2,7 +2,7 @@
   width: 100%;
   position: relative;
   background: linear-gradient(0.25turn, #6f2dbd, #b298dc);
-  padding-block: 2rem;
+  padding: 2rem;
 }
 
 .inner-container {

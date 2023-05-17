@@ -3,6 +3,7 @@
   position: relative;
   margin-bottom: 4rem;
   scroll-margin-top: 6rem;
+  padding-inline: 2rem;
 }
 
 .inner-container {
@@ -24,25 +25,31 @@
   text-decoration-thickness: 3px;
   margin: 0;
   padding-bottom: 2rem;
-  color: #6F2DBD;
-  font-family: 'Alegreya', serif;
+  color: #6f2dbd;
+  font-family: "Alegreya", serif;
   font-size: 2rem;
   position: relative;
 }
 
 .title::before {
-content: "";
-position: absolute;
-left: 5%;
-bottom: 2rem;
-width: 10%;
-height: 14px;
-transform: skew(-12deg) translateX(-50%);
-background: rgba(185,250,248,0.5);
+  content: "";
+  position: absolute;
+  left: 5%;
+  bottom: 2rem;
+  width: 10%;
+  height: 14px;
+  transform: skew(-12deg) translateX(-50%);
+  background: rgba(185, 250, 248, 0.5);
 }
 
 .title span {
   font-size: 1rem;
   margin-left: 1.5rem;
   color: gray;
+}
+
+@media screen and(max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
