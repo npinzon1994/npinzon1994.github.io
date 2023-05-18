@@ -83,10 +83,14 @@ video {
   max-width: 65%;
   margin: 0 auto;
   display: flex;
-  gap: clamp(0.7rem, 2vw, 1.5rem);
+  gap: 0.5rem;
   flex-direction: column;
   color: #fff;
 }
+
+.container-grid:nth-of-type(4) .overlay .info-container .language-container .language {
+    margin-top: 4px;
+  }
 
 .title {
   font-size: 1.4rem;
@@ -98,11 +102,11 @@ video {
 
 .coming-soon {
   text-align: center;
-  margin-top: -20px;
+  margin-top: -13px;
   margin-bottom: -0.5rem;
   font-style: italic;
   font-family: "Alegreya Sans", sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.92rem;
   color: rgb(255, 95, 95);
   letter-spacing: 1px;
   font-weight: 600;
@@ -159,12 +163,31 @@ video {
   .coming-soon {
     font-size: clamp(0.7rem, 2vw, 1.1rem);
     margin-bottom: 2px;
-    margin-top: -14px;
+    margin-top: -11px;
   }
 }
 
 @media screen and (max-width: 425px) {
   .container-grid:nth-of-type(4) .overlay .info-container {
-    gap: 0.6rem;
+    gap: 0.4rem;
+  }
+
+  .title {
+    font-size: 1.15rem;
+  }
+
+  .coming-soon {
+  }
+
+  .language {
+    font-size: 0.8rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .button-container a {
+    font-size: 0.81rem;
   }
 }
