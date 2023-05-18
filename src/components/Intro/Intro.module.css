@@ -82,6 +82,11 @@
   animation: floating 1.5s ease-in-out infinite;
 }
 
+.headshot {
+  height: 18rem;
+  width: 18rem;
+}
+
 @keyframes floating {
   0% {
     transform: translateY(0);
@@ -127,6 +132,11 @@
   .button-container a {
     padding: 0.5em 2.1em;
   font-size: 1.3rem;
+  }
+
+  .headshot {
+    height: 11rem;
+    width: 11rem;
   }
 
 }

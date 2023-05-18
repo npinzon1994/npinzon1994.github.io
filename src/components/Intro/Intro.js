@@ -29,6 +29,7 @@ const Intro = (props) => {
           </div>
         </div>
         <Headshot
+        className={classes.headshot}
           src={vectorArt}
           alt="vector drawing of me"
         />
