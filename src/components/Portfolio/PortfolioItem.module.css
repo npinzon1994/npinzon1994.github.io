@@ -93,6 +93,7 @@ video {
   font-weight: 600;
   font-family: "Alegreya", serif;
   text-align: center;
+  white-space: nowrap;
 }
 
 .coming-soon {
@@ -119,7 +120,7 @@ video {
   padding: 0.5em;
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 500;
-  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  font-size: 1rem;
 }
 
 .button-container {
@@ -140,19 +141,19 @@ video {
 
 @media screen and (max-width: 768px) {
   .description {
-    font-size: clamp(0.9rem, 3vw, 1.6rem);
+    font-size: clamp(1rem, 3vw, 1.6rem);
   }
 
   .title {
-    font-size: clamp(1rem, 3vw, 2rem);
+    font-size: clamp(1.35rem, 3vw, 2rem);
   }
 
   .language {
-    font-size: clamp(0.7rem, 2vw, 1.5rem);
+    font-size: 0.91rem;
   }
 
   .button-container a {
-    font-size: clamp(0.6rem, 3vw, 1rem);
+    font-size: clamp(0.94rem, 3vw, 1rem);
   }
 
   .coming-soon {

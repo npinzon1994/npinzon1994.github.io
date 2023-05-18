@@ -2,15 +2,15 @@
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(2rem, 8vw, 6rem);
+  gap: clamp(2rem, 7.5vw, 6rem);
   padding-left: 0;
   margin-block: 0;
   max-width: 100%;
 }
 
-@media (max-width: 967px) {
+@media (max-width: 858px) {
   .tools-list {
-    /* gap: 5rem; */
+    justify-content: center;
   }
 }
 

@@ -24,7 +24,7 @@ const Description = (props) => {
   }, []);
 
   return (
-    <div className={`${classes.overlay} ${props.isHovered ? classes.hovered : ""}`}  onClick={props.handleMouseLeave}>
+    <div className={`${classes.overlay} ${props.isHovered ? classes.hovered : ""}`}>
       {windowWidth < 540 && <Cross className={classes.cross} onClick={props.handleMouseLeave}/>}
       <div className={classes["info-container"]}>
         <span className={classes.title}>{props.title}</span>
