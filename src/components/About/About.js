@@ -8,23 +8,21 @@ const About = (props) => {
   const [isVisible, setIsVisible] = useState(false);
   const divRef = useRef(null);
 
-  
-
   useEffect(() => {
     const handleScroll = () => {
       const element = divRef.current;
       const elementPosition = element.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
-  
+
       if (elementPosition < windowHeight) {
         setIsVisible(true);
-        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener("scroll", handleScroll);
       }
     };
-    
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -46,9 +44,9 @@ const About = (props) => {
             Computer Science & Mathematics 👩‍🎓.
           </p>
           <p>
-            When I'm not coding, I'm either sprawled out on the couch watching
-            Netflix 📺 or catching Pokemon. Feel free to ask for my Switch
-            Online if you ever want to have a Pokemon battle! 🎮
+            When I'm not coding, I'm either watching Netflix 📺 or catching
+            Pokemon. Feel free to ask for my Switch Online if you ever want to
+            have a Pokemon battle! 🎮
           </p>
         </div>
         <Headshot
