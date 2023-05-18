@@ -175,7 +175,7 @@ video {
   }
 }
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 440px) {
   .container-grid:nth-of-type(4) .overlay .info-container {
     gap: 0.4rem;
   }
