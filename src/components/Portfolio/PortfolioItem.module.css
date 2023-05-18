@@ -83,14 +83,18 @@ video {
   max-width: 65%;
   margin: 0 auto;
   display: flex;
-  gap: 0.5rem;
+  gap: clamp(0.5rem, 1.11vw, 1rem);
   flex-direction: column;
   color: #fff;
 }
 
-.container-grid:nth-of-type(4) .overlay .info-container .language-container .language {
-    margin-top: 4px;
-  }
+.container-grid:nth-of-type(4)
+  .overlay
+  .info-container
+  .language-container
+  .language {
+  margin-top: 4px;
+}
 
 .title {
   font-size: 1.4rem;
@@ -124,7 +128,7 @@ video {
   padding: 0.5em;
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .button-container {
@@ -137,13 +141,18 @@ video {
 .button-container a {
   background: #b9faf8;
   border-radius: 7px;
-  padding: 0.7em 2em;
+  padding: 0.55em 2em;
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 500;
   text-decoration: none;
+  font-size: 0.9rem;
 }
 
 @media screen and (max-width: 768px) {
+  .info-container {
+    gap: clamp(0.5rem, 3vw, 1.3rem);
+  }
+
   .description {
     font-size: clamp(1rem, 3vw, 1.6rem);
   }
@@ -157,12 +166,11 @@ video {
   }
 
   .button-container a {
-    font-size: clamp(0.94rem, 3vw, 1rem);
+    font-size: 0.9rem;
   }
 
   .coming-soon {
     font-size: clamp(0.7rem, 2vw, 1.1rem);
-    margin-bottom: 2px;
     margin-top: -11px;
   }
 }
@@ -177,6 +185,7 @@ video {
   }
 
   .coming-soon {
+    margin-bottom: -3px;
   }
 
   .language {
