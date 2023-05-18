@@ -40,7 +40,7 @@ const Contact = (props) => {
           <p>
             Whether you have a question, an opportunity, or just want to say
             hello, shoot me a message! I'm always open to new ideas and eager to
-            contribute my skills as a junior developer 👩‍💻
+            contribute my skills as a Software Engineer 👩‍💻
           </p>
           <p>
             Let's collaborate and create something amazing together! Feel free
