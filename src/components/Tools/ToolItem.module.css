@@ -44,19 +44,19 @@
 }
 
 .tool:nth-child(6) {
-  transition-delay: 0s;
+  transition-delay: 0.5s;
 }
 
 .tool:nth-child(7) {
-  transition-delay: 0.1s;
+  transition-delay: 0.6s;
 }
 
 .tool:nth-child(8) {
-  transition-delay: 0.2s;
+  transition-delay: 0.7s;
 }
 
 .tool:nth-child(9) {
-  transition-delay: 0.3s;
+  transition-delay: 0.8s;
 }
 
 .tool span {
