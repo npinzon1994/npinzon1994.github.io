@@ -5,6 +5,7 @@ import portfolioItems from "./portfolio-items";
 
 const Portfolio = (props) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const handleScroll = () => {
     const scrollTop = window.pageYOffset;
@@ -21,6 +22,20 @@ const Portfolio = (props) => {
       }
     });
   };
+
+  useEffect(() => {
+    // Update window width when the window is resized
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const items = portfolioItems.map((item) => (
     <PortfolioItem
@@ -51,7 +66,7 @@ const Portfolio = (props) => {
       <div className={classes["inner-container"]}>
         <div className={classes["title-container"]}>
           <h2 className={classes.title}>My Projects</h2>
-          <span>(hover over a project to learn more!)</span>
+          {windowWidth < 540 ? <span>(click on a project to learn more!)</span> : <span>(hover over a project to learn more!)</span>}
         </div>
         <ul className={classes["portfolio-grid"]}>{items}</ul>
       </div>

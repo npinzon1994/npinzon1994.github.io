@@ -38,3 +38,19 @@
   height: 45px;
   width: 45px;
 }
+
+@media screen and (max-width: 768px) {
+  .inner-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .info-container {
+    flex-basis: 100%;
+  } 
+
+  .social-links {
+    justify-content: center;
+  }
+
+}

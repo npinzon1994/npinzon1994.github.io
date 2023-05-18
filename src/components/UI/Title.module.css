@@ -7,14 +7,3 @@
     font-size: 2rem;
     position: relative;
 }
-
-/* .title::before {
-  content: "";
-  position: absolute;
-  left: 5%;
-  bottom: 2rem;
-  width: 10%;
-  height: 14px;
-  transform: skew(-12deg) translateX(-50%);
-  background: rgba(185,250,248,0.5);
-} */

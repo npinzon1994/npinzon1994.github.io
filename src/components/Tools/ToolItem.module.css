@@ -1,15 +1,20 @@
 .tool {
   list-style-type: none;
-  width: 6.5rem;
-  min-width: 22px;
+  width: clamp(4.3rem, 14vw, 6.5rem);
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  
   background: #b298dc;
   text-align: center;
-  padding: 0.7rem;
+  padding: 0.9em;
   border-radius: 0.5rem;
   opacity: 0;
   transform: translateX(-50%);
   transition: opacity 300ms ease, transform 300ms ease;
   filter: blur(1);
+}
+
+.tool span {
+  white-space: nowrap;
 }
 
 .visible {
@@ -57,4 +62,10 @@
 .tool span {
   color: white;
   font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .tool {
+
+  }
 }

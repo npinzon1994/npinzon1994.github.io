@@ -33,6 +33,22 @@
 }
 
 .headshot {
-  flex-basis: 50%;
-  text-align: center;
+  height: 20rem;
+  width: 20rem;
+}
+
+@media screen and (max-width: 768px) {
+  .inner-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .info-container {
+    flex-basis: 100%;
+  } 
+
+  .headshot {
+    height: 18rem;
+    width: 18rem;
+  }
 }
