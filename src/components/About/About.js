@@ -43,11 +43,6 @@ const About = (props) => {
             graduated from St. Joseph's University with a Bachelor's degree in
             Computer Science & Mathematics 👩‍🎓.
           </p>
-          <p>
-            When I'm not coding, I'm either watching Netflix 📺 or catching
-            Pokemon. Feel free to ask for my Switch Online if you ever want to
-            have a Pokemon battle! 🎮
-          </p>
         </div>
         <Headshot
           className={classes.headshot}
