@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./Intro.module.css";
 import { ReactComponent as ArrowIcon } from "../../assets/triangle.svg";
 import Headshot from "../UI/Headshot";
-import vectorArt from "../../assets/vector-selfie.svg";
+import pfp from "../../assets/professional-headshot.jpg";
 
 const Intro = (props) => {
   return (
@@ -30,7 +30,7 @@ const Intro = (props) => {
         </div>
         <Headshot
         className={classes.headshot}
-          src={vectorArt}
+          src={pfp}
           alt="vector drawing of me"
         />
       </div>

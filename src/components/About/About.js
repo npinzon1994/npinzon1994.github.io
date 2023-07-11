@@ -41,14 +41,14 @@ const About = (props) => {
             passionate Junior Software Engineer who's goal is to bring
             simplicity and user-friendliness to the forefront of my projects. I
             graduated from St. Joseph's University with a Bachelor's degree in
-            Computer Science & Mathematics 👩‍🎓.
+            Computer Science & Mathematics.
           </p>
         </div>
-        <Headshot
+        {/* <Headshot
           className={classes.headshot}
           src={pfp}
           alt="professional headshot"
-        />
+        /> */}
       </div>
     </section>
   );

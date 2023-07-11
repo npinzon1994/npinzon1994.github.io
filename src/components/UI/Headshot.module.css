@@ -1,6 +1,7 @@
 .headshot {
   border-radius: 50%;
   margin-inline: auto;
-  background: #EEE4FF;
-  padding: 2rem;
+  /* background: #EEE4FF; */
+  padding: 1rem;
+  
 }
