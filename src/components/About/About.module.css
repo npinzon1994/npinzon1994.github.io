@@ -11,8 +11,8 @@
   width: 100%;
   max-width: 66rem;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   font-family: "Alegreya Sans", sans-serif;
   font-size: 1.25rem;
   line-height: 1.7rem;
@@ -29,7 +29,7 @@
 }
 
 .info-container {
-  flex-basis: 50%;
+  flex-basis: 100%;
 }
 
 .headshot {

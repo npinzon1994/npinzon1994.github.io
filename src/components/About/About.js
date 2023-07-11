@@ -44,11 +44,6 @@ const About = (props) => {
             Computer Science & Mathematics.
           </p>
         </div>
-        {/* <Headshot
-          className={classes.headshot}
-          src={pfp}
-          alt="professional headshot"
-        /> */}
       </div>
     </section>
   );
