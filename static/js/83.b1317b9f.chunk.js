@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[83],{83:function(o,e,r){r.r(e),r.d(e,{default:function(){return c}});r(791);var t="Footer_footer__yZEQv",n="Footer_copyright__cKGMI",i=r(184),c=function(o){return(0,i.jsx)("footer",{className:t,children:(0,i.jsx)("div",{className:n,children:"\xa9 2023 Nikki Pinzon"})})}}}]);
+//# sourceMappingURL=83.b1317b9f.chunk.js.map
