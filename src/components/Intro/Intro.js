@@ -20,7 +20,11 @@ const Intro = (props) => {
           <div className={classes["button-container"]}>
             <a href="#contact">Contact</a>
             <a
+<<<<<<< HEAD
               href="https://firebasestorage.googleapis.com/v0/b/portfolio-cd2d0.appspot.com/o/Nikki%20Pinzon%20Resume.pdf?alt=media&token=9b2c3e96-787a-4e70-ab04-273c00359443"
+=======
+              href="https://firebasestorage.googleapis.com/v0/b/portfolio-cd2d0.appspot.com/o/Nikki%20Pinzon%20Resume.pdf?alt=media&token=71b6d193-4297-4a7c-b593-8d7a8898050b"
+>>>>>>> db2672014ddadbb7a506ca487df9cb6b5261368f
               target="_blank"
               rel="noreferrer"
             >
