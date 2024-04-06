@@ -20,7 +20,7 @@ const Intro = (props) => {
             <a href="#contact">Contact</a>
             <a
 
-              href="https://firebasestorage.googleapis.com/v0/b/portfolio-cd2d0.appspot.com/o/Nikki%20Pinzon%20Resume.pdf?alt=media&token=29aaf0a5-dd0d-418c-8de9-c46d8e4f3980"
+              href="https://drive.google.com/file/d/1kcZb7kHFjmgiZQ0bB2vb-2lzt3EAeCnC/view?usp=sharing"
 
 
               target="_blank"
