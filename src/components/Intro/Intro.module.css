@@ -31,10 +31,6 @@
   font-weight: 600;
 }
 
-.content h1 span {
-  color: #b9faf8;
-}
-
 .content p {
   color: white;
   font-size: 1.6rem;
@@ -43,8 +39,11 @@
 }
 
 .content p span {
-  color: #b9faf8;
   font-weight: 500;
+}
+
+.green-text {
+  color: #b9faf8;
 }
 
 .button-container {

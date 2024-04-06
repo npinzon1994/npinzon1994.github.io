@@ -11,11 +11,10 @@ const Intro = (props) => {
 
         <div className={classes.content}>
           <h1>
-            Hi, I'm <span>Nikki!</span>
+            Hi, I'm <span className={classes['green-text']}>Nikki!</span>
           </h1>
           <p>
-            I'm a <span>Junior Software Engineer</span> looking to ease the
-            lives of everyone around me through code.
+            I'm a <span className={classes['green-text']}>Software Engineer</span> with a <span>passion</span> for <span>UI/UX</span>. <br />Shoot me a message!
           </p>
           <div className={classes["button-container"]}>
             <a href="#contact">Contact</a>
