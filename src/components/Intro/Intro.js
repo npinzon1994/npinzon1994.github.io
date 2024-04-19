@@ -20,7 +20,7 @@ const Intro = (props) => {
             <a href="#contact">Contact</a>
             <a
 
-              href="https://drive.google.com/file/d/19xtPXzKwngedrbpkv_PMr3WQWEmreC47/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Qj-vvH8k-Bevkoivm9UfzxCTEloWW0na/view?usp=sharing"
 
 
               target="_blank"
