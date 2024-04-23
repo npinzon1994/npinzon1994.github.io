@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import classes from "./About.module.css";
-import Headshot from "../UI/Headshot";
 import Title from "../UI/Title";
-import pfp from "../../assets/professional-headshot.jpg";
 
 const About = (props) => {
   const [isVisible, setIsVisible] = useState(false);

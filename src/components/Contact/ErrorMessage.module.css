@@ -1,8 +1,4 @@
 .invalid {
-  color: rgb(245, 125, 125);
+  color: rgb(240, 151, 151);
   margin-top: 6px;
-}
-
-.dark-invalid {
-  color: rgb(245, 125, 125);
 }

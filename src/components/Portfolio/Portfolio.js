@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import classes from "../Portfolio/Portfolio.module.css";
 import PortfolioItem from "../Portfolio/PortfolioItem";
 import portfolioItems from "./portfolio-items";
+import {useWindowWidth} from '../../hooks/use-window-width';
 
 const Portfolio = (props) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const {windowWidth} = useWindowWidth();
 
   const handleScroll = () => {
     const scrollTop = window.pageYOffset;
@@ -22,20 +23,6 @@ const Portfolio = (props) => {
       }
     });
   };
-
-  useEffect(() => {
-    // Update window width when the window is resized
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup the event listener
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   const items = portfolioItems.map((item) => (
     <PortfolioItem

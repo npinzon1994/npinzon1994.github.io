@@ -1,8 +1,7 @@
 import React, { lazy, Suspense } from "react";
-import "./DarkMode.css";
 import loadingSpinner from "./assets/loading-spinner.gif";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Navigation from "./components/Layout/Navigation";
+import Navigation from "./components/Layout/Header";
 
 const Intro = lazy(() => import("./components/Intro/Intro"));
 const Portfolio = lazy(() => import("./components/Portfolio/Portfolio"));

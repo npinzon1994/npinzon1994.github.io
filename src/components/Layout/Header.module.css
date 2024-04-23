@@ -1,0 +1,6 @@
+.header {
+  position: fixed;
+  width: 100%;
+  background: linear-gradient(0.25turn, #6f2dbd, #b298dc);
+  z-index: 100;
+}
