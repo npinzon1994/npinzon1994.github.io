@@ -1,27 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import classes from "../Portfolio/PortfolioItem.module.css";
-import { ReactComponent as Cross } from "../../assets/cross.svg";
 
 const Description = (props) => {
   const languages = props.languages.map((language) => (
     <span className={classes.language}>{language}</span>
   ));
-
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    // Update window width when the window is resized
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup the event listener
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <div className={`${classes.overlay} ${props.isHovered ? classes.hovered : ""}`}>
