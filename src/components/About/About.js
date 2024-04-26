@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import classes from "./About.module.css";
-import Title from "../UI/Title";
+import Wrapper from "../Layout/Wrapper";
+import Section from "../Layout/Section";
 
-const About = (props) => {
+const About = ({ id }) => {
   const [isVisible, setIsVisible] = useState(false);
   const divRef = useRef(null);
 
@@ -25,25 +26,21 @@ const About = (props) => {
   }, []);
 
   return (
-    <section className={`${classes.wrapper} ${props.className}`} id={props.id}>
-      <div
-        className={`${classes["inner-container"]} ${
-          isVisible ? classes.visible : ""
-        }`}
+    <Wrapper className={classes.wrapper} id={id}>
+      <Section
+        className={`${classes.section} ${isVisible ? classes.visible : ""}`}
+        title="About Me"
         ref={divRef}
       >
-        <div className={classes["info-container"]}>
-          <Title title="About Me" style={{ paddingBottom: 0 }} />
-          <p>
-            I'm happy you liked my page enough to scroll this far! I'm a
-            passionate Junior Software Engineer who's goal is to bring
-            simplicity and user-friendliness to the forefront of my projects. I
-            graduated from St. Joseph's University with a Bachelor's degree in
-            Computer Science & Mathematics.
-          </p>
-        </div>
-      </div>
-    </section>
+        <p>
+          I'm happy you liked my page enough to scroll this far! I'm a
+          passionate Junior Software Engineer who's goal is to bring simplicity
+          and user-friendliness to the forefront of my projects. I graduated
+          from St. Joseph's University with a Bachelor's degree in Computer
+          Science & Mathematics.
+        </p>
+      </Section>
+    </Wrapper>
   );
 };
 

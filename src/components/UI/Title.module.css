@@ -1,9 +1,33 @@
- .title {
-    text-decoration-thickness: 3px;
-    margin: 0;
-    padding-bottom: 2rem;
-    color: #6F2DBD;
-    font-family: 'Alegreya', serif;
-    font-size: 2rem;
-    position: relative;
+.container {
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 2rem; */
+  gap: 2rem;
+  line-height: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.container span {
+  font-size: 1rem;
+  color: rgb(68, 68, 68);
+  font-family: "Alegreya", serif;
+}
+
+.title {
+  text-decoration-thickness: 3px;
+  margin: 0;
+  /* padding-bottom: 2rem; */
+  color: #6f2dbd;
+  font-family: "Alegreya", serif;
+  font-size: 2rem;
+  position: relative;
+}
+
+@media screen and (max-width: 516px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    margin-bottom: 0.85rem;
+  }
 }

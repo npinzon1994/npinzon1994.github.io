@@ -1,15 +1,12 @@
 .wrapper {
   display: flex;
-  align-items: center;
   width: 100%;
   background: linear-gradient(0.25turn, #6f2dbd, #b298dc);
   height: 100vh;
-  position: relative;
-  margin-bottom: 2rem;
   padding-inline: 2rem;
 }
 
-.container {
+.section {
   display: flex;
   justify-content: space-between;
   gap: 3rem;
@@ -26,6 +23,7 @@
 .content h1 {
   color: #eee4ff;
   font-size: 3.6rem;
+  line-height: 4.7rem;
   margin: 0;
   font-family: "Alegreya", serif;
   font-weight: 600;
@@ -34,8 +32,10 @@
 .content p {
   color: white;
   font-size: 1.6rem;
+  line-height: 2.4rem;
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 300;
+  max-width: 37rem;
 }
 
 .content p span {
@@ -81,8 +81,13 @@
   animation: floating 1.5s ease-in-out infinite;
 }
 
+.headshot-container {
+}
+
 .headshot {
-  height: 18rem;
+  /* height: 100%;
+  width: 100%;
+  object-fit: cover; */
   width: 18rem;
 }
 
@@ -113,50 +118,46 @@
   .container {
     flex-wrap: wrap;
     justify-content: center;
-    
   }
-  
+
   .content {
     flex-basis: 100%;
   }
 
   .content h1 {
     font-size: 3.2rem;
+    line-height: 4.1rem;
   }
 
   .content p {
     font-size: 1.5rem;
+    line-height: 2.25rem;
   }
 
   .button-container a {
     padding: 0.5em 2.1em;
-  font-size: 1.3rem;
+    font-size: 1.3rem;
   }
 
   .headshot {
     height: 14rem;
     width: 14rem;
   }
-
 }
 
 @media screen and (max-width: 389px) {
-  
   .content h1 {
     font-size: 2.5rem;
+    line-height: 3.25rem;
   }
 
   .content p {
     font-size: 1.2rem;
-  }
-
-  .button-container {
-    /* gap: 0.7rem; */
+    line-height: 1.8rem;
   }
 
   .button-container a {
     padding: 0.5em 2.1em;
-  font-size: 1.3rem;
+    font-size: 1.3rem;
   }
-
 }

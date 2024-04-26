@@ -1,0 +1,21 @@
+.tools {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(2rem, 7.5vw, 6rem);
+  padding-left: 0;
+  margin-block: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 858px) {
+  .tools-list {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tools-list {
+    justify-content: flex-start;
+  }
+}

@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import classes from "../Portfolio/Portfolio.module.css";
+import Wrapper from "../Layout/Wrapper";
 import PortfolioItem from "../Portfolio/PortfolioItem";
 import portfolioItems from "./portfolio-items";
-import {useWindowWidth} from '../../hooks/use-window-width';
+import { useWindowWidth } from "../../hooks/use-window-width";
+import Section from "../Layout/Section";
 
-const Portfolio = (props) => {
+const Portfolio = ({ id }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const {windowWidth} = useWindowWidth();
+  const { windowWidth } = useWindowWidth();
 
   const handleScroll = () => {
     const scrollTop = window.pageYOffset;
@@ -49,15 +51,15 @@ const Portfolio = (props) => {
   }, []);
 
   return (
-    <div className={`${classes.wrapper} ${props.className}`} id={props.id}>
-      <div className={classes["inner-container"]}>
-        <div className={classes["title-container"]}>
-          <h2 className={classes.title}>My Projects</h2>
-          {windowWidth < 540 ? <span>(click on a project to learn more!)</span> : <span>(hover over a project to learn more!)</span>}
-        </div>
+    <Wrapper className={classes.wrapper} id={id}>
+      <Section
+        className={classes.section}
+        title="My Projects"
+        windowWidth={windowWidth}
+      >
         <ul className={classes["portfolio-grid"]}>{items}</ul>
-      </div>
-    </div>
+      </Section>
+    </Wrapper>
   );
 };
 

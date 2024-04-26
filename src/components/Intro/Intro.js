@@ -2,20 +2,21 @@ import React from "react";
 import classes from "./Intro.module.css";
 import { ReactComponent as ArrowIcon } from "../../assets/triangle.svg";
 import Headshot from "../UI/Headshot";
-import pfp from "../../assets/professional-headshot.jpg";
+import pfp from "../../assets/professional-headshot.png";
 
 const Intro = (props) => {
   return (
-    <section className={classes.wrapper} id={props.id}>
-      <div className={classes.container}>
+    <div className={classes.wrapper} id={props.id}>
+      <section className={classes.section}>
         <div className={classes.content}>
           <h1>Hi, I'm Nikki!</h1>
           <p>
             I'm a{" "}
             <span className={classes["green-text"]}>Software Engineer</span>{" "}
-            with a <span>passion</span> for <span>UI/UX</span>. <br />
-            Shoot me a message!
+            with a <span>passion</span> for creating engaging{" "}
+            <span>User Experiences.</span>
           </p>
+          <p>Shoot me a message!</p>
           <div className={classes["button-container"]}>
             <a href="#contact">Contact</a>
             <a
@@ -27,15 +28,17 @@ const Intro = (props) => {
             </a>
           </div>
         </div>
-        <Headshot
-          className={classes.headshot}
-          src={pfp}
-          alt="vector drawing of me"
-        />
-      </div>
+        <div className={classes["headshot-container"]}>
+          <Headshot
+            className={classes.headshot}
+            src={pfp}
+            alt="vector drawing of me"
+          />
+        </div>
+      </section>
 
       <ArrowIcon className={classes.arrow} />
-    </section>
+    </div>
   );
 };
 
