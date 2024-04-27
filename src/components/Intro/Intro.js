@@ -3,13 +3,14 @@ import classes from "./Intro.module.css";
 import { ReactComponent as ArrowIcon } from "../../assets/triangle.svg";
 import Headshot from "../UI/Headshot";
 import pfp from "../../assets/professional-headshot.png";
+import Wrapper from "../Layout/Wrapper";
 
-const Intro = (props) => {
+const Intro = ({ id }) => {
   return (
-    <div className={classes.wrapper} id={props.id}>
+    <Wrapper className={classes.wrapper} id={id}>
       <section className={classes.section}>
-        <div className={classes.content}>
-          <h1>Hi, I'm Nikki!</h1>
+        <div className={classes["left-container"]}>
+          <h1>Hi, I'm Nikki</h1>
           <p>
             I'm a{" "}
             <span className={classes["green-text"]}>Software Engineer</span>{" "}
@@ -28,17 +29,10 @@ const Intro = (props) => {
             </a>
           </div>
         </div>
-        <div className={classes["headshot-container"]}>
-          <Headshot
-            className={classes.headshot}
-            src={pfp}
-            alt="vector drawing of me"
-          />
-        </div>
+        <Headshot src={pfp} alt="Nikki Pinzon professional headshot" />
       </section>
-
       <ArrowIcon className={classes.arrow} />
-    </div>
+    </Wrapper>
   );
 };
 

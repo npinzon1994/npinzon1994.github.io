@@ -1,24 +1,21 @@
 .wrapper {
-  width: 100%;
-  position: relative;
   background: linear-gradient(0.25turn, #6f2dbd, #b298dc);
-  padding: 2rem;
 }
 
-.inner-container {
+.section {
   width: 100%;
   max-width: 66rem;
   margin: 0 auto;
   display: flex;
   font-family: "Alegreya Sans", sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.7rem;
+  font-size: 1.4rem;
+  line-height: 1.96rem;
   transform: translateX(-50%);
   transition: opacity 800ms, transform 800ms;
   filter: blur(100%);
 }
 
-.inner-container.visible {
+.section.visible {
   opacity: 1;
   transform: translateX(0%);
   filter: blur(0%);
@@ -40,17 +37,16 @@
 }
 
 @media screen and (max-width: 768px) {
-  .inner-container {
+  .section {
     flex-wrap: wrap;
     justify-content: center;
   }
 
   .info-container {
     flex-basis: 100%;
-  } 
+  }
 
   .social-links {
     justify-content: center;
   }
-
 }

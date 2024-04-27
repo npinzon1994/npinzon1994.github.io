@@ -1,14 +1,14 @@
-import jsIcon from "../../assets/tools-icons/js-icon.svg";
-import reactIcon from "../../assets/tools-icons/react-icon.svg";
-import nextIcon from "../../assets/tools-icons/nextjs-icon.svg";
-import htmlIcon from "../../assets/tools-icons/html5-plain.svg";
-import cssIcon from "../../assets/tools-icons/css3-plain.svg";
-import gitIcon from "../../assets/tools-icons/git-icon.svg";
-import reduxIcon from "../../assets/tools-icons/redux-icon.svg";
-import tsIcon from "../../assets/tools-icons/typescript-icon.svg";
-import awsIcon from "../../assets/tools-icons/aws-icon.svg";
-import firebaseIcon from "../../assets/tools-icons/firebase-icon.svg";
-import vsCodeIcon from "../../assets/tools-icons/vscode-plain.svg";
+import jsIcon from "../../assets/tools-icons/javascript.svg";
+import reactIcon from "../../assets/tools-icons/react.svg";
+import nextIcon from "../../assets/tools-icons/nextjs.svg";
+import htmlIcon from "../../assets/tools-icons/html5.svg";
+import cssIcon from "../../assets/tools-icons/css3.svg";
+import gitIcon from "../../assets/tools-icons/git.svg";
+import reduxIcon from "../../assets/tools-icons/redux.svg";
+import tsIcon from "../../assets/tools-icons/typescript.svg";
+import awsIcon from "../../assets/tools-icons/aws.svg";
+import firebaseIcon from "../../assets/tools-icons/firebase.svg";
+import vsCodeIcon from "../../assets/tools-icons/vscode.svg";
 
 export const tools = [
   { id: "S1", name: "React", img: reactIcon, alt: "React.js icon" },

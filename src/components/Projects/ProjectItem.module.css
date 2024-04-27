@@ -1,10 +1,8 @@
 .container-grid {
   outline: 2px solid #eee4ff;
-  /* margin: 10px; */
   border-radius: 0.4rem;
   list-style-type: none;
   position: relative;
-  /* animation: slideInLeft 700ms ease forwards; */
   opacity: 0;
   transform: translateX(-50%);
   transition: opacity 1.4s ease, transform 0.5s ease;
@@ -44,10 +42,8 @@
   width: 100%;
   opacity: 0;
   display: none;
-  /* transition: 0.5s ease; */
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 0.4rem;
-  /* display: flex; */
   align-items: center;
 }
 

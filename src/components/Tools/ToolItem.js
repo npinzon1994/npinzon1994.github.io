@@ -1,11 +1,15 @@
-import React, {forwardRef} from "react";
+import React, { forwardRef } from "react";
 import classes from "./ToolItem.module.css";
 
-const ToolItem = forwardRef((props, ref) => {  
+const ToolItem = forwardRef(({ id, name, img, alt, isVisible }, ref) => {
   return (
-    <li className={`${classes.tool} ${props.isVisible ? classes.visible : ''}`} key={props.id} ref={ref}>
-      <img src={props.img} alt={props.alt} />
-      <span>{props.name}</span>
+    <li
+      className={`${classes.tool} ${isVisible ? classes.visible : ""}`}
+      key={id}
+      ref={ref}
+    >
+      <img src={img} alt={alt} />
+      <span>{name}</span>
     </li>
   );
 });

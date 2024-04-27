@@ -1,6 +1,10 @@
 .headshot {
-  border-radius: 1.4rem;
-  margin-inline: auto;
-  /* background: #EEE4FF; */
-  padding: 1rem;
+  border-radius: 0.4rem;
+  max-width: 16.5rem;
+}
+
+@media screen and (max-width: 783px) {
+  .headshot {
+    max-width: 12.5rem;
+  }
 }

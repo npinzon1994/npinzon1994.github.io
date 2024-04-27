@@ -18,7 +18,7 @@ const isNotEmpty = (value) => value !== "";
 const isValidEmail = (value) =>
   value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
 
-const ContactForm = (props) => {
+const ContactForm = () => {
   const { reducer, defaultState } = emailSendReducer;
   const [sendingState, dispatchSending] = useReducer(reducer, defaultState);
   const [statusMsgVisible, setStatusMsgVisible] = useState(false);

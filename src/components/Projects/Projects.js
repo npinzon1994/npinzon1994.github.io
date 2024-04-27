@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import classes from "../Portfolio/Portfolio.module.css";
+import classes from "../Projects/Projects.module.css";
 import Wrapper from "../Layout/Wrapper";
-import PortfolioItem from "../Portfolio/PortfolioItem";
-import portfolioItems from "./portfolio-items";
+import ProjectItem from "../Projects/ProjectItem";
+import projectItems from "./project-items";
 import { useWindowWidth } from "../../hooks/use-window-width";
 import Section from "../Layout/Section";
 
-const Portfolio = ({ id }) => {
+const Projects = ({ id }) => {
   const [isVisible, setIsVisible] = useState(false);
   const { windowWidth } = useWindowWidth();
 
@@ -26,8 +26,8 @@ const Portfolio = ({ id }) => {
     });
   };
 
-  const items = portfolioItems.map((item) => (
-    <PortfolioItem
+  const items = projectItems.map((item) => (
+    <ProjectItem
       key={item.id}
       video={{
         src: item.video.src,
@@ -63,4 +63,4 @@ const Portfolio = ({ id }) => {
   );
 };
 
-export default Portfolio;
+export default Projects;

@@ -1,18 +1,18 @@
 import React, { lazy, Suspense } from "react";
 import loadingSpinner from "./assets/loading-spinner.gif";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Navigation from "./components/Layout/Header";
+import Header from "./components/Layout/Header";
 
 const Intro = lazy(() => import("./components/Intro/Intro"));
-const Portfolio = lazy(() => import("./components/Portfolio/Portfolio"));
+const Projects = lazy(() => import("./components/Projects/Projects"));
 const Contact = lazy(() => import("./components/Contact/Contact"));
 const Footer = lazy(() => import("./components/Layout/Footer"));
-const About = lazy(() => import('./components/About/About'));
-const Tools = lazy(() => import('./components/Tools/Tools'));
+const About = lazy(() => import("./components/About/About"));
+const Tools = lazy(() => import("./components/Tools/Tools"));
 
 const App = () => {
   return (
-    <div>
+    <main>
       <Suspense
         fallback={
           <div className="fallback">
@@ -27,15 +27,15 @@ const App = () => {
           </div>
         }
       >
-        <Navigation/>
-        <Intro id="home"/>
-        <Portfolio id="projects"/>
-        <About id="about"/>
+        <Header />
+        <Intro id="home" />
+        <Projects id="projects" />
+        <About id="about" />
         <Tools />
-        <Contact id="contact"/>
+        <Contact id="contact" />
         <Footer />
       </Suspense>
-    </div>
+    </main>
   );
 };
 

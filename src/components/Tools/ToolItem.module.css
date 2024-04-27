@@ -1,12 +1,9 @@
 .tool {
   list-style-type: none;
-  width: clamp(4.3rem, 14vw, 6.5rem);
-  font-size: clamp(0.7rem, 2vw, 1rem);
-  
-  background: #b298dc;
+  width: clamp(4.9rem, 14vw, 6.5rem);
+  font-size: clamp(0.8rem, 2vw, 1rem);
   text-align: center;
   padding: 0.9em;
-  border-radius: 0.4rem;
   opacity: 0;
   transform: translateX(-50%);
   transition: opacity 300ms ease, transform 300ms ease;
@@ -14,7 +11,9 @@
 }
 
 .tool span {
-  white-space: nowrap;
+  color: black;
+  font-weight: 500;
+  margin-top: 20px;
 }
 
 .visible {
@@ -59,13 +58,10 @@
   transition-delay: 0.8s;
 }
 
-.tool span {
-  color: white;
-  font-weight: 500;
+.tool:nth-child(10) {
+  transition-delay: 0.9s;
 }
 
-@media screen and (max-width: 768px) {
-  .tool {
-
-  }
+.tool:nth-child(11) {
+  transition-delay: 1s;
 }

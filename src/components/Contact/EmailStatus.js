@@ -1,15 +1,11 @@
 import React from "react";
 import classes from "../Contact/EmailStatus.module.css";
 
-const EmailStatus = (props) => {
+const EmailStatus = ({ className, status, img }) => {
   return (
     <div className={classes.container}>
-      <span className={props.className}>{props.status}</span>
-      <img
-        src={props.img.src || ''}
-        alt={props.img.alt || ''}
-        className={props.img.className}
-      />
+      <span className={className}>{status}</span>
+      <img src={img.src || ""} alt={img.alt || ""} className={img.className} />
     </div>
   );
 };

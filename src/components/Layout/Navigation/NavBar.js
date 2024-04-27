@@ -2,20 +2,20 @@ import React from "react";
 import classes from "./NavBar.module.css";
 import HamburgerCollapse from "hamburger-react";
 
-const NavBar = (props) => {
+const NavBar = ({ isOpen, toggleMenu, windowWidth }) => {
   return (
     <nav className={classes.navbar}>
       <span>
         <a
           href="#home"
-          onClick={props.isOpen && props.toggleMenu}
+          onClick={isOpen && toggleMenu}
           className={classes.title}
         >
           Nikki <br />
           Pinzon
         </a>
       </span>
-      {props.windowWidth > 768 && !props.isOpen ? (
+      {windowWidth > 768 && !isOpen ? (
         <ul className={classes.links}>
           <li>
             <a href="#projects">Projects</a>
@@ -29,8 +29,8 @@ const NavBar = (props) => {
         </ul>
       ) : (
         <HamburgerCollapse
-          toggle={props.toggleMenu}
-          toggled={props.isOpen}
+          toggle={toggleMenu}
+          toggled={isOpen}
           rounded
           color="#fff"
         />

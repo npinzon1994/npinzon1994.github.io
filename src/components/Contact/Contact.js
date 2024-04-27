@@ -2,16 +2,17 @@ import React, { useState, useEffect, useRef } from "react";
 import classes from "./Contact.module.css";
 import ContactForm from "./ContactForm";
 import Title from "../UI/Title";
-import { ReactComponent as GithubIcon } from "../../assets/github-mark.svg";
+import { ReactComponent as GithubIcon } from "../../assets/github-icon.svg";
 import { ReactComponent as LinkedinIcon } from "../../assets/linkedin-icon.svg";
+import Wrapper from "../Layout/Wrapper";
 
-const Contact = (props) => {
+const Contact = ({ id }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const divRef = useRef(null);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      const element = divRef.current;
+      const element = sectionRef.current;
       const elementPosition = element.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
 
@@ -28,12 +29,12 @@ const Contact = (props) => {
   }, []);
 
   return (
-    <section className={classes.wrapper} id={props.id}>
-      <div
-        className={`${classes["inner-container"]} ${
+    <Wrapper className={classes.wrapper} id={id}>
+      <section
+        className={`${classes.section} ${
           isVisible ? classes.visible : ""
         }`}
-        ref={divRef}
+        ref={sectionRef}
       >
         <div className={classes["info-container"]}>
           <Title title="Let's Chat!" style={{ padding: 0, color: "#b9faf8" }} />
@@ -64,8 +65,8 @@ const Contact = (props) => {
           </div>
         </div>
         <ContactForm />
-      </div>
-    </section>
+      </section>
+    </Wrapper>
   );
 };
 

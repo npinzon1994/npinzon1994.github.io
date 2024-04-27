@@ -5,11 +5,11 @@ import Section from "../Layout/Section";
 
 const About = ({ id }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const divRef = useRef(null);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      const element = divRef.current;
+      const element = sectionRef.current;
       const elementPosition = element.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
 
@@ -30,11 +30,11 @@ const About = ({ id }) => {
       <Section
         className={`${classes.section} ${isVisible ? classes.visible : ""}`}
         title="About Me"
-        ref={divRef}
+        ref={sectionRef}
       >
         <p>
           I'm happy you liked my page enough to scroll this far! I'm a
-          passionate Junior Software Engineer who's goal is to bring simplicity
+          passionate Software Engineer who's goal is to bring simplicity
           and user-friendliness to the forefront of my projects. I graduated
           from St. Joseph's University with a Bachelor's degree in Computer
           Science & Mathematics.

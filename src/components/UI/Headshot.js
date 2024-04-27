@@ -1,8 +1,10 @@
 import React from "react";
 import classes from "./Headshot.module.css";
 
-const Headshot = (props) => {
-  return <img src={props.src} alt={props.alt} className={`${classes.headshot} ${props.className}`} />;
+const Headshot = ({ src, alt, className }) => {
+  return (
+    <img src={src} alt={alt} className={`${classes.headshot} ${className}`} />
+  );
 };
 
 export default Headshot;

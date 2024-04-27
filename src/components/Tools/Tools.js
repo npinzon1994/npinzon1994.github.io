@@ -9,11 +9,11 @@ const Tools = () => {
   const tools = languagesAndTools;
 
   const [isVisible, setIsVisible] = useState(false);
-  const divRef = useRef(null);
+  const toolItemRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      const element = divRef.current;
+      const element = toolItemRef.current;
       const elementPosition = element.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
 
@@ -40,7 +40,7 @@ const Tools = () => {
               img={tool.img}
               alt={tool.alt}
               isVisible={isVisible}
-              ref={divRef}
+              ref={toolItemRef}
             />
           ))}
         </ul>

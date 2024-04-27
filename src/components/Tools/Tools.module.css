@@ -1,11 +1,10 @@
 .tools {
   list-style-type: none;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: clamp(2rem, 7.5vw, 6rem);
+  gap: 1.5rem;
   padding-left: 0;
-  margin-block: 0;
-  max-width: 100%;
 }
 
 @media (max-width: 858px) {

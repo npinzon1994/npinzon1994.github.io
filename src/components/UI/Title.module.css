@@ -1,7 +1,6 @@
 .container {
   display: flex;
   align-items: center;
-  /* margin-bottom: 2rem; */
   gap: 2rem;
   line-height: 2.6rem;
   margin-bottom: 1rem;
@@ -16,7 +15,6 @@
 .title {
   text-decoration-thickness: 3px;
   margin: 0;
-  /* padding-bottom: 2rem; */
   color: #6f2dbd;
   font-family: "Alegreya", serif;
   font-size: 2rem;
