@@ -52,6 +52,7 @@ const Contact = ({ id }) => {
               href="https://github.com/npinzon1994"
               target="_blank"
               rel="noreferrer"
+              aria-label="Link to my GitHub"
             >
               <GithubIcon className={classes.icon} />
             </a>
@@ -59,6 +60,7 @@ const Contact = ({ id }) => {
               href="https://www.linkedin.com/in/nikkipinzon/"
               target="_blank"
               rel="noreferrer"
+              aria-label="Link to my LinkedIn"
             >
               <LinkedinIcon className={classes.icon} />
             </a>

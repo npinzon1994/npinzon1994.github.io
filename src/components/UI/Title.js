@@ -6,7 +6,7 @@ const Title = ({ title, windowWidth, style }) => {
   if (windowWidth) {
     subtitle =
       windowWidth < 540 ? (
-        <span>(click on a project to learn more!)</span>
+        <span>(tap on a project to learn more!)</span>
       ) : (
         <span>(hover over a project to learn more!)</span>
       );

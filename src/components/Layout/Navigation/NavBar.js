@@ -33,6 +33,7 @@ const NavBar = ({ isOpen, toggleMenu, windowWidth }) => {
           toggled={isOpen}
           rounded
           color="#fff"
+          label="collapsable navigation"
         />
       )}
     </nav>
