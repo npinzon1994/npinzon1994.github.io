@@ -11,19 +11,32 @@ const Intro = ({ id }) => {
       <section className={classes.section}>
         <div className={classes["left-container"]}>
           <h1>Hi, I'm Nikki</h1>
-          <p>
+          <h3>
             I'm a{" "}
-            <span className={classes["green-text"]}>Software Engineer</span>{" "}
-            with a <span>passion</span> for creating engaging{" "}
-            <span>User Experiences.</span>
-          </p>
-          <p>Shoot me a message!</p>
+            <span
+              className={classes["green-text"]}
+              role="heading"
+              aria-level={1}
+            >
+              Software Engineer
+            </span>{" "}
+            with a{" "}
+            <span role="heading" aria-level={1}>
+              passion
+            </span>{" "}
+            for creating engaging{" "}
+            <span role="heading" aria-level={1}>
+              User Experiences.
+            </span>
+          </h3>
+          <h3>Shoot me a message!</h3>
           <div className={classes["button-container"]}>
             <a href="#contact">Contact</a>
             <a
               href="https://drive.google.com/file/d/1Qj-vvH8k-Bevkoivm9UfzxCTEloWW0na/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
+              aria-label="Link to my resume. Opens in a new tab."
             >
               Resume
             </a>

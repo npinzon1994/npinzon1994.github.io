@@ -16,21 +16,9 @@
   height: 100vh;
 }
 
-.menu-overlay .links {
+.links {
   flex-direction: column;
   align-items: center;
-}
-
-.menu-overlay .links li a:hover {
-  background: rgb(205, 174, 255);
-}
-
-.menu-overlay .links li a:active {
-  background: #c5a9f3;
-  transition: none;
-}
-
-.links {
   list-style-type: none;
   display: flex;
   gap: 1rem;
@@ -53,10 +41,10 @@
 }
 
 .links li a:hover {
-  background: #b298dc;
+  background: #a989dd;
 }
 
 .links li a:active {
-  background: #c5a9f3;
+  background: #a07fd4;
   transition: none;
 }

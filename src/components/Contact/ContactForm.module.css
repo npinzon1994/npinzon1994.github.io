@@ -68,6 +68,7 @@
   cursor: pointer;
   margin-top: 12px;
   transition: 200ms;
+  user-select: none;
 }
 
 .form-button:hover {

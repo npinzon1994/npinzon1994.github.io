@@ -150,6 +150,7 @@ const ContactForm = () => {
           type="text"
           placeholder="Name"
           name="name"
+          aria-label="name"
           onChange={nameChangeHandler}
           onBlur={validateNameOnBlur}
           className={nameClasses}
@@ -161,6 +162,7 @@ const ContactForm = () => {
           type="email"
           placeholder="Email"
           name="email"
+          aria-label="email"
           onChange={emailChangeHandler}
           onBlur={validateEmailOnBlur}
           className={classes.input}
@@ -171,6 +173,7 @@ const ContactForm = () => {
         <textarea
           placeholder="Message"
           name="message"
+          aria-label="message"
           rows="10"
           onChange={messageChangeHandler}
           onBlur={validateMessageOnBlur}
