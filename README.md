@@ -1,10 +1,10 @@
-# Developer Portfolio
+# Developer Portfolio 👩‍💻
 
-<p><span style="color: lightgreen; font-weight: 500;">LIVE SITE</span> ➡ <a href="https://nikkipinzon.com" target="_blank">https://nikkipinzon.com</a></p>
+**⚡ LIVE SITE** --> <a href="https://nikkipinzon.com" target="_blank">https://nikkipinzon.com</a>
 
 ## Overview
 
-<img src="https://firebasestorage.googleapis.com/v0/b/portfolio-cd2d0.appspot.com/o/portfolio%20screenshot.png?alt=media&token=0537889d-7f61-400f-a969-8c1fc0e799b7" style="border-radius: 0.4rem; width: 100%; max-width: 47rem;"/>
+<img src="https://firebasestorage.googleapis.com/v0/b/portfolio-cd2d0.appspot.com/o/portfolio%20screenshot.png?alt=media&token=0537889d-7f61-400f-a969-8c1fc0e799b7" width="900rem"/>
 
 This is a professional portfolio I built with React to showcase my expertise as a Software Engineer. I started building this site, and all its containing projects, shortly after I started learning React which really helped solidify my understanding of the framework.
 
@@ -22,10 +22,8 @@ Here are a few key things I learned:
  -->
 
 <a href="https://react.dev/" target="_blank">
-<div style="display: flex; align-items: center; gap: 10px">
-<h3>Built with React.js</h3>
+Built with React.js
 <img alt="React.js" width="34px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-</div>
 </a>
 
 
