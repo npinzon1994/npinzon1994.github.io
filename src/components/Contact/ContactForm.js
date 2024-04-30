@@ -74,7 +74,7 @@ const ContactForm = () => {
 
       dispatchSending({ type: "SENDING" });
       const result = await emailjs.sendForm(
-        "Zservice_nuurigj",
+        "service_nuurigj",
         "template_gpqj79d",
         form.current,
         "JioaKW-iFHKYcmt6F"
