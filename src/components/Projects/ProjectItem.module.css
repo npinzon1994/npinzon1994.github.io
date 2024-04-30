@@ -65,7 +65,7 @@
 
 .description {
   color: white;
-  text-align: justify;
+  text-align: center;
   font-family: "Alegreya Sans", sans-serif;
   font-size: clamp(0.8rem, 2vw, 1.2rem);
 }
@@ -119,13 +119,17 @@ video {
 }
 
 .language {
+  width: 36px;
+}
+
+/* .language {
   background: #b298dc;
   border-radius: 7px;
   padding: 0.5em;
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 500;
   font-size: 0.9rem;
-}
+} */
 
 .button-container {
   display: flex;

@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import loadingSpinner from "./assets/loading-spinner.gif";
+import loadingSpinner from "./assets/purple-loading-spinner.svg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Header from "./components/Layout/Header";
 
@@ -19,8 +19,8 @@ const App = () => {
             <p>
               <LazyLoadImage
                 src={loadingSpinner}
-                width={50}
-                height={50}
+                width={150}
+                height={150}
                 alt="loading spinner"
               />
             </p>

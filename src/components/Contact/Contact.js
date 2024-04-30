@@ -2,9 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import classes from "./Contact.module.css";
 import ContactForm from "./ContactForm";
 import Title from "../UI/Title";
-import { ReactComponent as GithubIcon } from "../../assets/github-icon.svg";
-import { ReactComponent as LinkedinIcon } from "../../assets/linkedin-icon.svg";
 import Wrapper from "../Layout/Wrapper";
+import SocialLinks from "../UI/SocialLinks";
 
 const Contact = ({ id }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -47,24 +46,7 @@ const Contact = ({ id }) => {
             Let's collaborate and create something amazing together! Feel free
             to reach out and let's embark on this coding journey side by side.
           </p>
-          <div className={classes["social-links"]}>
-            <a
-              href="https://github.com/npinzon1994"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Link to my GitHub. Opens in a new tab."
-            >
-              <GithubIcon className={classes.icon} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/nikkipinzon/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Link to my LinkedIn. Opens in a new tab."
-            >
-              <LinkedinIcon className={classes.icon} />
-            </a>
-          </div>
+          <SocialLinks />
         </div>
         <ContactForm />
       </section>

@@ -26,16 +26,6 @@
   flex: 1;
 }
 
-.social-links {
-  display: flex;
-  gap: 0.75rem;
-}
-
-.icon {
-  height: 45px;
-  width: 45px;
-}
-
 @media screen and (max-width: 768px) {
   .section {
     flex-wrap: wrap;
@@ -44,9 +34,5 @@
 
   .info-container {
     flex-basis: 100%;
-  }
-
-  .social-links {
-    justify-content: center;
   }
 }

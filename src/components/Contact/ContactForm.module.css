@@ -56,11 +56,11 @@
 }
 
 .form-button {
-  padding: 14px;
+  padding: 0.7em 2.3em;
   border-radius: 0.4rem;
-  width: 100%;
-  max-width: 10rem;
-  font-size: large;
+  /* width: 100%;
+  max-width: 13rem; */
+  font-size: 1.12rem;
   font-weight: 600;
   border: none;
   background: #b9faf8;
@@ -69,6 +69,7 @@
   margin-top: 12px;
   transition: 200ms;
   user-select: none;
+  position: relative;
 }
 
 .form-button:hover {
@@ -78,6 +79,11 @@
 .form-button:active {
   background: #ccfffd;
   transition: none;
+}
+
+.loading-spinner {
+  height: 1.12rem;
+  width: 1.12rem;
 }
 
 @media (max-width: 768px) {

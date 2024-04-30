@@ -1,3 +1,5 @@
+import { tools } from "../Tools/tools-data";
+
 const bbDemo =
   "https://firebasestorage.googleapis.com/v0/b/portfolio-cd2d0.appspot.com/o/bb-demo.mp4?alt=media&token=84ed2414-4265-4110-a1b1-ee36be260016";
 
@@ -10,16 +12,24 @@ const bucketlistDemo =
 const twitterCloneDemo =
   "https://firebasestorage.googleapis.com/v0/b/portfolio-cd2d0.appspot.com/o/twitter-clone-demo.mp4?alt=media&token=a2c9eae8-2215-4d72-a541-67c2bd17c14e";
 
+const react = tools[0];
+const javascript = tools[2];
+const html = tools[3];
+const css = tools[4];
+const redux = tools[6];
+const typescript = tools[7];
+const firebase = tools[9];
+
 const languages = {
-  budgetBreakdown: ["React", "Redux", "CSS", "Firebase"],
-  bucketlist: ["React", "Typescript", "CSS"],
-  socialMediaApp: ["React", "Redux", "Firebase"],
-  crSite: ["HTML", "CSS", "JavaScript"],
+  budgetBreakdown: [react, redux, css, firebase],
+  bucketlist: [react, typescript, css],
+  socialMediaApp: [react, redux, css, firebase],
+  crSite: [html, css, javascript],
 };
 
 const { budgetBreakdown, bucketlist, socialMediaApp, crSite } = languages;
 
-const portfolioItems = [
+const projectItems = [
   {
     id: "P1",
     video: { src: bbDemo, type: "video/mp4" },
@@ -64,4 +74,4 @@ const portfolioItems = [
   },
 ];
 
-export default portfolioItems;
+export default projectItems;

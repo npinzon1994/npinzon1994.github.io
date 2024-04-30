@@ -11,7 +11,10 @@ const Description = ({
   codeLink,
 }) => {
   const languagesList = languages.map((language) => (
-    <span className={classes.language}>{language}</span>
+    <li key={language.id}>
+      <img src={language.img} alt={language.alt} className={classes.language}/>
+    </li>
+    // <span className={classes.language}>{language}</span>
   ));
 
   return (

@@ -1,17 +1,13 @@
-import React, {
-  useRef,
-  useState,
-  useReducer,
-  useEffect,
-} from "react";
+import React, { useRef, useState, useReducer, useEffect } from "react";
 import classes from "../Contact/ContactForm.module.css";
 import emailClasses from "../Contact/EmailStatus.module.css";
 import emailjs from "@emailjs/browser";
 import useInput from "../../hooks/use-input";
 import EmailStatus from "./EmailStatus";
-import loadingSpinner from "../../assets/loading-spinner.gif";
+import loadingSpinner from "../../assets/purple-loading-spinner.svg";
 import ErrorMessage from "./ErrorMessage";
 import emailSendReducer from "./email-send-reducer";
+import { ReactComponent as LoadingSpinner } from "../../assets/purple-loading-spinner-thick.svg";
 
 //form validation functions
 const isNotEmpty = (value) => value !== "";
@@ -78,30 +74,28 @@ const ContactForm = () => {
 
       dispatchSending({ type: "SENDING" });
       const result = await emailjs.sendForm(
-        "service_nuurigj",
+        "Zservice_nuurigj",
         "template_gpqj79d",
         form.current,
         "JioaKW-iFHKYcmt6F"
       );
 
-      if (result.status !== "200") {
-        throw new Error("Could not successfully send email.");
-      }
+      // if (result.status !== "200") {
+      //   throw new Error("Could not successfully send email.");
+      // }
 
+      resetName();
+      resetEmail();
+      resetMessage();
       dispatchSending({ type: "SEND_SUCCESSFUL" });
       dispatchSending({ type: "NOT_SENDING" });
       setStatusMsgVisible(false);
-      
     } catch (error) {
       setError(error.text);
       dispatchSending({ type: "NOT_SENDING" });
       dispatchSending({ type: "SEND_UNSUCCESSFUL" });
       setStatusMsgVisible(false);
     }
-    
-    resetName();
-    resetEmail();
-    resetMessage();
   };
 
   useEffect(() => {
@@ -183,11 +177,15 @@ const ContactForm = () => {
         />
         {messageHasError && <ErrorMessage message="*Message is required" />}
         {emailStatus}
-        <button
-          type="submit"
-          className={classes["form-button"]}
-        >
-          Send Message
+        <button type="submit" className={classes["form-button"]}>
+          {isSending ? (
+            <>
+              Sending...{" "}
+              <LoadingSpinner className={classes["loading-spinner"]} />
+            </>
+          ) : (
+            "Send Message"
+          )}
         </button>
       </form>
     </div>
