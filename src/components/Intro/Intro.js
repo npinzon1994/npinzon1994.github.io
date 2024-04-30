@@ -33,7 +33,7 @@ const Intro = ({ id }) => {
           <div className={classes["button-container"]}>
             <a href="#contact">Contact</a>
             <a
-              href="https://drive.google.com/file/d/1Qj-vvH8k-Bevkoivm9UfzxCTEloWW0na/view?usp=sharing"
+              href="https://drive.google.com/file/d/13ylGh1YZ5j_NKGcejNE1JsV3gMH1ru_F/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
               aria-label="Link to my resume. Opens in a new tab."

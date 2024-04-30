@@ -16,9 +16,9 @@ const react = tools[0];
 const javascript = tools[2];
 const html = tools[3];
 const css = tools[4];
-const redux = tools[6];
-const typescript = tools[7];
-const firebase = tools[9];
+const redux = tools[9];
+const typescript = tools[5];
+const firebase = tools[11];
 
 const languages = {
   budgetBreakdown: [react, redux, css, firebase],
