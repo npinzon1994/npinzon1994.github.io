@@ -4,6 +4,7 @@ import { ReactComponent as ArrowIcon } from "../../assets/triangle.svg";
 import Headshot from "../UI/Headshot";
 import pfp from "../../assets/professional-headshot.png";
 import Wrapper from "../Layout/Wrapper";
+import animatedGraphic from "../../assets/animated-graphic.webm";
 
 const Intro = ({ id }) => {
   return (
@@ -12,22 +13,23 @@ const Intro = ({ id }) => {
         <div className={classes["left-container"]}>
           <h1>Hi, I'm Nikki</h1>
           <h3>
-            I'm a{" "}
+            I'm a Software Engineer with a passion for creating{" "}
             <span
-              className={classes["green-text"]}
+              className={classes["purple-text"]}
               role="heading"
               aria-level={1}
             >
-              Software Engineer
-            </span>{" "}
-            with a{" "}
-            <span role="heading" aria-level={1}>
-              passion
-            </span>{" "}
-            for creating engaging{" "}
-            <span role="heading" aria-level={1}>
-              User Experiences.
+              fast, scalable,{" "}
             </span>
+            and{" "}
+            <span
+              className={classes["purple-text"]}
+              role="heading"
+              aria-level={1}
+            >
+              engaging
+            </span>{" "}
+            web applications.
           </h3>
           <h3>Shoot me a message!</h3>
           <div className={classes["button-container"]}>
@@ -42,7 +44,13 @@ const Intro = ({ id }) => {
             </a>
           </div>
         </div>
-        <Headshot src={pfp} alt="Nikki Pinzon professional headshot" />
+        <div className={classes["animated-graphic"]}>
+          <video width="100%" height="100%" autoPlay playsInline muted loop>
+            <source src={animatedGraphic} type="video/webm" />
+            Sorry, your browser does not support videos.
+          </video>
+        </div>
+        {/* <Headshot src={pfp} alt="Nikki Pinzon professional headshot" /> */}
       </section>
       <ArrowIcon className={classes.arrow} />
     </Wrapper>

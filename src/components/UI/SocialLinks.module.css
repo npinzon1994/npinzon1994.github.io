@@ -1,20 +1,21 @@
 .social-links {
   display: flex;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .icon {
-  height: 45px;
-  width: 45px;
+  height: 35px;
+  width: 35px;
   transition: 200ms;
 }
 
 .icon:hover {
-  fill: #a6e0de;
+  /* fill: #a6e0de; */
+  /* fill: #7265c9; */
 }
 
 .icon:active {
-  fill: #ccfffd;
+  /* fill: #ccfffd; */
   transition: none;
 }
 

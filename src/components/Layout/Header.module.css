@@ -1,7 +1,7 @@
 .header {
   position: fixed;
   width: 100%;
-  background: linear-gradient(0.25turn, #6f2dbd, #b298dc);
+  background: linear-gradient(90deg, #6252c5, #2a9fde);
   z-index: 100;
   padding-block: 5px;
 }

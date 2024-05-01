@@ -1,5 +1,6 @@
 .wrapper {
-  background: linear-gradient(0.25turn, #6f2dbd, #b298dc);
+  /* background: linear-gradient(0.25turn, #6f2dbd, #b298dc); */
+  background: #030014;
 }
 
 .section {

@@ -1,11 +1,12 @@
 .wrapper {
-  background: linear-gradient(0.25turn, #6f2dbd, #b298dc);
+  /* background: linear-gradient(0.25turn, #6f2dbd, #b298dc); */
+  background: #030014;
   height: 100vh;
 }
 
 .section {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 3rem;
   align-items: center;
   width: 100%;
@@ -15,11 +16,11 @@
 }
 
 .left-container {
-  flex: 1 1 50%; /* Let content take up 50% of the container's width */
+  flex: 1;
 }
 
 .left-container h1 {
-  color: #ffffff;
+  color: #64b4df;
   font-size: 3.5rem;
   line-height: 3.85rem;
   margin: 0;
@@ -33,15 +34,18 @@
   line-height: 2.08rem;
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 300;
-  max-width: 37rem;
+  /* max-width: 37rem; */
 }
 
 .left-container h3 span {
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
-.green-text {
-  color: #b9faf8;
+.purple-text {
+  /* color: transparent;
+  background-image: linear-gradient(90deg, #7d71ca, #55b1e2);
+  background-clip: text; */
+  font-weight: 700;
 }
 
 .button-container {
@@ -52,23 +56,35 @@
 
 .button-container a {
   text-decoration: none;
-  background: #b9faf8;
-  color: #6f2dbd;
+  /* background: #b9faf8; */
+  background: #7265c9;
+  color: #fff;
   padding: 0.8em 2em;
   font-size: 1.4rem;
   border-radius: 0.4rem;
   font-family: "Alegreya Sans", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   transition: 200ms;
   user-select: none;
 }
 
 .button-container a:hover {
-  background: #a6e0de;
+  transform: scale(1.08);
+}
+
+.animated-graphic {
+  width: 100%;
+  /* max-width: 25rem; */
+  /* border: solid 1px #fff; */
+  flex: 1;
+}
+
+.animated-graphic video {
+  object-fit: fill;
 }
 
 .arrow {
-  fill: #b9faf8;
+  fill: #2a9fde;
   height: 1.7rem;
   width: 1.7rem;
   position: absolute;
