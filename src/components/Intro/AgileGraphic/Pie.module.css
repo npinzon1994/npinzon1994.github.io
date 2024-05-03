@@ -1,0 +1,12 @@
+.pie {
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    border: solid 1px magenta;
+    padding: 0;
+    width: 32rem;
+    height: 32rem;
+    border-radius: 50%;
+    list-style-type: none;
+    /* transform: rotate(-36deg); */
+  }

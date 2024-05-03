@@ -5,6 +5,7 @@ import Headshot from "../UI/Headshot";
 import pfp from "../../assets/professional-headshot.png";
 import Wrapper from "../Layout/Wrapper";
 import animatedGraphic from "../../assets/animated-graphic.webm";
+import AgileGraphic from "./AgileGraphic/AgileGraphic";
 
 const Intro = ({ id }) => {
   return (
@@ -44,12 +45,13 @@ const Intro = ({ id }) => {
             </a>
           </div>
         </div>
-        <div className={classes["animated-graphic"]}>
+        <AgileGraphic />
+        {/* <div className={classes["animated-graphic"]}>
           <video width="100%" height="100%" autoPlay playsInline muted loop>
             <source src={animatedGraphic} type="video/webm" />
             Sorry, your browser does not support videos.
           </video>
-        </div>
+        </div> */}
         {/* <Headshot src={pfp} alt="Nikki Pinzon professional headshot" /> */}
       </section>
       <ArrowIcon className={classes.arrow} />

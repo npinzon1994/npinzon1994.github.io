@@ -1,0 +1,118 @@
+.wrapper {
+  position: relative;
+  width: 32rem;
+  height: 32rem;
+  margin: 0 auto;
+}
+
+.pie {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: solid 1px magenta;
+  padding: 0;
+  list-style-type: none;
+  background: blue;
+  mask-image: radial-gradient(
+    circle,
+    transparent 0%,
+    transparent 49%,
+    black 50%,
+    black 100%
+  );
+  transform: rotate(-36deg);
+  /* animation: rotateElement 10s linear infinite; */
+}
+
+.slice {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 0% 100%;
+  background: palegreen;
+}
+
+.slice-contents {
+  overflow: hidden;
+  position: absolute;
+  left: -100%;
+  height: 200%;
+  width: 200%;
+  border-radius: 50%;
+}
+
+.slice:hover .slice-contents {
+  background: violet;
+}
+
+.slice:first-child {
+  transform: rotate(0deg) skewY(-18deg);
+}
+
+.slice:first-child .slice-contents {
+  transform: skewY(18deg);
+  background: red;
+}
+
+.slice:nth-child(2) {
+  transform: rotate(72deg) skewY(-18deg);
+}
+
+.slice:nth-child(2) .slice-contents {
+  transform: skewY(18deg);
+  background: blue;
+}
+
+.slice:nth-child(3) {
+  transform: rotate(144deg) skewY(-18deg);
+}
+
+.slice:nth-child(3) .slice-contents {
+  transform: skewY(18deg);
+  background: yellow;
+}
+
+.slice:nth-child(4) {
+  transform: rotate(216deg) skewY(-18deg);
+}
+
+.slice:nth-child(4) .slice-contents {
+  transform: skewY(18deg);
+  background: slateblue;
+}
+
+.slice:nth-child(5) {
+  transform: rotate(288deg) skewY(-18deg);
+}
+
+.slice:nth-child(5) .slice-contents {
+  transform: skewY(18deg);
+  background: limegreen;
+}
+
+.gear {
+  position: absolute;
+  left: 50.3%;
+  top: 53%;
+  transform: translate(-50%, -50%);
+  height: 5rem;
+  width: 5rem;
+  fill: white;
+  /* animation: rotateElement 5s linear infinite; */
+}
+
+@keyframes rotateElement {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
