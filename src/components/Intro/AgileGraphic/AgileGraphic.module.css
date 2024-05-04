@@ -13,10 +13,8 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: solid 1px magenta;
   padding: 0;
   list-style-type: none;
-  background: blue;
   mask-image: radial-gradient(
     circle,
     transparent 0%,
@@ -24,7 +22,7 @@
     black 50%,
     black 100%
   );
-  transform: rotate(-36deg);
+  /* transform: rotate(-36deg); */
   /* animation: rotateElement 10s linear infinite; */
 }
 
@@ -36,7 +34,7 @@
   width: 50%;
   height: 50%;
   transform-origin: 0% 100%;
-  background: palegreen;
+  clip-path: polygon(5% 0, 95% 0%, 95% 95%, 5% 95%);
 }
 
 .slice-contents {
@@ -54,6 +52,7 @@
 
 .slice:first-child {
   transform: rotate(0deg) skewY(-18deg);
+  
 }
 
 .slice:first-child .slice-contents {
