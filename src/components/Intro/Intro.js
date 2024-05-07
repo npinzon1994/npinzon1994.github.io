@@ -46,12 +46,6 @@ const Intro = ({ id }) => {
           </div>
         </div>
         <AgileGraphic />
-        {/* <div className={classes["animated-graphic"]}>
-          <video width="100%" height="100%" autoPlay playsInline muted loop>
-            <source src={animatedGraphic} type="video/webm" />
-            Sorry, your browser does not support videos.
-          </video>
-        </div> */}
         {/* <Headshot src={pfp} alt="Nikki Pinzon professional headshot" /> */}
       </section>
       <ArrowIcon className={classes.arrow} />
