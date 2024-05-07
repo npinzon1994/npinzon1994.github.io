@@ -4,8 +4,11 @@ import { ReactComponent as ArrowIcon } from "../../assets/triangle.svg";
 import Headshot from "../UI/Headshot";
 import pfp from "../../assets/professional-headshot.png";
 import Wrapper from "../Layout/Wrapper";
-import animatedGraphic from "../../assets/animated-graphic.webm";
-import AgileGraphic from "./AgileGraphic/AgileGraphic";
+
+import { ReactComponent as Ring } from "../../assets/agile-graphic/ring.svg";
+import { ReactComponent as Gear } from "../../assets/agile-graphic/gear.svg";
+import { ReactComponent as StartingBlock } from "../../assets/agile-graphic/starting-block.svg";
+import { ReactComponent as AgileArrow } from "../../assets/agile-graphic/arrow.svg";
 
 const Intro = ({ id }) => {
   return (
@@ -45,7 +48,14 @@ const Intro = ({ id }) => {
             </a>
           </div>
         </div>
-        <AgileGraphic />
+
+        <div className={classes['agile-graphic']}>
+          <Ring className={classes.ring} />
+          <Gear className={classes.gear}/>
+          <StartingBlock className={classes['starting-block']}/>
+          <AgileArrow className={classes['agile-arrow']}/>
+        </div>
+
         {/* <Headshot src={pfp} alt="Nikki Pinzon professional headshot" /> */}
       </section>
       <ArrowIcon className={classes.arrow} />

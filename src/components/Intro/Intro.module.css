@@ -7,7 +7,7 @@
 .section {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
   width: 100%;
   max-width: 66rem;
@@ -72,15 +72,45 @@
   transform: scale(1.08);
 }
 
-.animated-graphic {
+.agile-graphic {
+  position: relative;
   width: 100%;
-  /* max-width: 25rem; */
-  /* border: solid 1px #fff; */
-  flex: 1;
+  max-width: 530px;
+  height: 530px;
+  border: solid 1px white;
 }
 
-.animated-graphic video {
-  object-fit: fill;
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  
+}
+
+.gear {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  fill: white;
+  height: 64px;
+  width: 64px;
+}
+
+.starting-block {
+  position: absolute;
+  bottom: 13.9%;
+  transform: scale(0.7);
+  opacity: 0.6;
+}
+
+.agile-arrow {
+  position: absolute;
+  bottom: 22px;
+  left: 39.1%;
+  transform: scale(0.7);
+  opacity: 0.6;
 }
 
 .arrow {
