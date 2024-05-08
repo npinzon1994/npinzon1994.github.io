@@ -57,12 +57,12 @@ const Intro = ({ id }) => {
           <Ring />
           <Gear className={classes.gear} />
 
-          <RequirementsIcon
+          {/* <RequirementsIcon
             className={`${classes["agile-graphic-icon"]} ${classes.requirements}`}
-          />
+          /> */}
           <StartingBlock className={classes["starting-block"]} />
 
-          <LaunchIcon className={`${classes["agile-graphic-icon"]} ${classes.launch}`} />
+          {/* <LaunchIcon className={`${classes["agile-graphic-icon"]} ${classes.launch}`} /> */}
           <LaunchArrow className={classes["launch-arrow"]} />
         </div>
 

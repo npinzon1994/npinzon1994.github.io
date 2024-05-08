@@ -1,9 +1,10 @@
 .ring {
   position: relative;
   width: 100%;
-  max-width: 512px;
-  height: 512px;
+  max-width: 518px;
+  height: 518px;
   z-index: 20;
+  transform: rotate(-36deg);
   /* opacity: 0.5; */
   /* animation: rotateRing 20s linear infinite; */
 }

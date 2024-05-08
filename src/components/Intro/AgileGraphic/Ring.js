@@ -9,19 +9,19 @@ const Ring = () => {
   return (
     <div className={classes.ring}>
       
-      <TestIcon className={`${classes.icon} ${classes.test}`}/>
+      {/* <TestIcon className={`${classes.icon} ${classes.test}`}/> */}
       <Segment className={`${classes.segment} ${classes.green}`} />
 
-      <DevelopIcon className={`${classes.icon} ${classes['develop-1']}`}/>
+      {/* <DevelopIcon className={`${classes.icon} ${classes['develop-1']}`}/> */}
       <Segment className={`${classes.segment} ${classes.red}`} />
 
-      <DesignIcon className={`${classes.icon} ${classes.design}`}/>
+      {/* <DesignIcon className={`${classes.icon} ${classes.design}`}/> */}
       <Segment className={`${classes.segment} ${classes.blue}`} />
 
-      <ReviewIcon className={`${classes.icon} ${classes.review}`}/>
+      {/* <ReviewIcon className={`${classes.icon} ${classes.review}`}/> */}
       <Segment className={`${classes.segment} ${classes.yellow}`} />
       
-      <DevelopIcon className={`${classes.icon} ${classes['develop-2']}`}/>
+      {/* <DevelopIcon className={`${classes.icon} ${classes['develop-2']}`}/> */}
       <Segment className={`${classes.segment} ${classes.slateblue}`} />
     </div>
   );

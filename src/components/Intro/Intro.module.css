@@ -75,34 +75,36 @@
 .agile-graphic {
   position: relative;
   width: 100%;
-  max-width: 512px;
-  height: 512px;
+  max-width: 518px;
+  height: 518px;
   /* border: solid 1px white; */
+  transform: scale(0.7);
   z-index: 1;
 }
 
 .gear {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 41.5%;
+  transform: translate(-25%, -25%);
   fill: white;
   height: 100px;
   width: 100px;
+  animation: rotateGear 30s linear infinite;
 }
 
 .starting-block {
   position: absolute;
-  bottom: -3px;
-  transform: translateX(-53px);
+  bottom: 1px;
+  transform: translateX(-58px);
   /* opacity: 0.6; */
   z-index: 30;
 }
 
 .launch-arrow {
   position: absolute;
-  bottom: -53px;
-  left: 265px;
+  bottom: -48px;
+  left: 253px;
   /* opacity: 0.6; */
   z-index: 10;
 }
@@ -138,6 +140,15 @@
   right: 0;
   margin: auto;
   animation: floating 1.5s ease-in-out infinite;
+}
+
+@keyframes rotateGear {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 
 @keyframes floating {
