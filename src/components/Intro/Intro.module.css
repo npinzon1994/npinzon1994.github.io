@@ -75,45 +75,60 @@
 .agile-graphic {
   position: relative;
   width: 100%;
-  max-width: 530px;
-  height: 530px;
-  border: solid 1px white;
-}
-
-.ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.7);
-  
+  max-width: 512px;
+  height: 512px;
+  /* border: solid 1px white; */
+  z-index: 1;
 }
 
 .gear {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.7);
+  transform: translate(-50%, -50%);
   fill: white;
-  height: 64px;
-  width: 64px;
+  height: 100px;
+  width: 100px;
 }
 
 .starting-block {
   position: absolute;
-  bottom: 13.9%;
-  transform: scale(0.7);
-  opacity: 0.6;
+  bottom: -3px;
+  transform: translateX(-53px);
+  /* opacity: 0.6; */
+  z-index: 30;
 }
 
-.agile-arrow {
+.launch-arrow {
   position: absolute;
-  bottom: 22px;
-  left: 39.1%;
-  transform: scale(0.7);
-  opacity: 0.6;
+  bottom: -53px;
+  left: 265px;
+  /* opacity: 0.6; */
+  z-index: 10;
 }
 
-.arrow {
+.agile-graphic-icon {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+}
+
+.requirements {
+  left: 13.5%;
+  bottom: 7px;
+  fill: white;
+  z-index: 40;
+}
+
+.launch {
+  right: -15px;
+  bottom: 6px;
+  z-index: 20;
+  fill: white;
+  transform: rotate(45deg);
+}
+
+.downward-nav-arrow {
   fill: #2a9fde;
   height: 1.7rem;
   width: 1.7rem;

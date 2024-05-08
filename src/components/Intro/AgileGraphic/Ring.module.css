@@ -1,0 +1,92 @@
+.ring {
+  position: relative;
+  width: 100%;
+  max-width: 512px;
+  height: 512px;
+  z-index: 20;
+  /* opacity: 0.5; */
+  /* animation: rotateRing 20s linear infinite; */
+}
+
+.segment {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.green {
+  fill: limegreen;
+  z-index: 21;
+}
+
+.red {
+  fill: red;
+  transform: rotate(72deg);
+}
+
+.blue {
+  fill: blue;
+  transform: rotate(144deg);
+}
+
+.yellow {
+  fill: yellow;
+  transform: rotate(216deg);
+}
+
+.slateblue {
+  fill: slateblue;
+  transform: rotate(288deg);
+}
+
+.icon {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+}
+
+.test {
+  left: 20%;
+  top: 8%;
+  fill: white;
+  z-index: 22;
+}
+
+.develop-1 {
+  right: 20%;
+  top: 8%;
+  fill: white;
+  z-index: 22;
+}
+
+.design {
+  right: 4%;
+  bottom: 32%;
+  fill: white;
+  z-index: 22;
+  width: 56px;
+  height: 56px;
+}
+
+.develop-2 {
+  left: 4%;
+  bottom: 32%;
+  fill: white;
+  z-index: 22;
+}
+
+.review {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  z-index: 22;
+}
+
+@keyframes rotateRing {
+  0% {
+    transform: rotate(36deg);
+  }
+  100% {
+    transform: rotate(-324deg);
+  }
+}

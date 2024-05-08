@@ -5,10 +5,14 @@ import Headshot from "../UI/Headshot";
 import pfp from "../../assets/professional-headshot.png";
 import Wrapper from "../Layout/Wrapper";
 
-import { ReactComponent as Ring } from "../../assets/agile-graphic/ring.svg";
 import { ReactComponent as Gear } from "../../assets/agile-graphic/gear.svg";
 import { ReactComponent as StartingBlock } from "../../assets/agile-graphic/starting-block.svg";
-import { ReactComponent as AgileArrow } from "../../assets/agile-graphic/arrow.svg";
+import { ReactComponent as LaunchArrow } from "../../assets/agile-graphic/arrow.svg";
+
+import { ReactComponent as RequirementsIcon } from "../../assets/agile-graphic-icons/requirements.svg";
+import { ReactComponent as LaunchIcon } from "../../assets/agile-graphic-icons/launch.svg";
+
+import Ring from "./AgileGraphic/Ring";
 
 const Intro = ({ id }) => {
   return (
@@ -49,16 +53,22 @@ const Intro = ({ id }) => {
           </div>
         </div>
 
-        <div className={classes['agile-graphic']}>
-          <Ring className={classes.ring} />
-          <Gear className={classes.gear}/>
-          <StartingBlock className={classes['starting-block']}/>
-          <AgileArrow className={classes['agile-arrow']}/>
+        <div className={classes["agile-graphic"]}>
+          <Ring />
+          <Gear className={classes.gear} />
+
+          <RequirementsIcon
+            className={`${classes["agile-graphic-icon"]} ${classes.requirements}`}
+          />
+          <StartingBlock className={classes["starting-block"]} />
+
+          <LaunchIcon className={`${classes["agile-graphic-icon"]} ${classes.launch}`} />
+          <LaunchArrow className={classes["launch-arrow"]} />
         </div>
 
         {/* <Headshot src={pfp} alt="Nikki Pinzon professional headshot" /> */}
       </section>
-      <ArrowIcon className={classes.arrow} />
+      <ArrowIcon className={classes["downward-nav-arrow"]} />
     </Wrapper>
   );
 };
