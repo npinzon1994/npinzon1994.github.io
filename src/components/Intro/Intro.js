@@ -55,6 +55,7 @@ const Intro = ({ id }) => {
 
         <div className={classes["agile-graphic"]}>
           <Ring />
+          <div className={classes['spinning-arrow']}></div>
           <Gear className={classes.gear} />
 
           {/* <RequirementsIcon

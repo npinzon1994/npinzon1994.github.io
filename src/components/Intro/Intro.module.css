@@ -78,14 +78,25 @@
   max-width: 518px;
   height: 518px;
   /* border: solid 1px white; */
-  transform: scale(0.7);
+  transform: scale(0.8);
   z-index: 1;
+}
+
+.spinning-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 276px;
+  width: 276px;
+  border: solid 1px white;
+  border-radius: 50%;
 }
 
 .gear {
   position: absolute;
-  top: 40%;
-  left: 41.5%;
+  top: 40.3%;
+  left: 40.4%;
   transform: translate(-25%, -25%);
   fill: white;
   height: 100px;

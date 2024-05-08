@@ -15,28 +15,28 @@
   left: 0;
 }
 
-.green {
-  fill: limegreen;
+.yellow {
+  fill: #ffcc00;
   z-index: 21;
 }
 
-.red {
-  fill: red;
+.green {
+  fill: #43c35a;
   transform: rotate(72deg);
 }
 
-.blue {
-  fill: blue;
+.lightblue {
+  fill: #2a9fde;
   transform: rotate(144deg);
 }
 
-.yellow {
-  fill: yellow;
+.blue {
+  fill: #406ec8;
   transform: rotate(216deg);
 }
 
-.slateblue {
-  fill: slateblue;
+.orange {
+  fill: #ff8c00;
   transform: rotate(288deg);
 }
 
