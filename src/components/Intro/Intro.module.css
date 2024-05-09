@@ -83,14 +83,25 @@
 }
 
 .spinning-arrow {
+  fill: #ff4d4d;
+  position: absolute;
+  top: 23.3%;
+  left: 23.4%;
+  transform: translate(-25%, -25%);
+  height: 276px;
+  width: 276px;
+  animation: spinArrow 20s linear infinite;
+}
+
+.placeholder {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 276px;
-  width: 276px;
   border: solid 1px white;
   border-radius: 50%;
+  height: 276px;
+  width: 276px;
 }
 
 .gear {
@@ -98,21 +109,27 @@
   top: 40.3%;
   left: 40.4%;
   transform: translate(-25%, -25%);
-  fill: white;
+  fill: rgb(39, 37, 46);
   height: 100px;
   width: 100px;
   animation: rotateGear 30s linear infinite;
 }
 
 .starting-block {
+  fill: #6252c5; 
   position: absolute;
   bottom: 1px;
   transform: translateX(-58px);
   /* opacity: 0.6; */
   z-index: 30;
+  /* stroke: white;
+  stroke-width: 3; */
 }
 
 .launch-arrow {
+  fill: #ff4d4d;
+  /* stroke: white; 
+  stroke-width: 3; */
   position: absolute;
   bottom: -48px;
   left: 253px;
@@ -159,6 +176,15 @@
   }
   100% {
     transform: rotate(-360deg);
+  }
+}
+
+@keyframes spinArrow {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(-180deg);
   }
 }
 

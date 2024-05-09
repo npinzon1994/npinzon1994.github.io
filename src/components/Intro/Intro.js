@@ -7,7 +7,8 @@ import Wrapper from "../Layout/Wrapper";
 
 import { ReactComponent as Gear } from "../../assets/agile-graphic/gear.svg";
 import { ReactComponent as StartingBlock } from "../../assets/agile-graphic/starting-block.svg";
-import { ReactComponent as LaunchArrow } from "../../assets/agile-graphic/arrow.svg";
+import { ReactComponent as LaunchArrow } from "../../assets/agile-graphic/launch-arrow.svg";
+import { ReactComponent as SpinningArrow } from "../../assets/agile-graphic/spinning-arrow.svg";
 
 import { ReactComponent as RequirementsIcon } from "../../assets/agile-graphic-icons/requirements.svg";
 import { ReactComponent as LaunchIcon } from "../../assets/agile-graphic-icons/launch.svg";
@@ -55,7 +56,8 @@ const Intro = ({ id }) => {
 
         <div className={classes["agile-graphic"]}>
           <Ring />
-          <div className={classes['spinning-arrow']}></div>
+          <SpinningArrow className={classes['spinning-arrow']}/>
+          {/* <div className={classes.placeholder}></div> */}
           <Gear className={classes.gear} />
 
           {/* <RequirementsIcon
