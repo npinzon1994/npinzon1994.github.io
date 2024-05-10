@@ -1,36 +1,10 @@
 <svg width="518" height="518" viewBox=" -3 -3 518 518" xmlns="http://www.w3.org/2000/svg">
-  <!-- <circle r="256" cx="256" cy="256" fill="none" stroke="white"/>
-  <circle r="177.4" cx="256" cy="256" fill="none" stroke="white"/> -->
+  <defs>
+    <linearGradient id="segmentGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="var(--start-color)" />
+      <stop offset="100%" stop-color="var(--end-color)" />
+    </linearGradient>
+  </defs>
   
-  <!-- <polygon points="300,110 390,190 300,270" transform="translate(255.98, 282.8)" fill="slategray" opacity="0.6"/>
-  <rect id="arrow" x="256" y="433.548829237791" width="300" height="78.451170762209" fill="slategray" opacity="0.6"/> -->
-  
-
-  <!-- <g id="ring">
-    <path id="green" d="M 256 10 A 10 10 0 0 0 246 0 A 256 256 0 0 0 20.5 154.391625 A 10 10 0 0 0 26.32955 166 L 82.8 184.484061267 A 10 10 0 0 0 95.2 179.3 A 177 177 0 0 1 246 78.82 A 10 10 0 0 0 256 68.4511191 Z " fill="limegreen" opacity=""></path>
-    <path id="red" d="M 256 10 A 10 10 0 0 0 246 0 A 256 256 0 0 0 20.5 154.391625 A 10 10 0 0 0 26.32955 166 L 82.8 184.484061267 A 10 10 0 0 0 95.2 179.3 A 177 177 0 0 1 246 78.82 A 10 10 0 0 0 256 68.4511191 Z " fill="red" opacity="" transform="rotate(72, 256, 256)"></path>
-    <path id="blue" d="M 256 10 A 10 10 0 0 0 246 0 A 256 256 0 0 0 20.5 154.391625 A 10 10 0 0 0 26.32955 166 L 82.8 184.484061267 A 10 10 0 0 0 95.2 179.3 A 177 177 0 0 1 246 78.82 A 10 10 0 0 0 256 68.4511191 Z " fill="blue" opacity="" transform="rotate(144, 256, 256)"></path>
-    <path id="yellow" d="M 256 10 A 10 10 0 0 0 246 0 A 256 256 0 0 0 20.5 154.391625 A 10 10 0 0 0 26.32955 166 L 82.8 184.484061267 A 10 10 0 0 0 95.2 179.3 A 177 177 0 0 1 246 78.82 A 10 10 0 0 0 256 68.4511191 Z " fill="yellow" opacity="" transform="rotate(216, 256, 256)"></path>
-    <path id="slateblue" d="M 256 10 A 10 10 0 0 0 246 0 A 256 256 0 0 0 20.5 154.391625 A 10 10 0 0 0 26.32955 166 L 82.8 184.484061267 A 10 10 0 0 0 95.2 179.3 A 177 177 0 0 1 246 78.82 A 10 10 0 0 0 256 68.4511191 Z " fill="slateblue" opacity="" transform="rotate(288, 256, 256)"></path>
-  </g> -->
-
-  <path d="M 256 10 A 10 10 0 0 0 246 0 A 256 256 0 0 0 20.5 154.391625 A 10 10 0 0 0 26.32955 166 L 82.8 184.484061267 A 10 10 0 0 0 95.2 179.3 A 177 177 0 0 1 246 78.82 A 10 10 0 0 0 256 68.4511191 Z "></path>
-    
-  
-  <!-- <rect id="starting-block" x="-60" y="433.548829237791"  width="300" height="78.451170762209" rx="10" ry="10" fill="limegreen" opacity="0.4"/> -->
-
-  <g id="grid-markers">
-    <!--Vertical Lines (left to right)-->
-    <!-- <line x1="0" y1="0" x2="0" y2="512" stroke="yellow"/>
-    <line x1="256" y1="0" x2="256" y2="512" stroke="yellow"/>
-    <line x1="512" y1="0" x2="512" y2="512" stroke="yellow"/> -->
-
-    <!--Horizontal Lines (top to bottom)-->
-    <!-- <line x1="0" y1="0" x2="512" y2="0" stroke="yellow"/>
-    <line x1="0" y1="256" x2="512" y2="256" stroke="yellow"/>
-    <line x1="0" y1="512" x2="512" y2="512" stroke="yellow"/> -->
-
-    <!--Arrow vertical midpoint-->
-    <!-- <line x1="-100" y1="472.7744146" x2="712" y2="472.7744146" stroke="yellow"/> -->
-  </g>
+  <path fill="url(#segmentGradient)" d="M 256 10 A 10 10 0 0 0 246 0 A 256 256 0 0 0 20.5 154.391625 A 10 10 0 0 0 26.32955 166 L 82.8 184.484061267 A 10 10 0 0 0 95.2 179.3 A 177 177 0 0 1 246 78.82 A 10 10 0 0 0 256 68.4511191 Z "></path>
 </svg>

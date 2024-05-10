@@ -1,3 +1,9 @@
 <svg width="390" height="180" viewBox="-3 -3 396 186">
-    <path d="M 0 60 A 10 10 0 0 1 10 50 L 300 50 L 300 20 Q 300 10 306.6 16 L 386 86 Q 390 90 386 94 L 307.6 163.6 Q 300 170 300 160 L 300 130 L 10 130 A 10 10 0 0 1 0 120 Z"/>
+    <defs>
+    <linearGradient id="redGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#b33333" />
+      <stop offset="100%" stop-color="#ff4d4d" />
+    </linearGradient>
+  </defs>
+    <path fill="url(#redGradient)" d="M 0 60 A 10 10 0 0 1 10 50 L 300 50 L 300 20 Q 300 10 306.6 16 L 386 86 Q 390 90 386 94 L 307.6 163.6 Q 300 170 300 160 L 300 130 L 10 130 A 10 10 0 0 1 0 120 Z"/>
 </svg>

@@ -20,6 +20,9 @@
 }
 
 .left-container h1 {
+  background: linear-gradient(to top, #4c86fc, #52c2ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: #64b4df;
   font-size: 3.5rem;
   line-height: 3.85rem;
@@ -57,7 +60,7 @@
 .button-container a {
   text-decoration: none;
   /* background: #b9faf8; */
-  background: #7265c9;
+  background: linear-gradient(to top, #4a3a9f, #6252c5);
   color: #fff;
   padding: 0.8em 2em;
   font-size: 1.4rem;
@@ -83,7 +86,6 @@
 }
 
 .spinning-arrow {
-  fill: #ff4d4d;
   position: absolute;
   top: 23.3%;
   left: 23.4%;
@@ -116,7 +118,6 @@
 }
 
 .starting-block {
-  fill: #6252c5; 
   position: absolute;
   bottom: 1px;
   transform: translateX(-58px);
@@ -127,7 +128,6 @@
 }
 
 .launch-arrow {
-  fill: #ff4d4d;
   /* stroke: white; 
   stroke-width: 3; */
   position: absolute;

@@ -67,7 +67,7 @@
   font-size: 1.4rem;
   font-weight: 500;
   border: none;
-  background: #7265c9;
+  background: linear-gradient(to top, #4a3a9f, #6252c5);
   color: #fff;
   cursor: pointer;
   margin-top: 12px;
@@ -77,7 +77,7 @@
 }
 
 .form-button:hover {
-  background: #6252c5;
+  background: linear-gradient(to top, #6252c5, #826fff);
 }
 
 .form-button:active {

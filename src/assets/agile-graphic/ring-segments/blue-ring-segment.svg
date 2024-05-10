@@ -1,0 +1,10 @@
+<svg width="518" height="518" viewBox=" -3 -3 518 518" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#406ec8" />
+      <stop offset="100%" stop-color="#2d549f" />
+    </linearGradient>
+  </defs>
+  
+  <path fill="url(#blueGradient)" transform="rotate(216, 256, 256)" d="M 256 10 A 10 10 0 0 0 246 0 A 256 256 0 0 0 20.5 154.391625 A 10 10 0 0 0 26.32955 166 L 82.8 184.484061267 A 10 10 0 0 0 95.2 179.3 A 177 177 0 0 1 246 78.82 A 10 10 0 0 0 256 68.4511191 Z "></path>
+</svg>

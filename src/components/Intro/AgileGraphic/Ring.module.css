@@ -4,7 +4,7 @@
   max-width: 518px;
   height: 518px;
   z-index: 20;
-  transform: rotate(-36deg);
+  transform: rotate(-108deg);
   /* opacity: 0.5; */
   /* animation: rotateRing 20s linear infinite; */
 }
@@ -15,31 +15,6 @@
   left: 0;
   /* stroke: white;
   stroke-width: 3; */
-}
-
-.yellow {
-  fill: #ffcc00;
-  z-index: 21;
-}
-
-.green {
-  fill: #43c35a;
-  transform: rotate(72deg);
-}
-
-.lightblue {
-  fill: #2a9fde;
-  transform: rotate(144deg);
-}
-
-.blue {
-  fill: #406ec8;
-  transform: rotate(216deg);
-}
-
-.orange {
-  fill: #ff8c00;
-  transform: rotate(288deg);
 }
 
 .icon {

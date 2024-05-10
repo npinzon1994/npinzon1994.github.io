@@ -1,28 +1,18 @@
 import classes from "./Ring.module.css";
-import { ReactComponent as Segment } from "../../../assets/agile-graphic/ring-segment.svg";
-import {ReactComponent as TestIcon} from "../../../assets/agile-graphic-icons/test.svg";
-import {ReactComponent as DevelopIcon} from "../../../assets/agile-graphic-icons/develop.svg";
-import {ReactComponent as DesignIcon} from "../../../assets/agile-graphic-icons/design.svg";
-import {ReactComponent as ReviewIcon} from "../../../assets/agile-graphic-icons/review.svg";
+import { ReactComponent as YellowSegment } from "../../../assets/agile-graphic/ring-segments/yellow-ring-segment.svg";
+import { ReactComponent as GreenSegment } from "../../../assets/agile-graphic/ring-segments/green-ring-segment.svg";
+import { ReactComponent as LightBlueSegment } from "../../../assets/agile-graphic/ring-segments/lightblue-ring-segment.svg";
+import { ReactComponent as BlueSegment } from "../../../assets/agile-graphic/ring-segments/blue-ring-segment.svg";
+import { ReactComponent as OrangeSegment } from "../../../assets/agile-graphic/ring-segments/orange-ring-segment.svg";
 
 const Ring = () => {
   return (
     <div className={classes.ring}>
-      
-      {/* <TestIcon className={`${classes.icon} ${classes.test}`}/> */}
-      <Segment className={`${classes.segment} ${classes.yellow}`} />
-
-      {/* <DevelopIcon className={`${classes.icon} ${classes['develop-1']}`}/> */}
-      <Segment className={`${classes.segment} ${classes.green}`} />
-
-      {/* <DesignIcon className={`${classes.icon} ${classes.design}`}/> */}
-      <Segment className={`${classes.segment} ${classes.lightblue}`} />
-
-      {/* <ReviewIcon className={`${classes.icon} ${classes.review}`}/> */}
-      <Segment className={`${classes.segment} ${classes.blue}`} />
-      
-      {/* <DevelopIcon className={`${classes.icon} ${classes['develop-2']}`}/> */}
-      <Segment className={`${classes.segment} ${classes.orange}`} />
+      <GreenSegment className={classes.segment} />
+      <YellowSegment className={classes.segment} style={{zIndex: 21}} />
+      <LightBlueSegment className={classes.segment} />
+      <BlueSegment className={classes.segment} />
+      <OrangeSegment className={classes.segment} />
     </div>
   );
 };
