@@ -5,8 +5,15 @@
  width="200.000000pt" height="200.000000pt" viewBox="0 0 200.000000 200.000000"
  preserveAspectRatio="xMidYMid meet">
 
+<defs>
+    <linearGradient id="blueGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#75cfff" />
+      <stop offset="100%" stop-color="#52c2ff" />
+    </linearGradient>
+</defs>
+
 <g transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)" stroke="none">
-<path d="M153 1585 c-62 -27 -69 -80 -20 -151 46 -68 787 -1006 806 -1021 25
+<path fill="url(#blueGradient)" d="M153 1585 c-62 -27 -69 -80 -20 -151 46 -68 787 -1006 806 -1021 25
 -19 68 -15 94 10 23 20 771 929 830 1008 52 69 45 128 -18 155 -50 21 -1644
 20 -1692 -1z"/>
 </g>

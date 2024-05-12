@@ -10,9 +10,6 @@ import { ReactComponent as StartingBlock } from "../../assets/agile-graphic/star
 import { ReactComponent as LaunchArrow } from "../../assets/agile-graphic/launch-arrow.svg";
 import { ReactComponent as SpinningArrow } from "../../assets/agile-graphic/spinning-arrow.svg";
 
-import { ReactComponent as RequirementsIcon } from "../../assets/agile-graphic-icons/requirements.svg";
-import { ReactComponent as LaunchIcon } from "../../assets/agile-graphic-icons/launch.svg";
-
 import Ring from "./AgileGraphic/Ring";
 
 const Intro = ({ id }) => {
@@ -59,13 +56,7 @@ const Intro = ({ id }) => {
           <SpinningArrow className={classes['spinning-arrow']}/>
           {/* <div className={classes.placeholder}></div> */}
           <Gear className={classes.gear} />
-
-          {/* <RequirementsIcon
-            className={`${classes["agile-graphic-icon"]} ${classes.requirements}`}
-          /> */}
           <StartingBlock className={classes["starting-block"]} />
-
-          {/* <LaunchIcon className={`${classes["agile-graphic-icon"]} ${classes.launch}`} /> */}
           <LaunchArrow className={classes["launch-arrow"]} />
         </div>
 

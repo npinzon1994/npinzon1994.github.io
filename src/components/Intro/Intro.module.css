@@ -23,7 +23,6 @@
   background: linear-gradient(to top, #4c86fc, #52c2ff);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #64b4df;
   font-size: 3.5rem;
   line-height: 3.85rem;
   margin: 0;
@@ -159,7 +158,6 @@
 }
 
 .downward-nav-arrow {
-  fill: #2a9fde;
   height: 1.7rem;
   width: 1.7rem;
   position: absolute;
