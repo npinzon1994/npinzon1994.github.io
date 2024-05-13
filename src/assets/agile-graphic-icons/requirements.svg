@@ -1,74 +1,114 @@
 <svg width="205" height="250" viewBox="0 0 205 250">
     <defs>
-        <mask id="mask">
-            <path fill="black" stroke="black" stroke-width="5.25"
-                d="M 50 25 Q 50 20 55 20 L 70 20 A 10 10 0 0 1 90 20 L 105 20 Q 110 20 110 25 L 110 35 Q 110 40 105 40 L 55 40 Q 50 40 50 35 Z" />
+        <mask id="board-mask">
+            <rect fill="white" x="8.25" y="28.25" opacity="" width="143.5" height="168.5" ry="11.75" rx="11.75" />
+            <rect fill="black" x="11.75" y="31.75" opacity="" width="136.5" height="161.5" ry="8.25" rx="8.25" />
+            <path fill="black"
+                d="M 47.5 25 Q 47.5 17.5 55 17.5 L 67.5 17.5 A 12.5 10 0 0 1 92.5 17.5 L 105 17.5 Q 112.5 17.5 112.5 25 L 112.5 35 Q 112.5 42.5 105 42.5 L 55 42.5 Q 47.5 42.5 47.5 35 Z" />
+
+            <!--Big check bg-->
+            <circle cx="150" cy="175" r="37.5" fill="black" />
+
+            <rect id="transparent-bg-rect" fill="black" x="175" y="32.5" width="20" height="64.5"
+                transform="scale(0.8) translate(-20, 16) rotate(45, 180, 112)" />
+        </mask>
+
+        <mask id="paper-mask">
+            <!--paper (part that's not getting masked)-->
+            <rect fill="white" x="17.5" y="37.5" width="125" height="150" ry="2" rx="2" />
+
+            <!--clip-->
+            <path fill="black"
+                d="M 47.5 25 Q 47.5 17.5 55 17.5 L 67.5 17.5 A 12.5 10 0 0 1 92.5 17.5 L 105 17.5 Q 112.5 17.5 112.5 25 L 112.5 35 Q 112.5 42.5 105 42.5 L 55 42.5 Q 47.5 42.5 47.5 35 Z" />
+
+            <!--Requirement details-->
+            <g id="req-details-1">
+                <rect fill="black" x="67" y="60" width="69" height="6" ry="10" rx="2.5" />
+                <rect fill="black" x="67" y="72" width="69" height="6" ry="10" rx="2.5" />
+            </g>
+            <g id="req-details-2">
+                <rect fill="black" x="67" y="102.75" width="57" height="6" ry="10" rx="2.5" />
+                <rect fill="black" x="67" y="114.75" width="69" height="6" ry="10" rx="2.5" />
+            </g>
+            <g id="req-details-3">
+                <rect fill="black" x="67" y="145" width="46" height="6" ry="10" rx="2.5" />
+                <rect fill="black" x="67" y="157" width="41" height="6" ry="10" rx="2.5" />
+            </g>
+
+            <!--Big check bg-->
+            <circle cx="150" cy="175" r="37.5" fill="black" />
+
+            <!--small checks-->
+            <circle cx="42.5" cy="69.25" r="17.5" fill="black" />
+            <rect fill="black" x="37.9" y="72.3" width="28" height="5" ry="10" rx="2.5"
+                transform="rotate(-45, 39.77, 71.45)" />
+
+            <circle cx="42.5" cy="112" r="17.5" fill="black" />
+            <rect fill="black" x="37.9" y="115.05" width="28" height="5" ry="10" rx="2.5"
+                transform="rotate(-45, 39.77, 114.2)" />
+
+            <circle cx="42.5" cy="154.25" r="17.5" fill="black" />
+            <rect fill="black" x="37.9" y="157.3" width="28" height="5" ry="10" rx="2.5"
+                transform="rotate(-45, 39.77, 156.45)" />
+
+            <!--Pencil background-->
+            <g transform="scale(0.8) translate(-20, 16) rotate(45, 180, 112)">
+                <rect id="transparent-bg-rect" fill="black" x="175" y="32.5" width="20" height="64.5" />
+
+                <path id="transparent-bg-triangle" fill="black"
+                    d="M 175 97 L 195 97 L 186.198 111.7 Q 185 113.7 183.802 111.7 Z" />
+            </g>
+        </mask>
+
+        <mask id="big-circle-check-mask">
+            <circle cx="150" cy="175" r="32.5" fill="white" />
+            <rect fill="black" x="135" y="175" width="20" height="5" ry="10" rx="2.5"
+                transform="rotate(35, 135, 175)" />
+            <rect fill="black" x="142.35" y="185.75" width="35" height="5" ry="10" rx="2.5"
+                transform="rotate(-45, 145, 184)" opacity="1" />
+        </mask>
+
+        <mask id="check-mask-1">
+            <circle cx="42.5" cy="69.25" r="12.5" fill="white" />
+            <rect fill="black" x="35" y="65" width="13.5" height="5" ry="10" rx="2.5" transform="rotate(35, 35, 65)" />
+            <rect fill="black" x="37.9" y="72.3" width="28" height="5" ry="10" rx="2.5"
+                transform="rotate(-45, 39.77, 71.45)" />
+        </mask>
+
+        <mask id="check-mask-2">
+            <circle cx="42.5" cy="112" r="12.5" fill="white" />
+            <rect fill="black" x="35" y="107.75" width="13.5" height="5" ry="10" rx="2.5"
+                transform="rotate(35, 35, 107.75)" />
+            <rect fill="black" x="37.9" y="115.05" width="28" height="5" ry="10" rx="2.5"
+                transform="rotate(-45, 39.77, 114.2)" />
+        </mask>
+
+        <mask id="check-mask-3">
+            <circle cx="42.5" cy="154.25" r="12.5" fill="white" />
+            <rect fill="black" x="35" y="150" width="13.5" height="5" ry="10" rx="2.5"
+                transform="rotate(35, 35, 150)" />
+            <rect fill="black" x="37.9" y="157.3" width="28" height="5" ry="10" rx="2.5"
+                transform="rotate(-45, 39.77, 156.45)" />
         </mask>
     </defs>
 
-    <rect id="board" fill="none" stroke="hotpink" stroke-width="3.5" x="10" y="30" width="140" height="165" ry="10"
-        rx="10" />
-    <rect id="paper" fill="#406ec8" x="17.5" y="37.5" width="125" height="150" ry="2" rx="2" />
 
+    <rect id="board" fill="#406ec8" mask="url(#board-mask)" x="8.25" y="28.25" opacity="" width="143.5" height="168.5"
+        ry="11.75" rx="11.75" />
+    <rect id="paper" mask="url(#paper-mask)" fill="#406ec8" x="17.5" y="37.5" width="125" height="150" ry="2" rx="2" />
+    <path id="clip" fill="#406ec8" opacity=""
+        d="M 52.5 25 Q 52.5 22.5 55 22.5 L 72.5 22.5 L 72.5 22.5 A 7.5 7.5 0 0 1 87.5 22.5 L 105 22.5 Q 107.5 22.5 107.5 25 L 107.5 35 Q 107.5 37.5 105 37.5 L 55 37.5 Q 52.5 37.5 52.5 35 Z" />
 
-    <path id="clip" fill="#406ec8"
-        d="M 50 25 Q 50 20 55 20 L 70 20 A 10 10 0 0 1 90 20 L 105 20 Q 110 20 110 25 L 110 35 Q 110 40 105 40 L 55 40 Q 50 40 50 35 Z" />
+    <circle cx="42.5" cy="69.25" r="12.5" mask="url(#check-mask-1)" fill="#406ec8" />
+    <circle cx="42.5" cy="112" r="12.5" mask="url(#check-mask-2)" fill="#406ec8" />
+    <circle cx="42.5" cy="154.25" r="12.5" mask="url(#check-mask-3)" fill="#406ec8" />
 
-    <g id="requirement-1">
-        <g>
-            <circle cx="42.5" cy="69.25" r="15" stroke="white" stroke-width="5" />
-            <rect fill="white" x="35" y="65" width="13.5" height="5" ry="10" rx="2.5" transform="rotate(35, 35, 65)" />
-            <rect fill="white" x="37.9" y="72.3" width="28" height="5" ry="10" rx="2.5"
-                transform="rotate(-45, 39.77, 71.45)" />
-        </g>
-        <g>
-            <rect fill="white" stroke="white" x="67.5" y="60" width="68" height="5" ry="10" rx="2.5" />
-            <rect fill="white" stroke="white" x="67.5" y="72" width="68" height="5" ry="10" rx="2.5" />
-        </g>
-    </g>
-
-
-    <g id="requirement-2">
-        <g>
-            <circle cx="42.5" cy="112" r="15" stroke="white" stroke-width="5" />
-            <rect fill="white" x="35" y="107.75" width="13.5" height="5" ry="10" rx="2.5"
-                transform="rotate(35, 35, 107.75)" />
-            <rect fill="white" x="37.9" y="115.05" width="28" height="5" ry="10" rx="2.5"
-                transform="rotate(-45, 39.77, 114.2)" />
-        </g>
-        <g>
-            <rect fill="white" stroke="white" x="67.5" y="102.75" width="56" height="5" ry="10" rx="2.5" />
-            <rect fill="white" stroke="white" x="67.5" y="114.75" width="68" height="5" ry="10" rx="2.5" />
-        </g>
-    </g>
-
-    <g id="requirement-3">
-        <g>
-            <circle cx="42.5" cy="154.25" r="15" stroke="white" stroke-width="5" />
-            <rect fill="white" x="35" y="150" width="13.5" height="5" ry="10" rx="2.5"
-                transform="rotate(35, 35, 150)" />
-            <rect fill="white" x="37.9" y="157.3" width="28" height="5" ry="10" rx="2.5"
-                transform="rotate(-45, 39.77, 156.45)" />
-        </g>
-        <g>
-            <rect fill="white" stroke="white" x="67.5" y="145" width="45" height="5" ry="10" rx="2.5" />
-            <rect fill="white" stroke="white" x="67.5" y="157" width="40" height="5" ry="10" rx="2.5" />
-        </g>
-    </g>
 
     <g id="pencil" transform="scale(0.8) translate(-20, 16) rotate(45, 180, 112)">
-        <rect id="transparent-bg-rect" fill="white" x="175" y="32.5" width="20" height="64.5" />
         <rect fill="#406ec8" x="180" y="37.5" width="10" height="57" />
-        <path id="transparent-bg-triangle" fill="white"
-            d="M 175 97 L 195 97 L 186.198 111.7 Q 185 113.7 183.802 111.7 Z" />
+
         <polygon fill="#406ec8" points="182,101 188,101 185,105.8" opacity="1" />
     </g>
 
-    <g id="big-circle-check">
-        <circle cx="150" cy="175" r="35" stroke="white" stroke-width="5" />
-        <rect fill="white" x="135" y="175" width="20" height="5" ry="10" rx="2.5" transform="rotate(35, 135, 175)" />
-        <rect fill="white" x="142.35" y="185.75" width="35" height="5" ry="10" rx="2.5"
-            transform="rotate(-45, 145, 184)" opacity="1" />
-    </g>
-
+    <circle cx="150" cy="175" r="32.5" mask="url(#big-circle-check-mask)" fill="#406ec8" />
 </svg>

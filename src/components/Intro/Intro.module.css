@@ -74,23 +74,50 @@
   transform: scale(1.08);
 }
 
+.animation-path {
+  position: absolute;
+  z-index: 50;
+  top: 0;
+  left: 0;
+}
+
+.animated-icon-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: white;
+  /* bottom: 50px; */
+  z-index: 40;
+  offset-path: path(
+    "M 30 472.7744146 L 344.75 472.7744146 A 230 230 0 0 0 552 323 A 235 235 0 0 0 472.5 79.5 A 230 230 0 0 0 216.5 81 A 225 225 0 0 0 138 323.5 A 215 215 0 0 0 330 472.7744146 L 675 472.7744146"
+  );
+}
+
+.animated-icon {
+  z-index: 40;
+  width: 64px;
+  height: 64px;
+}
+
 .agile-graphic {
   position: relative;
-  width: 100%;
-  max-width: 518px;
-  height: 518px;
-  /* border: solid 1px white; */
+  width: 827px;
+  height: 550px;
+  border: solid 1px white;
   transform: scale(0.8);
   z-index: 1;
 }
 
 .spinning-arrow {
   position: absolute;
-  top: 23.3%;
-  left: 23.4%;
+  top: 21.5%;
+  left: 25%;
   transform: translate(-25%, -25%);
-  height: 276px;
-  width: 276px;
+  height: 50%;
+  width: 50%;
   animation: spinArrow 20s linear infinite;
 }
 
@@ -107,8 +134,8 @@
 
 .gear {
   position: absolute;
-  top: 40.3%;
-  left: 40.4%;
+  top: 38%;
+  left: 43%;
   transform: translate(-25%, -25%);
   fill: rgb(39, 37, 46);
   height: 100px;
@@ -118,8 +145,8 @@
 
 .starting-block {
   position: absolute;
-  bottom: 1px;
-  transform: translateX(-58px);
+  bottom: 36px;
+  left: 30px;
   /* opacity: 0.6; */
   z-index: 30;
   /* stroke: white;
@@ -130,23 +157,10 @@
   /* stroke: white; 
   stroke-width: 3; */
   position: absolute;
-  bottom: -48px;
-  left: 253px;
+  bottom: -14px;
+  right: -45px;
   /* opacity: 0.6; */
   z-index: 10;
-}
-
-.agile-graphic-icon {
-  position: absolute;
-  width: 64px;
-  height: 64px;
-}
-
-.requirements {
-  left: 13.5%;
-  bottom: 7px;
-  fill: white;
-  z-index: 40;
 }
 
 .launch {
