@@ -1,6 +1,10 @@
+@font-face {
+  font-family: 'League Spartan bold';
+  src: url('C:\workspace\react_practice\react\personal-github-site\npinzon1994.github.io\src\fonts\LeagueSpartan-Bold.otf');
+}
+
 .wrapper {
   /* background: linear-gradient(0.25turn, #6f2dbd, #b298dc); */
-  background: #030014;
   height: 100vh;
 }
 
@@ -12,7 +16,7 @@
   width: 100%;
   max-width: 66rem;
   margin: 0 auto;
-  animation: slide-down 700ms ease-in-out forwards;
+  /* animation: slide-down 700ms ease-in-out forwards; */
 }
 
 .left-container {
@@ -20,34 +24,28 @@
 }
 
 .left-container h1 {
-  background: linear-gradient(to top, #4c86fc, #52c2ff);
+  /* background: linear-gradient(to top, #4c86fc, #52c2ff);
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+  color: white;
   font-size: 3.5rem;
   line-height: 3.85rem;
   margin: 0;
-  font-family: "Alegreya", serif;
+  font-family: 'League Spartan bold';
   font-weight: 600;
 }
 
 .left-container h3 {
   color: white;
-  font-size: 1.6rem;
-  line-height: 2.08rem;
-  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.35rem;
+  line-height: 1.8rem;
+  font-family: "Open Sans";
   font-weight: 300;
   /* max-width: 37rem; */
 }
 
 .left-container h3 span {
-  /* font-weight: 500; */
-}
-
-.purple-text {
-  /* color: transparent;
-  background-image: linear-gradient(90deg, #7d71ca, #55b1e2);
-  background-clip: text; */
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .button-container {
@@ -62,9 +60,9 @@
   background: linear-gradient(to top, #4a3a9f, #6252c5);
   color: #fff;
   padding: 0.8em 2em;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   border-radius: 0.4rem;
-  font-family: "Alegreya Sans", sans-serif;
+  font-family: "Open Sans";
   font-weight: 500;
   transition: 200ms;
   user-select: none;
@@ -72,43 +70,6 @@
 
 .button-container a:hover {
   transform: scale(1.08);
-}
-
-.animation-path {
-  position: absolute;
-  z-index: 50;
-  top: 0;
-  left: 0;
-}
-
-.animated-icon-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: white;
-  /* bottom: 50px; */
-  z-index: 40;
-  offset-path: path(
-    "M 30 472.7744146 L 344.75 472.7744146 A 230 230 0 0 0 552 323 A 235 235 0 0 0 472.5 79.5 A 230 230 0 0 0 216.5 81 A 225 225 0 0 0 138 323.5 A 215 215 0 0 0 330 472.7744146 L 675 472.7744146"
-  );
-}
-
-.animated-icon {
-  z-index: 40;
-  width: 64px;
-  height: 64px;
-}
-
-.agile-graphic {
-  position: relative;
-  width: 827px;
-  height: 550px;
-  border: solid 1px white;
-  transform: scale(0.8);
-  z-index: 1;
 }
 
 .spinning-arrow {
@@ -121,25 +82,14 @@
   animation: spinArrow 20s linear infinite;
 }
 
-.placeholder {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: solid 1px white;
-  border-radius: 50%;
-  height: 276px;
-  width: 276px;
-}
-
 .gear {
   position: absolute;
-  top: 38%;
-  left: 43%;
+  top: 33%;
+  left: 39.5%;
   transform: translate(-25%, -25%);
   fill: rgb(39, 37, 46);
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   animation: rotateGear 30s linear infinite;
 }
 
@@ -180,6 +130,46 @@
   right: 0;
   margin: auto;
   animation: floating 1.5s ease-in-out infinite;
+}
+
+.agile-graphic {
+  position: relative;
+  width: 827px;
+  height: 550px;
+  /* border: solid 1px white; */
+  transform: scale(0.7);
+  z-index: 1;
+  flex: 1;
+}
+
+.animation-path {
+  position: absolute;
+  top: 0;
+  left: 12.8%;
+  /* border: solid 1px white; */
+  /* border-radius: 50%; */
+  height: 512px;
+  width: 512px;
+  z-index: 60;
+  transform: translateX(-16.7rem);
+}
+
+.animated-icon-container {
+  position: absolute;
+  bottom: 4px;
+  right: 45%;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: white;
+  z-index: 40;
+  transform-origin: center;
+}
+
+.animated-icon {
+  z-index: 40;
+  width: 60px;
+  height: 60px;
 }
 
 @keyframes rotateGear {

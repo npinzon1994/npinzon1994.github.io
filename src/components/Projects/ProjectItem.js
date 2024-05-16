@@ -12,7 +12,7 @@ const Description = ({
 }) => {
   const languagesList = languages.map((language) => (
     <li key={language.id}>
-      <img src={language.img} alt={language.alt} className={classes.language}/>
+      <img src={language.img} alt={language.alt} className={classes.language} />
     </li>
     // <span className={classes.language}>{language}</span>
   ));
@@ -24,7 +24,7 @@ const Description = ({
         {!completed && (
           <span className={classes["coming-soon"]}>Coming soon!</span>
         )}
-        <div className={classes["language-container"]}>{languagesList}</div>
+        <ul className={classes["language-container"]}>{languagesList}</ul>
         <span className={classes.description}>{description}</span>
         <div className={classes["button-container"]}>
           {completed && (
@@ -41,7 +41,17 @@ const Description = ({
   );
 };
 
-const ProjectItem = ({ handleMouseLeave, isVisible, video, ...props }) => {
+const ProjectItem = ({
+  handleMouseLeave,
+  isVisible,
+  video,
+  title,
+  tools,
+  liveLink,
+  codeLink,
+  completed,
+  ...props
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleHover = () => {
@@ -52,26 +62,48 @@ const ProjectItem = ({ handleMouseLeave, isVisible, video, ...props }) => {
     setIsHovered(false);
   };
 
+  const toolsList = tools.map((tool) => (
+    <li key={tool.id}>
+      <img src={tool.img} alt={tool.alt} />
+    </li>
+  ));
+
   return (
-    <>
-      <li
-        className={`${classes["container-grid"]} ${
-          isVisible ? classes.visible : ""
-        }`}
-        onMouseEnter={handleHover}
-        onMouseLeave={handleLeave}
-      >
-        <video width="100%" height="100%" autoPlay playsInline muted loop>
-          <source src={video.src} type={video.type} />
-          Sorry, your browser does not support videos.
-        </video>
-        <Description
-          {...props}
-          isHovered={isHovered}
-          handleMouseLeave={handleLeave}
-        />
-      </li>
-    </>
+    <li
+      className={`${classes["container-grid"]} ${
+        isVisible ? classes.visible : ""
+      }`}
+      onMouseEnter={handleHover}
+      onMouseLeave={handleLeave}
+    >
+      <video width="100%" height="100%" autoPlay playsInline muted loop>
+        <source src={video.src} type={video.type} />
+        Sorry, your browser does not support videos.
+      </video>
+
+      <div className={classes["below-video-container"]}>
+        <h4 className={classes["project-title"]}>{title}</h4>
+        <div className={classes["tools-and-links-container"]}>
+          <ul className={classes["tools-list"]}>{toolsList}</ul>
+          <div className={classes["links-container"]}>
+            {completed && (
+              <a href={liveLink} target="_blank" rel="noreferrer">
+                LIVE
+              </a>
+            )}
+            <a href={codeLink} target="_blank" rel="noreferrer">
+              CODE
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* <Description
+        {...props}
+        isHovered={isHovered}
+        handleMouseLeave={handleLeave}
+      /> */}
+    </li>
   );
 };
 

@@ -1,7 +1,8 @@
 .tool {
   list-style-type: none;
   width: clamp(4.9rem, 14vw, 6.5rem);
-  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-family: "Open Sans";
+  font-size: clamp(0.75rem, 2vw, 0.95rem);
   text-align: center;
   padding: 0.9em;
   opacity: 0;
@@ -11,7 +12,7 @@
 }
 
 .tool span {
-  color: black;
+  color: white;
   margin-top: 20px;
 }
 

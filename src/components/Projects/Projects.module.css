@@ -1,16 +1,11 @@
 .wrapper {
   scroll-margin-top: 6rem;
-}
-
-.section {
-  width: 100%;
-  max-width: 66rem;
-  margin: 0 auto;
+  background: #343436;
 }
 
 .portfolio-grid {
   display: grid;
-  gap: 1rem;
+  gap: 2.2rem;
   grid-template-columns: repeat(2, 1fr);
   padding-left: 0;
   margin: auto;

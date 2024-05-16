@@ -4,13 +4,13 @@
   flex-direction: column;
   /* background: linear-gradient(0.25turn, #6f2dbd, #B298DC); */
   background: #030014;
-  font-family: "Alegreya Sans", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-family: "Open Sans";
 }
 
 .copyright {
   max-width: 40rem;
   margin: 1rem auto;
-  color: #EEE4FF;
+  color: #eee4ff;
   font-weight: 500;
 }

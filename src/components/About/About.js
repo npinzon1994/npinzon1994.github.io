@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import classes from "./About.module.css";
 import Wrapper from "../Layout/Wrapper";
 import Section from "../Layout/Section";
+import Headshot from "../UI/Headshot";
+import pfp from "../../assets/professional-headshot.png";
 
 const About = ({ id }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,6 +41,7 @@ const About = ({ id }) => {
           from St. Joseph's University with a Bachelor's degree in Computer
           Science & Mathematics.
         </p>
+        <Headshot src={pfp} alt="Nikki Pinzon professional headshot" />
       </Section>
     </Wrapper>
   );

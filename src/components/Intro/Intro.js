@@ -1,10 +1,7 @@
-import React from "react";
 import classes from "./Intro.module.css";
 import { ReactComponent as ArrowIcon } from "../../assets/triangle.svg";
-import Headshot from "../UI/Headshot";
-import pfp from "../../assets/professional-headshot.png";
 import Wrapper from "../Layout/Wrapper";
-import { motion } from "framer-motion";
+import { useAnimate } from "framer-motion";
 
 import { ReactComponent as Gear } from "../../assets/agile-graphic/gear.svg";
 import { ReactComponent as StartingBlock } from "../../assets/agile-graphic/starting-block.svg";
@@ -13,13 +10,39 @@ import { ReactComponent as SpinningArrow } from "../../assets/agile-graphic/spin
 import { ReactComponent as AnimatedIcon } from "../../assets/agile-graphic-icons/requirements.svg";
 
 import Ring from "./AgileGraphic/Ring";
+import { useEffect } from "react";
 
 const Intro = ({ id }) => {
-  const transition = {
-    duration: 4,
-    delay: 0.2,
-    ease: "easeInOut",
-  };
+  const [scope, animate] = useAnimate();
+
+  useEffect(() => {
+    const moveRightDuration = 2.3;
+    const rotationDuration = 6;
+
+    const handleAnimate = async () => {
+      animate(
+        "div",
+        { rotate: 360 },
+        { duration: rotationDuration, ease: "linear" }
+      );
+      await animate(
+        scope.current,
+        { translateX: "0rem" },
+        { duration: moveRightDuration, ease: "linear" }
+      );
+      await animate(
+        scope.current,
+        { rotate: -360 },
+        { duration: rotationDuration, ease: "linear" }
+      );
+      await animate(
+        scope.current,
+        { translateX: "20.8rem" },
+        { duration: moveRightDuration, ease: "easeOut" }
+      );
+    };
+    handleAnimate();
+  }, [scope, animate]);
 
   return (
     <Wrapper className={classes.wrapper} id={id}>
@@ -28,19 +51,11 @@ const Intro = ({ id }) => {
           <h1>Hi, I'm Nikki</h1>
           <h3>
             I'm a Software Engineer with a passion for creating{" "}
-            <span
-              className={classes["purple-text"]}
-              role="heading"
-              aria-level={1}
-            >
+            <span role="heading" aria-level={1}>
               fast, scalable,{" "}
             </span>
             and{" "}
-            <span
-              className={classes["purple-text"]}
-              role="heading"
-              aria-level={1}
-            >
+            <span role="heading" aria-level={1}>
               engaging
             </span>{" "}
             web applications.
@@ -61,39 +76,18 @@ const Intro = ({ id }) => {
 
         <div className={classes["agile-graphic"]}>
           <Ring />
-          <SpinningArrow className={classes["spinning-arrow"]} />
-          {/* <div className={classes.placeholder}></div> */}
+          {/* <SpinningArrow className={classes["spinning-arrow"]} /> */}
+
+          <div className={classes["animation-path"]} ref={scope}>
+            <div className={classes["animated-icon-container"]}>
+              <AnimatedIcon className={classes["animated-icon"]} />
+            </div>
+          </div>
+
           <Gear className={classes.gear} />
           <StartingBlock className={classes["starting-block"]} />
           <LaunchArrow className={classes["launch-arrow"]} />
-
-          {/*ANIMATION PATH*/}
-          <svg
-            width="754.34"
-            height="552"
-            viewBox="0 0 754.34 552"
-            className={classes["animation-path"]}
-            opacity={0.6}
-          >
-            <motion.path
-              d="M 30 472.7744146 L 344.75 472.7744146 A 230 230 0 0 0 552 323 A 235 235 0 0 0 472.5 79.5 A 230 230 0 0 0 216.5 81 A 225 225 0 0 0 138 323.5 A 215 215 0 0 0 330 472.7744146 L 675 472.7744146"
-              fill="transparent"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={transition}
-            />
-          </svg>
-          <motion.div
-            className={classes["animated-icon-container"]}
-            initial={{ offsetDistance: "0%" }}
-            animate={{ offsetDistance: "100%" }}
-            transition={transition}
-          >
-            <AnimatedIcon className={classes["animated-icon"]} />
-          </motion.div>
         </div>
-
-        {/* <Headshot src={pfp} alt="Nikki Pinzon professional headshot" /> */}
       </section>
       <ArrowIcon className={classes["downward-nav-arrow"]} />
     </Wrapper>

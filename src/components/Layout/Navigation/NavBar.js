@@ -8,11 +8,10 @@ const NavBar = ({ isOpen, toggleMenu, windowWidth }) => {
       <span>
         <a
           href="#home"
-          onClick={isOpen && toggleMenu}
+          onClick={isOpen ? toggleMenu : undefined}
           className={classes.title}
         >
-          Nikki <br />
-          Pinzon
+          Nikki Pinzon
         </a>
       </span>
       {windowWidth > 768 && !isOpen ? (

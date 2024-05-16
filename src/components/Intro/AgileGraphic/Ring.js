@@ -9,7 +9,7 @@ const Ring = () => {
   return (
     <div className={classes.ring}>
       <GreenSegment className={classes.segment} />
-      <YellowSegment className={classes.segment} style={{zIndex: 21}} />
+      <YellowSegment className={`${classes.segment} ${classes.yellow}`} style={{zIndex: 21}} />
       <LightBlueSegment className={classes.segment} />
       <BlueSegment className={classes.segment} />
       <OrangeSegment className={classes.segment} />

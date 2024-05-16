@@ -3,12 +3,10 @@ import classes from "../Projects/Projects.module.css";
 import Wrapper from "../Layout/Wrapper";
 import ProjectItem from "../Projects/ProjectItem";
 import projectItems from "./project-items";
-import { useWindowWidth } from "../../hooks/use-window-width";
 import Section from "../Layout/Section";
 
 const Projects = ({ id }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const { windowWidth } = useWindowWidth();
 
   const handleScroll = () => {
     const scrollTop = window.pageYOffset;
@@ -36,6 +34,7 @@ const Projects = ({ id }) => {
       title={item.title}
       description={item.description}
       languages={item.languages}
+      tools={item.languages}
       liveLink={item.liveLink}
       codeLink={item.codeLink}
       completed={item.completed}
@@ -53,9 +52,7 @@ const Projects = ({ id }) => {
   return (
     <Wrapper className={classes.wrapper} id={id}>
       <Section
-        className={classes.section}
-        title="My Projects"
-        windowWidth={windowWidth}
+        title="My Work"
       >
         <ul className={classes["portfolio-grid"]}>{items}</ul>
       </Section>
