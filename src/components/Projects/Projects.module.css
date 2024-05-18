@@ -1,6 +1,5 @@
 .wrapper {
   scroll-margin-top: 6rem;
-  background: #343436;
 }
 
 .portfolio-grid {
@@ -9,6 +8,10 @@
   grid-template-columns: repeat(2, 1fr);
   padding-left: 0;
   margin: auto;
+}
+
+.title {
+  margin-block: 0 2rem;
 }
 
 @media screen and (max-width: 768px) {

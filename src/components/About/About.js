@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import classes from "./About.module.css";
 import Wrapper from "../Layout/Wrapper";
-import Section from "../Layout/Section";
-import Headshot from "../UI/Headshot";
+import Headshot from "./Headshot";
 import pfp from "../../assets/professional-headshot.png";
+import Title from "../UI/Title";
+import Section from "../Layout/Section";
 
 const About = ({ id }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,17 +32,23 @@ const About = ({ id }) => {
     <Wrapper className={classes.wrapper} id={id}>
       <Section
         className={`${classes.section} ${isVisible ? classes.visible : ""}`}
-        title="About Me"
         ref={sectionRef}
       >
-        <p>
-          I'm happy you liked my page enough to scroll this far! I'm a
-          passionate Software Engineer who's goal is to bring simplicity
-          and user-friendliness to the forefront of my projects. I graduated
-          from St. Joseph's University with a Bachelor's degree in Computer
-          Science & Mathematics.
-        </p>
-        <Headshot src={pfp} alt="Nikki Pinzon professional headshot" />
+        <div>
+          <Title className={classes.title}>About Me</Title>
+          <p>
+            I'm happy you liked my page enough to scroll this far! I'm a
+            passionate Software Engineer who's goal is to bring simplicity and
+            user-friendliness to the forefront of my projects. I graduated from
+            St. Joseph's University with a Bachelor's degree in Computer Science
+            & Mathematics.
+          </p>
+        </div>
+
+        <div className={classes.headshot}>
+          <img src={pfp} alt="Nikki Pinzon professional headshot" />
+        </div>
+        
       </Section>
     </Wrapper>
   );

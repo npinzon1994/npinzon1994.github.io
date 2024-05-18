@@ -4,6 +4,7 @@ import { tools as languagesAndTools } from "./tools-data";
 import Wrapper from "../Layout/Wrapper";
 import Section from "../Layout/Section";
 import ToolItem from "./ToolItem";
+import Title from "../UI/Title";
 
 const Tools = () => {
   const tools = languagesAndTools;
@@ -31,7 +32,8 @@ const Tools = () => {
 
   return (
     <Wrapper>
-      <Section title="My Tools">
+      <Section>
+        <Title className={classes.title}>My Tools</Title>
         <ul className={classes.tools}>
           {tools.map((tool) => (
             <ToolItem

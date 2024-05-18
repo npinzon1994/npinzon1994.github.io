@@ -3,13 +3,14 @@
   max-width: 66rem;
   margin: 0 auto;
   display: flex;
-  font-family: "Open Sans";
+  font-family: "League Spartan";
   font-weight: 300;
-  font-size: 1.3rem;
-  line-height: 1.8rem;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
   transform: translateX(-50%);
   transition: opacity 800ms, transform 800ms;
   filter: blur(100%);
+  gap: 5rem;
 }
 
 .section.visible {
@@ -21,6 +22,15 @@
 .info-container {
   color: white;
   flex: 1;
+}
+
+.title {
+  margin-block: 0 1.5rem;
+}
+
+.info-container p {
+  opacity: 0.8;
+  margin-block: 1rem;
 }
 
 @media screen and (max-width: 768px) {

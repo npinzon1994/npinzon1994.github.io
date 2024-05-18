@@ -4,6 +4,7 @@ import Wrapper from "../Layout/Wrapper";
 import ProjectItem from "../Projects/ProjectItem";
 import projectItems from "./project-items";
 import Section from "../Layout/Section";
+import Title from "../UI/Title";
 
 const Projects = ({ id }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -51,9 +52,8 @@ const Projects = ({ id }) => {
 
   return (
     <Wrapper className={classes.wrapper} id={id}>
-      <Section
-        title="My Work"
-      >
+      <Section>
+        <Title className={classes.title}>My Work</Title>
         <ul className={classes["portfolio-grid"]}>{items}</ul>
       </Section>
     </Wrapper>

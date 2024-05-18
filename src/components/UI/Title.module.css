@@ -1,39 +1,6 @@
-@font-face {
-  font-family: 'League Spartan bold';
-  src: url('C:\workspace\react_practice\react\personal-github-site\npinzon1994.github.io\src\fonts\LeagueSpartan-Bold.otf');
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  line-height: 2.6rem;
-  margin-bottom: 1rem;
-}
-
-.container span {
-  font-size: 1rem;
-  color: rgb(68, 68, 68);
-  font-family: "Alegreya", serif;
-}
-
 .title {
-  /* background: linear-gradient(to top, #4c86fc, #52c2ff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent; */
   color: white;
-  text-decoration-thickness: 3px;
-  margin: 0;
-  font-family: "League Spartan bold";
-  font-size: 2rem;
-  position: relative;
-}
-
-@media screen and (max-width: 516px) {
-  .container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    margin-bottom: 0.85rem;
-  }
+  font-family: "League Spartan";
+  font-weight: 600;
+  font-size: 3rem;
 }

@@ -3,7 +3,9 @@ import classes from "./Headshot.module.css";
 
 const Headshot = ({ src, alt, className }) => {
   return (
-    <img src={src} alt={alt} className={`${classes.headshot} ${className}`} />
+    <div className={`${classes.container} ${className}`}>
+      <img src={src} alt={alt} />
+    </div>
   );
 };
 

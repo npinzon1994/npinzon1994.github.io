@@ -2,18 +2,4 @@
   width: 100%;
   max-width: 66rem;
   margin: 3rem auto;
-  align-items: center;
-}
-
-.title-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-  gap: 2.5rem;
-}
-
-.title-container span {
-  font-size: 1rem;
-  color: gray;
-  font-family: "Alegreya", serif;
 }

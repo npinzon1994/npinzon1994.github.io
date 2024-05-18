@@ -1,10 +1,10 @@
-@font-face {
-  font-family: 'League Spartan bold';
-  src: url('C:\workspace\react_practice\react\personal-github-site\npinzon1994.github.io\src\fonts\LeagueSpartan-Bold.otf');
-}
-
 .wrapper {
-  /* background: linear-gradient(0.25turn, #6f2dbd, #b298dc); */
+  /* background: linear-gradient(to right, #1d1c24 50%, #6252c5 0%); */
+  background: radial-gradient(
+    circle at 70% 60%,
+    #6252c5 0%,
+    #1d1c24 30%
+  ) !important;
   height: 100vh;
 }
 
@@ -24,46 +24,51 @@
 }
 
 .left-container h1 {
-  /* background: linear-gradient(to top, #4c86fc, #52c2ff);
-  background-clip: text;
-  -webkit-text-fill-color: transparent; */
   color: white;
-  font-size: 3.5rem;
-  line-height: 3.85rem;
-  margin: 0;
-  font-family: 'League Spartan bold';
+  margin-block: 1.5rem;
+  font-size: 4.5rem;
+  line-height: 5rem;
+  letter-spacing: -0.02rem;
+  font-family: "League Spartan";
   font-weight: 600;
 }
 
-.left-container h3 {
+.left-container p {
   color: white;
-  font-size: 1.35rem;
-  line-height: 1.8rem;
-  font-family: "Open Sans";
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  font-family: "League Spartan";
   font-weight: 300;
+  margin-block: 0 1.5rem;
   /* max-width: 37rem; */
 }
 
-.left-container h3 span {
-  font-weight: 600;
+.white-text {
+  font-weight: 400;
+  color: white;
+}
+
+.low-opacity-text {
+  opacity: 0.85;
 }
 
 .button-container {
   display: flex;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .button-container a {
   text-decoration: none;
-  /* background: #b9faf8; */
-  background: linear-gradient(to top, #4a3a9f, #6252c5);
+  background: #6252c5;
+  box-shadow: inset 0 2px 10px -5px rgba(255, 255, 255, 0.8),
+    0 4px 12px rgba(0, 0, 0, 0.8);
+  /* background: linear-gradient(to top, #4a3a9f, #6252c5); */
   color: #fff;
-  padding: 0.8em 2em;
-  font-size: 1.3rem;
-  border-radius: 0.4rem;
-  font-family: "Open Sans";
-  font-weight: 500;
+  padding: 0.9em 2em;
+  font-size: 1.25rem;
+  border-radius: 7px;
+  font-family: "League Spartan";
   transition: 200ms;
   user-select: none;
 }

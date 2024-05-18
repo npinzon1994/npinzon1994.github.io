@@ -7,6 +7,10 @@
   padding-left: 0;
 }
 
+.title {
+  margin-block: 0 2rem;
+}
+
 @media (max-width: 858px) {
   .tools-list {
     justify-content: center;

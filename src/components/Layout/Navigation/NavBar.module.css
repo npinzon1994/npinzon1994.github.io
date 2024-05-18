@@ -1,7 +1,3 @@
-@font-face {
-  font-family: 'League Spartan bold';
-  src: url('C:\workspace\react_practice\react\personal-github-site\npinzon1994.github.io\src\fonts\LeagueSpartan-Bold.otf');
-}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -12,17 +8,28 @@
   /* animation: navbar-slide 700ms ease-in-out forwards; */
 }
 
-.title {
-  background: linear-gradient(to top, #8572ff, #35b5fa);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /* color: #fff; */
-  font-family: "League Spartan bold";
-  /* font-weight: 700; */
-  font-size: 1.3rem;
-  line-height: 1.4rem;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   text-decoration: none;
   user-select: none;
+}
+
+.logo svg {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.logo span {
+  /* background: linear-gradient(to top, #8572ff, #35b5fa);
+  background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  color: #fff;
+  font-family: "League Spartan";
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 4px;
 }
 
 .links {
@@ -34,8 +41,8 @@
 
 .links li a {
   color: #fff;
-  font-family: "Open Sans";
-  font-size: 1rem;
+  font-family: "League Spartan";
+  font-size: 1.25rem;
   text-decoration: none;
   padding: 0.65rem 1rem;
   border-radius: 24px;
