@@ -4,6 +4,7 @@ import ContactForm from "./ContactForm";
 import Title from "../UI/Title";
 import Wrapper from "../Layout/Wrapper";
 import SocialLinks from "../UI/SocialLinks";
+import Section from "../Layout/Section";
 
 const Contact = ({ id }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,14 +30,14 @@ const Contact = ({ id }) => {
 
   return (
     <Wrapper className={classes.wrapper} id={id}>
-      <section
+      <Section
         className={`${classes.section} ${
           isVisible ? classes.visible : ""
         }`}
         ref={sectionRef}
       >
         <div className={classes["info-container"]}>
-          <Title className={classes.title}>Let's Chat!</Title>
+          <Title className={classes.title}>Contact</Title>
           <p>
             Whether you have a question, an opportunity, or just want to say
             hello, shoot me a message! I'm always open to new ideas and eager to
@@ -49,7 +50,7 @@ const Contact = ({ id }) => {
           <SocialLinks />
         </div>
         <ContactForm />
-      </section>
+      </Section>
     </Wrapper>
   );
 };

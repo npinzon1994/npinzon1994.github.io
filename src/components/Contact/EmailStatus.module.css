@@ -1,19 +1,19 @@
-.container {
+.message {
   margin-top: 12px;
   display: flex;
   align-items: center;
+  justify-content: end;
+  font-size: 1rem;
 }
 
 .sending {
-  font-size: larger;
-  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.8)
 }
 
-.loading-spinner {
-  height: 28px;
-  width: 28px;
+.send-successful {
+  color: rgb(67, 195, 90);
 }
 
-.loading-spinner-hidden {
-  display: none;
+.send-failed {
+  color: rgb(255, 77, 77);
 }

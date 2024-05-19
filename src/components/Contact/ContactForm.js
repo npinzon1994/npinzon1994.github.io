@@ -4,10 +4,11 @@ import emailClasses from "../Contact/EmailStatus.module.css";
 import emailjs from "@emailjs/browser";
 import useInput from "../../hooks/use-input";
 import EmailStatus from "./EmailStatus";
-import loadingSpinner from "../../assets/purple-loading-spinner.svg";
 import ErrorMessage from "./ErrorMessage";
 import emailSendReducer from "./email-send-reducer";
-import { ReactComponent as LoadingSpinner } from "../../assets/purple-loading-spinner-thick.svg";
+import { ReactComponent as LoadingSpinner } from "../../assets/loading-spinner-thick.svg";
+
+import { AnimatePresence } from "framer-motion";
 
 //form validation functions
 const isNotEmpty = (value) => value !== "";
@@ -19,6 +20,20 @@ const ContactForm = () => {
   const [sendingState, dispatchSending] = useReducer(reducer, defaultState);
   const [statusMsgVisible, setStatusMsgVisible] = useState(false);
   const [error, setError] = useState();
+
+  const { isSending, sendSuccessful } = sendingState;
+
+  const statusMessage = sendSuccessful
+    ? "✓ All right, I got your message! I'll look it over ASAP"
+    : sendSuccessful === false
+    ? error
+    : null;
+
+  const statusClasses = sendSuccessful
+    ? `${emailClasses["send-successful"]}`
+    : sendSuccessful === false
+    ? `${emailClasses["send-failed"]}`
+    : "";
 
   //useInput(s)
   const {
@@ -56,6 +71,19 @@ const ContactForm = () => {
 
   const formIsValid = nameIsValid && emailIsValid && messageIsValid;
 
+  //I only want the SUCCESS message to disappear after 3.5 seconds
+  useEffect(() => {
+    if (!error) {
+      const timer = setTimeout(() => {
+        setStatusMsgVisible(false);
+      }, 3500);
+
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [statusMsgVisible, error]);
+
   const submitForm = async (event) => {
     event.preventDefault();
     setError(null);
@@ -73,72 +101,30 @@ const ContactForm = () => {
       }
 
       dispatchSending({ type: "SENDING" });
-      const result = await emailjs.sendForm(
+      await emailjs.sendForm(
         "service_nuurigj",
         "template_gpqj79d",
         form.current,
         "JioaKW-iFHKYcmt6F"
       );
 
-      // if (result.status !== "200") {
-      //   throw new Error("Could not successfully send email.");
-      // }
-
       resetName();
       resetEmail();
       resetMessage();
       dispatchSending({ type: "SEND_SUCCESSFUL" });
       dispatchSending({ type: "NOT_SENDING" });
-      setStatusMsgVisible(false);
+      setStatusMsgVisible(true);
     } catch (error) {
       setError(error.text);
       dispatchSending({ type: "NOT_SENDING" });
       dispatchSending({ type: "SEND_UNSUCCESSFUL" });
-      setStatusMsgVisible(false);
+      setStatusMsgVisible(true);
     }
   };
 
-  useEffect(() => {
-    setStatusMsgVisible(true);
-  }, []);
-
-  const { isSending } = sendingState;
-  const nameClasses = `${classes.input} ${classes.name}`;
-
-  //determining which status message should be shown
-  let emailStatus;
-  if (isSending) {
-    emailStatus = (
-      <EmailStatus
-        status="Sending..."
-        className={emailClasses.sending}
-        img={{
-          src: loadingSpinner,
-          alt: "Loading Spinner",
-          className: emailClasses["loading-spinner"],
-        }}
-      />
-    );
-  } else if (!statusMsgVisible && !error) {
-    emailStatus = (
-      <EmailStatus
-        status="Email sent successfully!"
-        className={classes.success}
-        img={{ className: emailClasses["loading-spinner-hidden"] }}
-      />
-    );
-  } else if (!statusMsgVisible && error) {
-    emailStatus = (
-      <EmailStatus
-        status={error}
-        className={classes.error}
-        img={{ className: emailClasses["loading-spinner-hidden"] }}
-      />
-    );
-  }
-
   return (
     <div className={classes.container}>
+      <span className={classes['all-fields-required']}>ALL FIELDS REQUIRED</span>
       <form onSubmit={submitForm} ref={form} className={classes.form}>
         <input
           type="text"
@@ -147,11 +133,13 @@ const ContactForm = () => {
           aria-label="name"
           onChange={nameChangeHandler}
           onBlur={validateNameOnBlur}
-          className={nameClasses}
+          className={`${classes.input} ${
+            nameHasError ? classes.invalid : undefined
+          }`}
           ref={nameInputRef}
           value={name}
         />
-        {nameHasError && <ErrorMessage message="*Name is required" />}
+        {nameHasError && <ErrorMessage message="Please enter your name" />}
         <input
           type="email"
           placeholder="Email"
@@ -159,11 +147,15 @@ const ContactForm = () => {
           aria-label="email"
           onChange={emailChangeHandler}
           onBlur={validateEmailOnBlur}
-          className={classes.input}
+          className={`${classes.input} ${
+            emailHasError ? classes.invalid : undefined
+          }`}
           ref={emailInputRef}
           value={email}
         />
-        {emailHasError && <ErrorMessage message="*Invalid Email" />}
+        {emailHasError && (
+          <ErrorMessage message="Please enter a valid email (e.g. test@example.com)" />
+        )}
         <textarea
           placeholder="Message"
           name="message"
@@ -171,22 +163,26 @@ const ContactForm = () => {
           rows="10"
           onChange={messageChangeHandler}
           onBlur={validateMessageOnBlur}
-          className={classes["text-area"]}
+          className={`${classes["text-area"]} ${
+            messageHasError ? classes.invalid : undefined
+          }`}
           ref={messageInputRef}
           value={message}
         />
-        {messageHasError && <ErrorMessage message="*Message is required" />}
-        {emailStatus}
+        {messageHasError && <ErrorMessage message="Please enter a message" />}
+
         <button type="submit" className={classes["form-button"]}>
           {isSending ? (
-            <>
-              Sending...{" "}
-              <LoadingSpinner className={classes["loading-spinner"]} />
-            </>
+            <LoadingSpinner className={classes["loading-spinner"]} />
           ) : (
-            "Send Message"
+            "Let's Chat"
           )}
         </button>
+        <AnimatePresence>
+          {statusMsgVisible ? (
+            <EmailStatus status={statusMessage} className={statusClasses} />
+          ) : undefined}
+        </AnimatePresence>
       </form>
     </div>
   );

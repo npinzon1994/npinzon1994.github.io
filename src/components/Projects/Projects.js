@@ -53,7 +53,7 @@ const Projects = ({ id }) => {
   return (
     <Wrapper className={classes.wrapper} id={id}>
       <Section>
-        <Title className={classes.title}>My Work</Title>
+        <Title className={classes.title}>My Projects</Title>
         <ul className={classes["portfolio-grid"]}>{items}</ul>
       </Section>
     </Wrapper>
