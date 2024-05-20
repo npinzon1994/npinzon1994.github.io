@@ -1,0 +1,33 @@
+.link {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  text-decoration: none;
+  user-select: none;
+  color: #fff;
+  font-family: "League Spartan";
+}
+
+.logo {
+  /* position: relative; */
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 4px #fff, inset 2px 0 6px #7d6ee4, inset -2px 0 6px #9c91e0,
+    inset 2px 0 24px #7d6ee4, inset -2px 0 24px #9c91e0, 0 0 4px #fff, -1px 0 6px #7d6ee4,
+    1px 0 6px #9c91e0;
+}
+
+.inner-text {
+  position: absolute;
+  top: 55%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  font-size: 0.85rem;
+  font-weight: 200;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 1.5rem;
+}

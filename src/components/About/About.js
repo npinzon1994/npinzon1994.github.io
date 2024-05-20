@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import classes from "./About.module.css";
 import Wrapper from "../Layout/Wrapper";
-import Headshot from "./Headshot";
 import pfp from "../../assets/professional-headshot.png";
 import Title from "../UI/Title";
 import Section from "../Layout/Section";

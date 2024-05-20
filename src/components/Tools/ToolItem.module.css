@@ -10,6 +10,8 @@
   transform: translateX(-50%);
   transition: opacity 300ms ease, transform 300ms ease;
   filter: blur(1);
+  background-color: rgba(137, 121, 238, 0.065);
+  border-radius: 10px;
 }
 
 .tool img {

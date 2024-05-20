@@ -76,7 +76,7 @@ const ProjectItem = ({
       onMouseEnter={handleHover}
       onMouseLeave={handleLeave}
     >
-      <div className={classes['video-container']}>
+      <div className={classes["video-container"]}>
         <video width="100%" autoPlay playsInline muted loop>
           <source src={video.src} type={video.type} />
           Sorry, your browser does not support videos.
@@ -86,7 +86,10 @@ const ProjectItem = ({
       <div className={classes["below-video-container"]}>
         <h4 className={classes["project-title"]}>{title}</h4>
         <div className={classes["tools-and-links-container"]}>
-          <ul className={classes["tools-list"]}>{toolsList}</ul>
+          <div>
+            <span className={classes['built-with']}>BUILT WITH</span>
+            <ul className={classes['tools-list']}>{toolsList}</ul>
+          </div>
           <div className={classes["links-container"]}>
             {completed && (
               <a href={liveLink} target="_blank" rel="noreferrer">

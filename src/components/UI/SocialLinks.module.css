@@ -11,8 +11,7 @@
 }
 
 .icon:hover {
-  /* fill: #a6e0de; */
-  /* fill: #7265c9; */
+  transform: scale(1.1);
 }
 
 .icon:active {

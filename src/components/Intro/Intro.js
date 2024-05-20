@@ -106,11 +106,11 @@ const Intro = ({ id }) => {
           <Ring />
           {/* <SpinningArrow className={classes["spinning-arrow"]} /> */}
 
-          <div className={classes["animation-path"]} ref={scope}>
+          {/* <div className={classes["animation-path"]} ref={scope}>
             <div className={classes["animated-icon-container"]}>
               <AnimatedIcon className={classes["animated-icon"]} />
             </div>
-          </div>
+          </div> */}
 
           <Gear className={classes.gear} />
           <StartingBlock className={classes["starting-block"]} />

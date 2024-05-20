@@ -1,16 +1,16 @@
-import reactIcon from "../../assets/tools-icons/react.svg";
-import nextIcon from "../../assets/tools-icons/nextjs.svg";
-import jsIcon from "../../assets/tools-icons/javascript.svg";
-import htmlIcon from "../../assets/tools-icons/html5.svg";
-import cssIcon from "../../assets/tools-icons/css3.svg";
-import tsIcon from "../../assets/tools-icons/typescript.svg";
-import pythonIcon from "../../assets/tools-icons/python.svg";
-import javaIcon from "../../assets/tools-icons/java.svg";
-import gitIcon from "../../assets/tools-icons/git.svg";
-import reduxIcon from "../../assets/tools-icons/redux.svg";
-import awsIcon from "../../assets/tools-icons/aws.svg";
-import firebaseIcon from "../../assets/tools-icons/firebase.svg";
-import vsCodeIcon from "../../assets/tools-icons/vscode.svg";
+import reactIcon from "../../assets/tools-icons-monochrome/react.svg";
+import nextIcon from "../../assets/tools-icons-monochrome/nextjs.svg";
+import jsIcon from "../../assets/tools-icons-monochrome/javascript.svg";
+import htmlIcon from "../../assets/tools-icons-monochrome/html5.svg";
+import cssIcon from "../../assets/tools-icons-monochrome/css3.svg";
+import tsIcon from "../../assets/tools-icons-monochrome/typescript.svg";
+import pythonIcon from "../../assets/tools-icons-monochrome/python.svg";
+import javaIcon from "../../assets/tools-icons-monochrome/java.svg";
+import gitIcon from "../../assets/tools-icons-monochrome/git.svg";
+import reduxIcon from "../../assets/tools-icons-monochrome/redux.svg";
+import awsIcon from "../../assets/tools-icons-monochrome/aws.svg";
+import firebaseIcon from "../../assets/tools-icons-monochrome/firebase.svg";
+import vsCodeIcon from "../../assets/tools-icons-monochrome/vscode.svg";
 
 export const tools = [
   { id: "S1", name: "React", img: reactIcon, alt: "React.js icon" },

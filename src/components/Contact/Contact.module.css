@@ -7,7 +7,7 @@
   transform: translateX(-50%);
   transition: opacity 800ms, transform 800ms;
   filter: blur(100%);
-  gap: 5rem;
+  gap: 2.2rem;
 }
 
 .section.visible {
@@ -22,7 +22,7 @@
 }
 
 .title {
-  margin-block: 0 1.5rem;
+  margin-block: 0 2rem;
 }
 
 .info-container p {
