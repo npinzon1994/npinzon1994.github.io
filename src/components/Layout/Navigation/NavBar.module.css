@@ -17,8 +17,8 @@
 }
 
 .logo svg {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .logo span {
@@ -28,7 +28,7 @@
   color: #fff;
   font-family: "League Spartan";
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-top: 6px;
 }
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import classes from "./Contact.module.css";
 import ContactForm from "./ContactForm";
+import ContactFormNew from "./ContactFormNew";
 import Title from "../UI/Title";
 import Wrapper from "../Layout/Wrapper";
 import SocialLinks from "../UI/SocialLinks";
@@ -49,7 +50,7 @@ const Contact = ({ id }) => {
           </p>
           <SocialLinks />
         </div>
-        <ContactForm />
+        <ContactFormNew />
       </Section>
     </Wrapper>
   );

@@ -154,7 +154,7 @@ const ContactForm = () => {
           value={email}
         />
         {emailHasError && (
-          <ErrorMessage message="Please enter a valid email (e.g. test@example.com)" />
+          <ErrorMessage message="Please enter a valid email (e.g. name@example.com)" />
         )}
         <textarea
           placeholder="Message"
