@@ -13,7 +13,7 @@ const App = () => {
       <Intro id="home" />
       <Projects id="projects" />
       <About id="about" />
-      <Tools />
+      <Tools id="tools"/>
       <Contact id="contact" />
       <Footer />
     </main>

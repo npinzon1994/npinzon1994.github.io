@@ -1,6 +1,7 @@
 .title {
-  color: white;
+  color: hsl(248, 100%, 94%);
   font-family: "League Spartan";
   font-weight: 600;
   font-size: 3.25rem;
+  margin-block: 0 2rem;
 }

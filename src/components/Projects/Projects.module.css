@@ -2,12 +2,8 @@
   display: grid;
   gap: 2.2rem;
   grid-template-columns: repeat(2, 1fr);
-  padding-left: 0;
+  padding: 1rem 0 0 0;
   margin: auto;
-}
-
-.title {
-  margin-block: 0 2rem;
 }
 
 @media screen and (max-width: 768px) {

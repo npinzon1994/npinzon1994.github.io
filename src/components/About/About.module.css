@@ -22,10 +22,6 @@
   filter: blur(0%);
 }
 
-.title {
-  margin-block: 0 2rem;
-}
-
 .section p {
   font-family: "League Spartan";
   font-weight: 300;

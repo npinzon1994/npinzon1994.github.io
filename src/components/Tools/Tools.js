@@ -6,7 +6,7 @@ import Section from "../Layout/Section";
 import ToolItem from "./ToolItem";
 import Title from "../UI/Title";
 
-const Tools = () => {
+const Tools = ({ id }) => {
   const tools = languagesAndTools;
 
   const [isVisible, setIsVisible] = useState(false);
@@ -31,7 +31,7 @@ const Tools = () => {
   }, []);
 
   return (
-    <Wrapper>
+    <Wrapper id={id}>
       <Section>
         <Title className={classes.title}>My Tools</Title>
         <ul className={classes.tools}>

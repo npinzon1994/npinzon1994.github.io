@@ -38,7 +38,7 @@ const Contact = ({ id }) => {
         ref={sectionRef}
       >
         <div className={classes["info-container"]}>
-          <Title className={classes.title}>Contact</Title>
+          <Title>Contact</Title>
           <p>
             Whether you have a question, an opportunity, or just want to say
             hello, shoot me a message! I'm always open to new ideas and eager to

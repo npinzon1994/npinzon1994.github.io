@@ -34,7 +34,7 @@ const About = ({ id }) => {
         ref={sectionRef}
       >
         <div>
-          <Title className={classes.title}>About Me</Title>
+          <Title>About Me</Title>
           <p>
             I'm happy you liked my page enough to scroll this far! I'm a
             passionate Software Engineer who's goal is to bring simplicity and

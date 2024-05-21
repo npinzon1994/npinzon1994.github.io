@@ -21,10 +21,6 @@
   flex: 1;
 }
 
-.title {
-  margin-block: 0 2rem;
-}
-
 .info-container p {
   opacity: 0.8;
   margin-block: 1rem;
