@@ -12,7 +12,7 @@
   color: white;
   font-weight: 300;
   letter-spacing: 1px;
-  font-style: italic;
+  text-align: right;
 }
 
 .form {
@@ -82,8 +82,11 @@ textarea.invalid:focus {
 
 .error-message {
   font-size: 1rem;
+  margin-block: 10px 0;
+  border-radius: 5px;
   color: rgb(255, 77, 77);
-  text-align: right;
+  background: rgba(255, 77, 77, 0.175);
+  text-align: center;
 }
 
 .form-button {

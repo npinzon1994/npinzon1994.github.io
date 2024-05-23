@@ -31,7 +31,7 @@ const Tools = ({ id }) => {
   }, []);
 
   return (
-    <Wrapper id={id}>
+    <Wrapper id={id} className={classes.wrapper}>
       <Section>
         <Title className={classes.title}>My Tools</Title>
         <ul className={classes.tools}>

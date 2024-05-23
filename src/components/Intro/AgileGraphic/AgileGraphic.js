@@ -1,28 +1,71 @@
 import React from "react";
 import classes from "./AgileGraphic.module.css";
-import { ReactComponent as GearIcon } from "../../../assets/agile-graphic/gear.svg";
 
 const AgileGraphic = () => {
   return (
-    <div className={classes.wrapper}>
-      <ul className={classes.pie}>
-        <li className={classes.slice}>
-          <div className={classes["slice-contents"]}></div>
-        </li>
-        <li className={classes.slice}>
-          <div className={classes["slice-contents"]}></div>
-        </li>
-        <li className={classes.slice}>
-          <div className={classes["slice-contents"]}></div>
-        </li>
-        <li className={classes.slice}>
-          <div className={classes["slice-contents"]}></div>
-        </li>
-        <li className={classes.slice}>
-          <div className={classes["slice-contents"]}></div>
-        </li>
-      </ul>
-      <GearIcon className={classes.gear} />
+    <div className={classes.container}>
+      <svg
+        className={classes.svg}
+        width="654"
+        height="554"
+        viewBox="-12 -12 654 554"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <mask id="gear-mask">
+            <path
+              fill="white"
+              d="M 280 162 L 280 140 Q 280 130 290 130 L 310 130 Q 320 130 320 140 L 320 162 A 90 90 0 0 1 348.5 173.8 L 364.25 157.7 Q 371.1 151.2 378.25 158.2 L 392.15 172.2 Q 399.15 180.2 392.15 186.2 L 376.5 201.5 A 90 90 0 0 1 387.9 230 L 410 230 Q 420 230 420 240 L 420 260 Q 420 270 410 270 L 387.9 270 A 90 90 0 0 1 375.75 298.4 L 391.5 314.8 Q 398.5 321.95 392 329 L 378.35 342.1 Q 371.35 348.95 364.1 341.95 L 348.95 326.35 A 90 90 0 0 1 320 338.25 L 320 360 Q 320 370 310 370 L 290 370 Q 280 370 280 360 L 280 338.25 A 90 90 0 0 1 251.05 326.35 L 236.1 342 Q 229 349.25 222 342 L 208 327.95 Q 200.95 321 207.95 314.05 L 224.25 298.4 A 90 90 0 0 1 212.1 270 L 190 270 Q 180 270 180 260 L 180 240 Q 180 230 190 230 L 212.1 230 A 90 90 0 0 1 223.5 201.5 L 208.1 186.1 Q 201 179 208 172 L 222.5 157.5 Q 229.1 150.95 236.1 157.95 L 251.5 173.8 A 90 90 0 0 1 280 162 Z"
+            />
+            <circle cx="300" cy="250" r="50" fill="black" />
+          </mask>
+        </defs>
+
+        {/*GEAR*/}
+        <g className={classes.gear}>
+          <path
+            fill="hsl(248, 13%, 20%)"
+            mask="url(#gear-mask)"
+            d="M 280 162 L 280 140 Q 280 130 290 130 L 310 130 Q 320 130 320 140 L 320 162 A 90 90 0 0 1 348.5 173.8 L 364.25 157.7 Q 371.1 151.2 378.25 158.2 L 392.15 172.2 Q 399.15 180.2 392.15 186.2 L 376.5 201.5 A 90 90 0 0 1 387.9 230 L 410 230 Q 420 230 420 240 L 420 260 Q 420 270 410 270 L 387.9 270 A 90 90 0 0 1 375.75 298.4 L 391.5 314.8 Q 398.5 321.95 392 329 L 378.35 342.1 Q 371.35 348.95 364.1 341.95 L 348.95 326.35 A 90 90 0 0 1 320 338.25 L 320 360 Q 320 370 310 370 L 290 370 Q 280 370 280 360 L 280 338.25 A 90 90 0 0 1 251.05 326.35 L 236.1 342 Q 229 349.25 222 342 L 208 327.95 Q 200.95 321 207.95 314.05 L 224.25 298.4 A 90 90 0 0 1 212.1 270 L 190 270 Q 180 270 180 260 L 180 240 Q 180 230 190 230 L 212.1 230 A 90 90 0 0 1 223.5 201.5 L 208.1 186.1 Q 201 179 208 172 L 222.5 157.5 Q 229.1 150.95 236.1 157.95 L 251.5 173.8 A 90 90 0 0 1 280 162 Z"
+          />
+          <circle cx="300" cy="250" r="50" mask="url(#gear-mask)" />
+        </g>
+
+        <g className={classes.ring}>
+          {/*LAUNCH ARROW*/}
+          <path
+            fill="hsl(248, 40%, 85%)"
+            d="M 300 420 L 550 420 L 550 400 Q 550 390 562 401 L 622.5 454 Q 630 460 622.5 466 L 562 519 Q 550 530 550 520 L 550 500 L 300 500 Z"
+          />
+
+          {/*SEGMENTS*/}
+          <path
+            fill="hsl(248, 40%, 60%)"
+            d="M 50 250 A 250 250 0 0 1 300 0 L 300 80 A 170 170 0 0 0 130 250 Z"
+          />
+          <path
+            fill="hsl(248, 40%, 45%)"
+            transform="rotate(90, 300, 250)"
+            d="M 50 250 A 250 250 0 0 1 300 0 L 300 80 A 170 170 0 0 0 130 250 Z"
+          />
+          <path
+            fill="hsl(248, 40%, 30%)"
+            transform="rotate(180, 300, 250)"
+            d="M 50 250 A 250 250 0 0 1 300 0 L 300 80 A 170 170 0 0 0 130 250 Z"
+          />
+          <path
+            fill="hsl(248, 40%, 75%)"
+            transform="rotate(270, 300, 250)"
+            d="M 50 250 A 250 250 0 0 1 300 0 L 300 80 A 170 170 0 0 0 130 250 Z"
+          />
+
+          {/*STARTING BLOCK*/}
+          <path
+            fill="hsl(248, 40%, 15%)"
+            d="M 0 430 Q 0 420 10 420 L 300 420 L 300 500 L 10 500 Q 0 500 0 490 Z"
+          />
+        </g>
+      </svg>
     </div>
   );
 };

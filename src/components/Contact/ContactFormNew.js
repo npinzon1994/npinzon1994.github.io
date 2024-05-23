@@ -108,9 +108,9 @@ const ContactFormNew = () => {
             }
           />
           {errors.name && nameFieldTouched ? (
-            <span className={classes["error-message"]}>
+            <p className={classes["error-message"]}>
               {errors.name.message}
-            </span>
+            </p>
           ) : undefined}
         </div>
         <div className={classes["input-container"]}>
@@ -124,7 +124,7 @@ const ContactFormNew = () => {
               },
             })}
             id="email"
-            type="text"
+            type="email"
             placeholder="e.g. name@example.com"
             aria-label="email"
             className={
@@ -132,9 +132,9 @@ const ContactFormNew = () => {
             }
           />
           {errors.email && emailFieldTouched ? (
-            <span className={classes["error-message"]}>
+            <p className={classes["error-message"]}>
               {errors.email.message}
-            </span>
+            </p>
           ) : undefined}
         </div>
         <div className={classes["input-container"]}>
@@ -152,13 +152,17 @@ const ContactFormNew = () => {
             }
           />
           {errors.message && messageFieldTouched ? (
-            <span className={classes["error-message"]}>
+            <p className={classes["error-message"]}>
               {errors.message.message}
-            </span>
+            </p>
           ) : undefined}
         </div>
 
-        <button type="submit" className={classes["form-button"]}>
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className={classes["form-button"]}
+        >
           {isSubmitting ? (
             <LoadingSpinner className={classes["loading-spinner"]} />
           ) : (

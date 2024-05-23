@@ -20,6 +20,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  background: linear-gradient(to bottom, hsl(248, 13%, 13%), hsl(248, 20%, 20%));
+  background-repeat: repeat-x;
 }
 
 code {

@@ -4,6 +4,7 @@ import Wrapper from "../Layout/Wrapper";
 import { useAnimate } from "framer-motion";
 
 import { ReactComponent as Gear } from "../../assets/agile-graphic/gear.svg";
+import {ReactComponent as NuGraphic} from "../../assets/agile-graphic/nu-graphic.svg";
 import { ReactComponent as StartingBlock } from "../../assets/agile-graphic/starting-block.svg";
 import { ReactComponent as LaunchArrow } from "../../assets/agile-graphic/launch-arrow.svg";
 import { ReactComponent as SpinningArrow } from "../../assets/agile-graphic/spinning-arrow.svg";
@@ -11,6 +12,7 @@ import { ReactComponent as AnimatedIcon } from "../../assets/agile-graphic-icons
 
 import Ring from "./AgileGraphic/Ring";
 import { useEffect } from "react";
+import AgileGraphic from "./AgileGraphic/AgileGraphic";
 
 const Intro = ({ id }) => {
   const [scope, animate] = useAnimate();
@@ -62,7 +64,7 @@ const Intro = ({ id }) => {
               aria-level={1}
               className={classes["white-text"]}
             >
-              fast, scalable,{" "}
+              fast, intuitive,{" "}
             </span>
             and{" "}
             <span
@@ -102,20 +104,25 @@ const Intro = ({ id }) => {
           </div>
         </div>
 
-        <div className={classes["agile-graphic"]}>
-          <Ring />
-          {/* <SpinningArrow className={classes["spinning-arrow"]} /> */}
+        <AgileGraphic />
 
-          {/* <div className={classes["animation-path"]} ref={scope}>
+        {/* <div className={classes["agile-graphic"]}>
+          <Ring />
+          <SpinningArrow className={classes["spinning-arrow"]} />
+
+          <div className={classes["animation-path"]} ref={scope}>
             <div className={classes["animated-icon-container"]}>
               <AnimatedIcon className={classes["animated-icon"]} />
             </div>
-          </div> */}
+          </div>
 
+          <NuGraphic className={classes.ring}/>
           <Gear className={classes.gear} />
+
           <StartingBlock className={classes["starting-block"]} />
           <LaunchArrow className={classes["launch-arrow"]} />
-        </div>
+        </div> */}
+
       </section>
       <ArrowIcon className={classes["downward-nav-arrow"]} />
     </Wrapper>
