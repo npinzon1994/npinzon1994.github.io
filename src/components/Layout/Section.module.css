@@ -3,3 +3,9 @@
   max-width: 66rem;
   margin: 5rem auto;
 }
+
+@media screen and (max-width: 783px) {
+  .section {
+    max-width: 37.5rem; /*600px*/
+  }
+}

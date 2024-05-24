@@ -16,6 +16,11 @@ const NavMenuOverlay = ({isOpen, toggleMenu}) => {
           </a>
         </li>
         <li>
+          <a href="#tools" onClick={toggleMenu}>
+            Tools
+          </a>
+        </li>
+        <li>
           <a href="#contact" onClick={toggleMenu}>
             Contact
           </a>

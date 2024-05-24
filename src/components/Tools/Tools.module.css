@@ -7,11 +7,21 @@
   padding-left: 0;
 }
 
+/* .tools {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(4.9rem, 6.5rem));
+  grid-template-rows: max-content;
+  gap: 2.2rem;
+  justify-content: space-between;
+  padding-left: 0;
+} */
+
 .title {
   text-align: center;
 }
 
-@media (max-width: 858px) {
+/* @media (max-width: 858px) {
   .tools-list {
     justify-content: center;
   }
@@ -21,4 +31,4 @@
   .tools-list {
     justify-content: flex-start;
   }
-}
+} */

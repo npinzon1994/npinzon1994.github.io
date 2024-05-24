@@ -18,9 +18,3 @@
   /* fill: #ccfffd; */
   transition: none;
 }
-
-@media screen and (max-width: 768px) {
-  .social-links {
-    justify-content: center;
-  }
-}

@@ -8,6 +8,7 @@
   transition: opacity 800ms, transform 800ms;
   filter: blur(100%);
   gap: 2.2rem;
+  margin-bottom: 3rem;
 }
 
 .section.visible {
@@ -26,7 +27,7 @@
   margin-block: 1rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 783px) {
   .section {
     flex-wrap: wrap;
     justify-content: center;

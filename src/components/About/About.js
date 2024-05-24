@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import classes from "./About.module.css";
 import Wrapper from "../Layout/Wrapper";
-import pfp from "../../assets/professional-headshot.png";
+import pfp from "../../assets/professional-headshot-square.png";
 import Title from "../UI/Title";
 import Section from "../Layout/Section";
 
@@ -33,7 +33,7 @@ const About = ({ id }) => {
         className={`${classes.section} ${isVisible ? classes.visible : ""}`}
         ref={sectionRef}
       >
-        <div>
+        <div className={classes['info-container']}>
           <Title>About Me</Title>
           <p>
             I'm happy you liked my page enough to scroll this far! I'm a

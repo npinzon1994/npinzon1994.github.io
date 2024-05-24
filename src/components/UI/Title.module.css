@@ -2,6 +2,7 @@
   color: hsl(248, 100%, 94%);
   font-family: "League Spartan";
   font-weight: 600;
-  font-size: 3.25rem;
-  margin-block: 0 2rem;
+  /* font-size: 3.25rem; */
+  font-size: clamp(2.9rem, 4.5vw, 3.25rem);
+  margin-block: 0 clamp(1rem, 4.5vw, 2rem);
 }

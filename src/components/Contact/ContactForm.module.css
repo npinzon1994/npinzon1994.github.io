@@ -9,9 +9,9 @@
 
 .all-fields-required {
   font-size: 0.85rem;
-  color: white;
-  font-weight: 300;
-  letter-spacing: 1px;
+  color: hsl(248, 66%, 95%);
+  font-weight: 400;
+  letter-spacing: 2.5px;
   text-align: right;
 }
 
@@ -93,7 +93,7 @@ textarea.invalid:focus {
   font-family: "League Spartan";
   border-radius: 7px;
   border: none;
-  background: #8273e2;
+  background: linear-gradient(to top, #6252c5, #8273e2);
   color: #fff;
   cursor: pointer;
   margin-top: 12px;
@@ -123,12 +123,5 @@ textarea.invalid:focus {
 
   100% {
     transform: scale(1);
-  }
-}
-
-@media (max-width: 768px) {
-  .form {
-    margin-block: 2rem;
-    margin-inline: 0;
   }
 }

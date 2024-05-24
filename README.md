@@ -1,4 +1,4 @@
-# Developer Portfolio 👩‍💻
+# 👩‍💻 Developer Portfolio
 
 **⚡ LIVE SITE** --> <a href="https://nikkipinzon.com" target="_blank">https://nikkipinzon.com</a>
 

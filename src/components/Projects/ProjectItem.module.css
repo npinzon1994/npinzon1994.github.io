@@ -38,43 +38,6 @@
   transition-delay: 0.9s;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  display: none;
-  background-color: rgba(0, 0, 0, 0.8);
-  align-items: center;
-}
-
-.overlay.hovered {
-  display: flex;
-  opacity: 1;
-}
-
-.cross {
-  position: absolute;
-  top: 0.65rem;
-  right: 0.65rem;
-  cursor: pointer;
-  border-radius: 50%;
-  padding: 0.1em;
-  transition: 200ms;
-  z-index: 2;
-}
-
-.description {
-  color: white;
-  text-align: center;
-  font-family: "Alegreya Sans", sans-serif;
-  font-size: clamp(0.8rem, 2vw, 1.2rem);
-}
-
 .video-container {
   position: relative;
   width: 100%;
@@ -101,7 +64,8 @@
 
 .project-title {
   color: white;
-  font-size: 1.5rem;
+  font-size: clamp(1.35rem, 2vw, 1.5rem);
+  /* font-size: 1.5rem; */
   font-weight: 600;
   margin-block: 0 5px;
   padding-block: 6px;
@@ -121,6 +85,15 @@
   list-style-type: none;
 }
 
+.tools-list li {
+  width: clamp(28px, 2.85vw, 34px);
+  height: clamp(28px, 2.85vw, 34px);
+  padding: clamp(4px, 2.85vw, 5px);
+  border-radius: 6px;
+  background-color: rgba(137, 121, 238, 0.2);
+  transition: 170ms;
+}
+
 .built-with {
   display: block;
   font-size: 0.85rem;
@@ -130,31 +103,21 @@
   margin-bottom: 4px;
 }
 
-.tools-list li {
-  width: 34px;
-  height: 34px;
-  border-radius: 6px;
-  padding: 5px;
-  background-color: rgba(137, 121, 238, 0.2);
-  transition: 170ms;
-}
-
 .links-container {
   display: flex;
   gap: 10px;
-  white-space: nowrap;
 }
 
 /*Project Links*/
 .links-container a {
-  background: rgba(130, 115, 226, 0.5);
-  box-shadow: inset 0 2px 10px -6px rgba(255, 255, 255, 0.8);
+  background: linear-gradient(to top, #6252c5, #8273e2);
+  /* box-shadow: inset 0 2px 10px -6px rgba(255, 255, 255, 0.8); */
   border: solid 1px rgba(130, 115, 226, 0.35);
   padding: 0.75em 1.5em;
   color: white;
   border-radius: 7px;
   font-family: "League Spartan";
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
   text-decoration: none;
   user-select: none;
   transition: 200ms;
@@ -164,122 +127,42 @@
   transform: scale(1.1);
 }
 
-.info-container {
-  max-width: 65%;
-  margin: 0 auto;
-  display: flex;
-  gap: clamp(0.5rem, 1.11vw, 1rem);
-  flex-direction: column;
-  color: #fff;
-}
-
-.container-grid:nth-of-type(4)
-  .overlay
-  .info-container
-  .language-container
-  .language {
-  margin-top: 4px;
-}
-
-.title {
-  font-size: 1.4rem;
-  font-weight: 600;
-  font-family: "Alegreya", serif;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.coming-soon {
-  text-align: center;
-  margin-top: -13px;
-  margin-bottom: -0.5rem;
-  font-style: italic;
-  font-family: "Alegreya Sans", sans-serif;
-  font-size: 0.92rem;
-  color: rgb(255, 95, 95);
-  letter-spacing: 1px;
-  font-weight: 600;
-}
-
-.language-container {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  padding-left: 0;
-  list-style-type: none;
-}
-
-.language {
-  width: 36px;
-}
-
-.button-container {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  white-space: nowrap;
-}
-
-.button-container a {
-  background: #b9faf8;
-  border-radius: 7px;
-  padding: 0.55em 2em;
-  font-family: "Alegreya Sans", sans-serif;
-  font-weight: 500;
-  text-decoration: none;
-  font-size: 0.9rem;
-  user-select: none;
-}
-
-@media screen and (max-width: 768px) {
-  .info-container {
-    gap: clamp(0.5rem, 3vw, 1.3rem);
+@media screen and (max-width: 783px) {
+  .project-title {
+    /* font-size: clamp(1.35rem, 3vw, 1.5rem); */
+    font-size: 1.5rem;
   }
 
-  .description {
-    font-size: clamp(1rem, 3vw, 1.6rem);
+  .tools-list li {
+    width: 34px;
+    height: 34px;
+    padding: 5px;
+    /* width: clamp(28px, 6.4vw, 34px);
+    height: clamp(28px, 6.4vw, 34px);
+    padding: clamp(4px, 6.4vw, 5px); */
   }
 
-  .title {
-    font-size: clamp(1.35rem, 3vw, 2rem);
-  }
-
-  .language {
-    font-size: 0.91rem;
-  }
-
-  .button-container a {
-    font-size: 0.9rem;
-  }
-
-  .coming-soon {
-    font-size: clamp(0.7rem, 2vw, 1.1rem);
-    margin-top: -11px;
+  .links-container a {
+    /* font-size: clamp(0.8rem, 3vw, 1rem); */
+    font-size: 1rem;
   }
 }
 
-@media screen and (max-width: 440px) {
-  .container-grid:nth-of-type(4) .overlay .info-container {
-    gap: 0.4rem;
+@media screen and (max-width: 480px) {
+  .tools-and-links-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
   }
 
-  .title {
-    font-size: 1.15rem;
+  .links-container {
+    width: 100%;
+    justify-content: center;
   }
 
-  .coming-soon {
-    margin-bottom: -3px;
-  }
-
-  .language {
-    font-size: 0.8rem;
-  }
-
-  .description {
-    font-size: 0.9rem;
-  }
-
-  .button-container a {
-    font-size: 0.81rem;
+  .links-container a {
+    flex: 1;
+    text-align: center;
+    padding-block: 1rem;
   }
 }

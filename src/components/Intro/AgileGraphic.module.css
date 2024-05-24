@@ -1,6 +1,7 @@
 .container {
   position: relative;
   z-index: 1;
+  
 }
 
 .svg {
@@ -16,6 +17,30 @@
 
 .ring path {
   animation: glow 2.5s linear infinite;
+}
+
+@media screen and (max-width: 783px) {
+  .container {
+    margin-left: 25px;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .container {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    margin-left: 17px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    margin-left: 14px;
+  }
 }
 
 @keyframes rotateGear {

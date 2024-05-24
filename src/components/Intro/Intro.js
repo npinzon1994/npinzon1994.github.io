@@ -95,8 +95,8 @@ const Intro = ({ id }) => {
           </div>
         </div>
         <AgileGraphic />
+      <ArrowIcon className={classes["floating-arrow"]} />
       </section>
-      <ArrowIcon className={classes["downward-nav-arrow"]} />
     </Wrapper>
   );
 };

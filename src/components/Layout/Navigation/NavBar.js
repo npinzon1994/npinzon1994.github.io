@@ -7,7 +7,7 @@ const NavBar = ({ isOpen, toggleMenu, windowWidth }) => {
   return (
     <nav className={classes.navbar}>
       <HomeLink href="#home" isOpen={isOpen} toggleMenu={toggleMenu}/>
-      {windowWidth > 768 && !isOpen ? (
+      {windowWidth > 783 && !isOpen ? (
         <ul className={classes.links}>
           <li>
             <a href="#projects">Projects</a>
@@ -16,7 +16,7 @@ const NavBar = ({ isOpen, toggleMenu, windowWidth }) => {
             <a href="#about">About</a>
           </li>
           <li>
-            <a href="#tools">My Tools</a>
+            <a href="#tools">Tools</a>
           </li>
           <li>
             <a href="#contact">Contact</a>
