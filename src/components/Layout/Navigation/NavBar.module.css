@@ -5,7 +5,7 @@
   max-width: 66rem;
   margin: 0 auto;
   padding-block: 4px;
-  /* animation: navbar-slide 700ms ease-in-out forwards; */
+  animation: navbar-slide 700ms ease-in-out forwards;
 }
 
 .logo {

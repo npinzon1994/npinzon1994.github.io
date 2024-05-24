@@ -4,7 +4,10 @@
 
 ## Overview
 
-<img src="https://firebasestorage.googleapis.com/v0/b/portfolio-cd2d0.appspot.com/o/portfolio%20screenshot.png?alt=media&token=0537889d-7f61-400f-a969-8c1fc0e799b7" width="900rem"/>
+### ❗ Redesign coming soon ❗
+
+<img src="https://firebasestorage.googleapis.com/v0/b/portfolio-cd2d0.appspot.com/o/portfolio%20redesign%20screenshot.png?alt=media&token=570b80b9-0244-4868-bfce-c911ae63f2f5" width="900rem"/>
+<br /><br />
 
 This is a professional portfolio I built with React to showcase my expertise as a Software Engineer. I started building this site, and all its containing projects, shortly after I started learning React which really helped solidify my understanding of the framework.
 
@@ -25,6 +28,9 @@ Here are a few key things I learned:
 Built with React.js
 <img alt="React.js" width="34px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
 </a>
+
+### Previous Version
+<img src="https://firebasestorage.googleapis.com/v0/b/portfolio-cd2d0.appspot.com/o/portfolio%20screenshot.png?alt=media&token=0537889d-7f61-400f-a969-8c1fc0e799b7" width="900rem"/>
 
 
 <!-- TODO: List any MAJOR libraries/frameworks (e.g. React, Tailwind) with links to their homepages. -->

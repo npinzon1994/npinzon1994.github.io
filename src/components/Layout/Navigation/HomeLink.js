@@ -7,9 +7,7 @@ const HomeLink = ({ isOpen, toggleMenu, href }) => {
       onClick={isOpen ? toggleMenu : undefined}
       className={classes.link}
     >
-      <div className={classes.logo}>
-        {/* <span className={classes["inner-text"]}>NP</span> */}
-      </div>
+      <div className={classes.logo} />
       <span className={classes.name}>Nikki Pinzon</span>
     </a>
   );

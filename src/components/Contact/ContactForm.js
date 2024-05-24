@@ -1,185 +1,177 @@
-import React, { useRef, useState, useReducer, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "../Contact/ContactForm.module.css";
 import emailClasses from "../Contact/EmailStatus.module.css";
 import emailjs from "@emailjs/browser";
-import useInput from "../../hooks/use-input";
 import EmailStatus from "./EmailStatus";
-import ErrorMessage from "./ErrorMessage";
-import emailSendReducer from "./email-send-reducer";
 import { ReactComponent as LoadingSpinner } from "../../assets/loading-spinner-thick.svg";
-
 import { AnimatePresence } from "framer-motion";
-
-//form validation functions
-const isNotEmpty = (value) => value !== "";
-const isValidEmail = (value) =>
-  value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+import { useForm } from "react-hook-form";
 
 const ContactForm = () => {
-  const { reducer, defaultState } = emailSendReducer;
-  const [sendingState, dispatchSending] = useReducer(reducer, defaultState);
-  const [statusMsgVisible, setStatusMsgVisible] = useState(false);
-  const [error, setError] = useState();
+  //Need this state to access status codes outside the submit function
+  const [emailStatusCode, setEmailStatusCode] = useState(null);
 
-  const { isSending, sendSuccessful } = sendingState;
-
-  const statusMessage = sendSuccessful
-    ? "✓ All right, I got your message! I'll look it over ASAP"
-    : sendSuccessful === false
-    ? error
-    : null;
-
-  const statusClasses = sendSuccessful
-    ? `${emailClasses["send-successful"]}`
-    : sendSuccessful === false
-    ? `${emailClasses["send-failed"]}`
-    : "";
-
-  //useInput(s)
+  //REACT-HOOK-FORM SETUP
   const {
-    enteredValue: name,
-    valueIsValid: nameIsValid,
-    hasError: nameHasError,
-    inputChangeHandler: nameChangeHandler,
-    validateOnBlurHandler: validateNameOnBlur,
-    reset: resetName,
-  } = useInput(isNotEmpty);
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting, isValid, touchedFields },
+  } = useForm();
 
+  //user-friendly email status messages
+  let statusMessage = null;
+  switch (emailStatusCode) {
+    case 200:
+      statusMessage = "✓ All right, I got your message! I'll look it over ASAP";
+      break;
+    case 400:
+      statusMessage =
+        "Could not process request. Please check your data and try again.";
+      break;
+    case 500:
+      statusMessage = "Server error. Please try again later.";
+      break;
+    case null:
+      statusMessage = null;
+      break;
+    default:
+      statusMessage = "Failed to send email. Please try again later.";
+  }
+
+  //otherwise, every error message would display at once
   const {
-    enteredValue: email,
-    valueIsValid: emailIsValid,
-    hasError: emailHasError,
-    inputChangeHandler: emailChangeHandler,
-    validateOnBlurHandler: validateEmailOnBlur,
-    reset: resetEmail,
-  } = useInput(isNotEmpty && isValidEmail);
+    name: nameFieldTouched,
+    email: emailFieldTouched,
+    message: messageFieldTouched,
+  } = touchedFields;
 
-  const {
-    enteredValue: message,
-    valueIsValid: messageIsValid,
-    hasError: messageHasError,
-    inputChangeHandler: messageChangeHandler,
-    validateOnBlurHandler: validateMessageOnBlur,
-    reset: resetMessage,
-  } = useInput(isNotEmpty);
-
-  //refs
-  const form = useRef();
-  const nameInputRef = useRef();
-  const emailInputRef = useRef();
-  const messageInputRef = useRef();
-
-  const formIsValid = nameIsValid && emailIsValid && messageIsValid;
+  const statusClasses =
+    emailStatusCode === 200
+      ? emailClasses["send-successful"]
+      : emailClasses["send-failed"];
 
   //I only want the SUCCESS message to disappear after 3.5 seconds
   useEffect(() => {
-    if (!error) {
+    if (emailStatusCode === 200) {
+      reset({
+        name: "",
+        email: "",
+        message: "",
+      });
+
       const timer = setTimeout(() => {
-        setStatusMsgVisible(false);
-      }, 3500);
+        setEmailStatusCode(null);
+      }, 5000);
 
       return () => {
         clearTimeout(timer);
       };
     }
-  }, [statusMsgVisible, error]);
+  }, [emailStatusCode, reset]);
 
-  const submitForm = async (event) => {
-    event.preventDefault();
-    setError(null);
+  const submitForm = async (data) => {
+    if (!isValid) {
+      return;
+    }
+
+    const serviceID = "service_nuurigj";
+    const templateID = "template_gpqj79d";
+    const userID = "FVtwWw2x0WzKwROJM";
 
     try {
-      if (!formIsValid) {
-        if (!nameIsValid) {
-          nameInputRef.current.focus();
-        } else if (!emailIsValid) {
-          emailInputRef.current.focus();
-        } else if (!messageIsValid) {
-          messageInputRef.current.focus();
-        }
-        return;
-      }
-
-      dispatchSending({ type: "SENDING" });
-      await emailjs.sendForm(
-        "service_nuurigj",
-        "template_gpqj79d",
-        form.current,
-        "JioaKW-iFHKYcmt6F"
-      );
-
-      resetName();
-      resetEmail();
-      resetMessage();
-      dispatchSending({ type: "SEND_SUCCESSFUL" });
-      dispatchSending({ type: "NOT_SENDING" });
-      setStatusMsgVisible(true);
+      const response = await emailjs.send(serviceID, templateID, data, userID);
+      console.log("SUCCESS!", response.status, response.text);
+      setEmailStatusCode(response.status);
     } catch (error) {
-      setError(error.text);
-      dispatchSending({ type: "NOT_SENDING" });
-      dispatchSending({ type: "SEND_UNSUCCESSFUL" });
-      setStatusMsgVisible(true);
+      console.log("FAILED", error);
+      setEmailStatusCode(error.status);
     }
   };
 
   return (
     <div className={classes.container}>
-      <span className={classes['all-fields-required']}>ALL FIELDS REQUIRED</span>
-      <form onSubmit={submitForm} ref={form} className={classes.form}>
-        <input
-          type="text"
-          placeholder="Name"
-          name="name"
-          aria-label="name"
-          onChange={nameChangeHandler}
-          onBlur={validateNameOnBlur}
-          className={`${classes.input} ${
-            nameHasError ? classes.invalid : undefined
-          }`}
-          ref={nameInputRef}
-          value={name}
-        />
-        {nameHasError && <ErrorMessage message="Please enter your name" />}
-        <input
-          type="email"
-          placeholder="Email"
-          name="email"
-          aria-label="email"
-          onChange={emailChangeHandler}
-          onBlur={validateEmailOnBlur}
-          className={`${classes.input} ${
-            emailHasError ? classes.invalid : undefined
-          }`}
-          ref={emailInputRef}
-          value={email}
-        />
-        {emailHasError && (
-          <ErrorMessage message="Please enter a valid email (e.g. name@example.com)" />
-        )}
-        <textarea
-          placeholder="Message"
-          name="message"
-          aria-label="message"
-          rows="10"
-          onChange={messageChangeHandler}
-          onBlur={validateMessageOnBlur}
-          className={`${classes["text-area"]} ${
-            messageHasError ? classes.invalid : undefined
-          }`}
-          ref={messageInputRef}
-          value={message}
-        />
-        {messageHasError && <ErrorMessage message="Please enter a message" />}
+      <span className={classes["all-fields-required"]}>
+        ALL FIELDS REQUIRED
+      </span>
+      <form onSubmit={handleSubmit(submitForm)} className={classes.form}>
+        <div className={classes["input-container"]}>
+          <label htmlFor="name">Name</label>
+          <input
+            {...register("name", { required: "Name is required" })}
+            id="name"
+            type="text"
+            placeholder="First and last name"
+            aria-label="name"
+            className={
+              errors.name && nameFieldTouched ? classes.invalid : undefined
+            }
+          />
+          {errors.name && nameFieldTouched ? (
+            <p className={classes["error-message"]}>
+              {errors.name.message}
+            </p>
+          ) : undefined}
+        </div>
+        <div className={classes["input-container"]}>
+          <label htmlFor="email">Email</label>
+          <input
+            {...register("email", {
+              required: "Email is required",
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: "Please enter a valid email (e.g. name@example.com)",
+              },
+            })}
+            id="email"
+            type="email"
+            placeholder="e.g. name@example.com"
+            aria-label="email"
+            className={
+              errors.email && emailFieldTouched ? classes.invalid : undefined
+            }
+          />
+          {errors.email && emailFieldTouched ? (
+            <p className={classes["error-message"]}>
+              {errors.email.message}
+            </p>
+          ) : undefined}
+        </div>
+        <div className={classes["input-container"]}>
+          <label htmlFor="message">Message</label>
+          <textarea
+            {...register("message", { required: "Message is required" })}
+            id="message"
+            placeholder="Ask me anything!"
+            aria-label="message"
+            rows="10"
+            className={
+              errors.message && messageFieldTouched
+                ? classes.invalid
+                : undefined
+            }
+          />
+          {errors.message && messageFieldTouched ? (
+            <p className={classes["error-message"]}>
+              {errors.message.message}
+            </p>
+          ) : undefined}
+        </div>
 
-        <button type="submit" className={classes["form-button"]}>
-          {isSending ? (
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className={classes["form-button"]}
+        >
+          {isSubmitting ? (
             <LoadingSpinner className={classes["loading-spinner"]} />
           ) : (
             "Let's Chat"
           )}
         </button>
+
         <AnimatePresence>
-          {statusMsgVisible ? (
+          {statusMessage ? (
             <EmailStatus status={statusMessage} className={statusClasses} />
           ) : undefined}
         </AnimatePresence>
