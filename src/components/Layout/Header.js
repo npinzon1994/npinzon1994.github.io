@@ -1,6 +1,6 @@
 import { useState } from "react";
 import classes from "./Header.module.css";
-import NavMenuOverlay from "./Navigation/NavMenuOverlay";
+import SideBar from "./Navigation/SideBar";
 import NavBar from "./Navigation/NavBar";
 import { useWindowWidth } from "../../hooks/use-window-width";
 
@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <header className={classes.header}>
-      <NavMenuOverlay isOpen={isOpen} toggleMenu={toggleMenu} />
+      <SideBar isOpen={isOpen} toggleMenu={toggleMenu} />
       <NavBar
         isOpen={isOpen}
         toggleMenu={toggleMenu}

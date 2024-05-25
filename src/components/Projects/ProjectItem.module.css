@@ -90,7 +90,7 @@
   height: clamp(28px, 2.85vw, 34px);
   padding: clamp(4px, 2.85vw, 5px);
   border-radius: 6px;
-  background-color: rgba(137, 121, 238, 0.2);
+  background-color: hsl(248, 13%, 13%);
   transition: 170ms;
 }
 
@@ -164,5 +164,9 @@
     flex: 1;
     text-align: center;
     padding-block: 1rem;
+  }
+
+  .links-container a:hover {
+    transform: scale(1.05);
   }
 }

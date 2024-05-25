@@ -30,7 +30,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: clamp(22rem, 45vw, 26rem);
+  height: clamp(20rem, 45vw, 26rem);
 }
 
 .headshot img {
