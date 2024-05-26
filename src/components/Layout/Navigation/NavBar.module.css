@@ -61,11 +61,11 @@
 }
 
 .links li a:hover {
-  background: hsla(248, 66%, 80%, 0.35);
+  background: hsla(248, 66%, 67%, 0.7);
 }
 
 .links li a:active {
-  background: hsla(248, 66%, 90%, 0.35);
+  background: hsla(248, 66%, 77%, 0.7);
   transition: none;
 }
 

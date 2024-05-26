@@ -2,8 +2,11 @@ import React from "react";
 import classes from "./NavBar.module.css";
 import HamburgerCollapse from "hamburger-react";
 import HomeLink from "./HomeLink";
+import { useWindowWidth } from "../../../hooks/use-window-width";
 
-const NavBar = ({ isOpen, toggleMenu, windowWidth }) => {
+const NavBar = ({ isOpen, toggleMenu }) => {
+  const { windowWidth } = useWindowWidth();
+  
   return (
     <nav className={classes.navbar}>
       <HomeLink href="#home" isOpen={isOpen} toggleMenu={toggleMenu} />

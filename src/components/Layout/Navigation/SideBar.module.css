@@ -3,7 +3,7 @@
   right: -250px;
   top: 0;
   width: 250px;
-  background: rgba(3, 0, 20, 0.7);
+  background: rgba(3, 0, 20, 0.65);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   z-index: 1000;
@@ -21,10 +21,6 @@
   padding-left: 0;
 }
 
-.links li {
-  /* border-radius: 24px; */
-}
-
 .links li:first-of-type {
   padding-left: 28px;
   padding-block: 20px;
@@ -38,16 +34,13 @@
   text-decoration: none;
   padding-left: 40px;
   padding-block: 20px;
-  /* padding: 0.65rem 1rem; */
-  /* border-radius: 24px; */
-
   cursor: pointer;
 }
 
 .links li a:hover {
-  background: hsla(248, 66%, 80%, 0.35);
+  background: hsla(248, 60%, 65%, 0.7);
 }
 
 .links li a:active {
-  background: hsla(248, 66%, 90%, 0.35);
+  background: hsla(248, 60%, 75%, 0.7);
 }
