@@ -111,6 +111,10 @@ textarea.invalid:focus {
   transition: none;
 }
 
+.form-button:disabled {
+  opacity: 0.75;
+}
+
 .loading-spinner {
   height: 1.35rem;
   width: 1.35rem;

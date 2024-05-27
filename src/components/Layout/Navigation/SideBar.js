@@ -1,44 +1,62 @@
-import React from "react";
+import { useRef, useEffect, useState } from "react";
 import classes from "./SideBar.module.css";
 import HamburgerCollapse from "hamburger-react";
 
-const SideBar = ({ isOpen, toggleMenu }) => {
+const SideBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef();
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (!ref.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("click", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, [ref]);
+
   return (
-    <div className={`${classes.sidebar} ${isOpen ? classes.open : ""}`}>
-      <ul className={classes.links}>
+    <div
+      className={`${classes.sidebar} ${
+        isOpen ? classes.open__sidebar : undefined
+      }`}
+      ref={ref}
+    >
+      <div className={classes["hamburger-container"]}>
+        <HamburgerCollapse
+          toggle={() => setIsOpen(!isOpen)}
+          toggled={isOpen}
+          rounded
+          color="#fff"
+          label="collapsible-navigation"
+        />
+      </div>
+      <ul
+        initial={{ x: 250 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 1 }}
+        className={`${classes.links} ${
+          isOpen ? classes.open__links : undefined
+        }`}
+      >
         <li>
-          <HamburgerCollapse
-            toggle={toggleMenu}
-            toggled={isOpen}
-            rounded
-            color="#fff"
-            label="collapsible-navigation"
-          />
+          <a href="#home">Home</a>
         </li>
         <li>
-          <a href="#home" onClick={toggleMenu}>
-            Home
-          </a>
+          <a href="#projects">Projects</a>
         </li>
         <li>
-          <a href="#projects" onClick={toggleMenu}>
-            Projects
-          </a>
+          <a href="#about">About</a>
         </li>
         <li>
-          <a href="#about" onClick={toggleMenu}>
-            About
-          </a>
+          <a href="#tools">Tools</a>
         </li>
         <li>
-          <a href="#tools" onClick={toggleMenu}>
-            Tools
-          </a>
-        </li>
-        <li>
-          <a href="#contact" onClick={toggleMenu}>
-            Contact
-          </a>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
     </div>

@@ -1,12 +1,8 @@
 import classes from "./HomeLink.module.css";
 
-const HomeLink = ({ isOpen, toggleMenu, href }) => {
+const HomeLink = ({ href }) => {
   return (
-    <a
-      href={href}
-      onClick={isOpen ? toggleMenu : undefined}
-      className={classes.link}
-    >
+    <a href={href} className={classes.link}>
       <div className={classes.logo} />
       <span className={classes.name}>Nikki Pinzon</span>
     </a>

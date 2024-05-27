@@ -1,14 +1,14 @@
-import classes from "./Header.module.css";
-import SideBar from "./Navigation/SideBar";
-import NavBar from "./Navigation/NavBar";
+import classes from './Header.module.css';
+import NavBar from './Navigation/NavBar';
+import SideBar from './Navigation/SideBar';
 
-const Header = ({ isOpen, toggleMenu }) => {
+const Header = () => {
   return (
     <header className={classes.header}>
-      <SideBar isOpen={isOpen} toggleMenu={toggleMenu} />
-      <NavBar isOpen={isOpen} toggleMenu={toggleMenu} />
+        <NavBar />
+        <SideBar />
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
