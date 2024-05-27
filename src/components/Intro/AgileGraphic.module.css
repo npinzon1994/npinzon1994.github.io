@@ -1,7 +1,6 @@
 .container {
   position: relative;
   z-index: 1;
-  
 }
 
 .svg {
@@ -55,13 +54,16 @@
 @keyframes glow {
   0% {
     filter: drop-shadow(0 0 6px hsl(248, 100%, 82%));
+    -webkit-filter: drop-shadow(0 0 6px hsl(248, 100%, 82%));
   }
 
   50% {
     filter: drop-shadow(0 0 10px hsl(248, 100%, 82%));
+    -webkit-filter: drop-shadow(0 0 10px hsl(248, 100%, 82%));
   }
 
   100% {
     filter: drop-shadow(0 0 6px hsl(248, 100%, 82%));
+    -webkit-filter: drop-shadow(0 0 6px hsl(248, 100%, 82%));
   }
 }

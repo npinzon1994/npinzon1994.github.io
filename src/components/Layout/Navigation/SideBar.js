@@ -1,8 +1,10 @@
 import { useRef, useEffect, useState } from "react";
 import classes from "./SideBar.module.css";
 import HamburgerCollapse from "hamburger-react";
+import { useWindowWidth } from "../../../hooks/use-window-width";
 
 const SideBar = () => {
+  const { windowWidth } = useWindowWidth();
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef();
 
@@ -19,6 +21,12 @@ const SideBar = () => {
     };
   }, [ref]);
 
+  function handleToggle() {
+    setIsOpen(!isOpen);
+  }
+
+  const isOnPhoneScreen = windowWidth <= 430;
+
   return (
     <div
       className={`${classes.sidebar} ${
@@ -28,7 +36,7 @@ const SideBar = () => {
     >
       <div className={classes["hamburger-container"]}>
         <HamburgerCollapse
-          toggle={() => setIsOpen(!isOpen)}
+          toggle={handleToggle}
           toggled={isOpen}
           rounded
           color="#fff"
@@ -36,27 +44,40 @@ const SideBar = () => {
         />
       </div>
       <ul
-        initial={{ x: 250 }}
-        animate={{ x: 0 }}
-        transition={{ duration: 1 }}
         className={`${classes.links} ${
           isOpen ? classes.open__links : undefined
         }`}
       >
         <li>
-          <a href="#home">Home</a>
+          <a href="#home" onClick={isOnPhoneScreen ? handleToggle : undefined}>
+            Home
+          </a>
         </li>
         <li>
-          <a href="#projects">Projects</a>
+          <a
+            href="#projects"
+            onClick={isOnPhoneScreen ? handleToggle : undefined}
+          >
+            Projects
+          </a>
         </li>
         <li>
-          <a href="#about">About</a>
+          <a href="#about" onClick={isOnPhoneScreen ? handleToggle : undefined}>
+            About
+          </a>
         </li>
         <li>
-          <a href="#tools">Tools</a>
+          <a href="#tools" onClick={isOnPhoneScreen ? handleToggle : undefined}>
+            Tools
+          </a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a
+            href="#contact"
+            onClick={isOnPhoneScreen ? handleToggle : undefined}
+          >
+            Contact
+          </a>
         </li>
       </ul>
     </div>

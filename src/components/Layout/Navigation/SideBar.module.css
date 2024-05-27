@@ -2,7 +2,6 @@
   position: fixed;
   right: 0;
   top: 0;
-  background: rgba(3, 0, 20, 0.65);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   z-index: 1000;
@@ -11,6 +10,7 @@
 
 .sidebar.open__sidebar {
   height: 100vh;
+  background: rgba(3, 0, 20, 0.65);
 }
 
 .hamburger-container {
@@ -18,6 +18,8 @@
   margin-top: 6px;
   margin-right: 2rem;
   margin-left: 26px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .links {
@@ -49,9 +51,9 @@
   font-family: "League Spartan";
   font-size: 1.25rem;
   text-decoration: none;
-  padding-left: 40px;
   padding-block: 24px;
   cursor: pointer;
+  text-align: center;
 }
 
 .links li a:hover {
