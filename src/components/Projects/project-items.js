@@ -22,7 +22,7 @@ const redux = tools[9];
 const firebase = tools[11];
 
 const languages = {
-  budgetBreakdown: [react, css, redux, firebase],
+  budgetBreakdown: [next, typescript, css, redux, firebase],
   bucketlist: [react, typescript, css],
   socialMediaApp: [react, redux, css, firebase],
   crSite: [html, css, javascript],
