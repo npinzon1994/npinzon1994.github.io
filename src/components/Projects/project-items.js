@@ -13,15 +13,16 @@ const twitterCloneDemo =
   "https://firebasestorage.googleapis.com/v0/b/portfolio-cd2d0.appspot.com/o/twitter-clone-demo.mp4?alt=media&token=a2c9eae8-2215-4d72-a541-67c2bd17c14e";
 
 const react = tools[0];
+const next = tools[1];
 const javascript = tools[2];
 const html = tools[3];
 const css = tools[4];
-const redux = tools[9];
 const typescript = tools[5];
+const redux = tools[9];
 const firebase = tools[11];
 
 const languages = {
-  budgetBreakdown: [react, redux, css, firebase],
+  budgetBreakdown: [react, css, redux, firebase],
   bucketlist: [react, typescript, css],
   socialMediaApp: [react, redux, css, firebase],
   crSite: [html, css, javascript],
