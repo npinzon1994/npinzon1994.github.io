@@ -19,6 +19,7 @@
     1px 0 5px #9c91e0;
   animation: glow 5s linear infinite;
   transform: scale(0.7);
+  margin-bottom: 3px;
 }
 
 .inner-text {
