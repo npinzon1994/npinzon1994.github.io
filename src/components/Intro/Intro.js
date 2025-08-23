@@ -84,7 +84,7 @@ const Intro = ({ id }) => {
           </p>
           <div className={classes["button-container"]}>
             <a
-              href="https://drive.google.com/file/d/13ylGh1YZ5j_NKGcejNE1JsV3gMH1ru_F/view?usp=sharing"
+              href="https://drive.google.com/file/d/1GpVYXC9QyADIjQvDvzM12POOz2V8ysgv/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
               aria-label="Link to my resume. Opens in a new tab."
